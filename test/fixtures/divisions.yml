@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: sports
+# Table name: divisions
 #
 #  id           :bigint           not null, primary key
 #  abbreviation :string
@@ -8,14 +8,25 @@
 #  name         :string
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#  league_id    :bigint           not null
+#
+# Indexes
+#
+#  index_divisions_on_league_id  (league_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (league_id => leagues.id)
 #
 
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
   name: MyString
-  abbreviation: MyString
+  active: false
+  league: one
 
 two:
   name: MyString
-  abbreviation: MyString
+  active: false
+  league: two
