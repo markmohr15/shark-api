@@ -23,4 +23,7 @@ class Division < ApplicationRecord
   belongs_to :league
 
   has_many :subdivisions
+  has_many :teams
+ 
+  delegate :sport, to: :league
 end

@@ -14,4 +14,5 @@ class Sport < ApplicationRecord
   has_many :leagues
   has_many :divisions, through: :leagues
   has_many :subdivisions, through: :divsions
+  has_many :teams
 end

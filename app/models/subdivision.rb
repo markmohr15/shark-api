@@ -20,4 +20,10 @@
 
 class Subdivision < ApplicationRecord
   belongs_to :division
+
+  has_many :teams
+
+  delegate :league, to: :division
+  delegate :sport, to: :division
+
 end

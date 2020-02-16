@@ -23,4 +23,6 @@ class League < ApplicationRecord
   belongs_to :sport
   has_many :divisions
   has_many :subdivisions, through: :divisions
+  has_many :teams
+
 end
