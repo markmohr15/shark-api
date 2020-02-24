@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_10_051800) do
+ActiveRecord::Schema.define(version: 2020_02_17_222226) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,38 @@ ActiveRecord::Schema.define(version: 2020_02_10_051800) do
     t.index ["league_id"], name: "index_divisions_on_league_id"
   end
 
+  create_table "games", force: :cascade do |t|
+    t.bigint "sport_id", null: false
+    t.bigint "season_id", null: false
+    t.integer "visitor_id"
+    t.integer "home_id"
+    t.integer "stadium_id"
+    t.boolean "neutral"
+    t.integer "visitor_score"
+    t.integer "home_score"
+    t.integer "visitor_rot"
+    t.integer "home_rot"
+    t.datetime "when"
+    t.integer "status"
+    t.integer "sportsdata_game_id"
+    t.integer "week"
+    t.boolean "conference_game"
+    t.float "spread"
+    t.float "total"
+    t.integer "visitor_ml"
+    t.integer "home_ml"
+    t.integer "visitor_rl"
+    t.integer "home_rl"
+    t.integer "period"
+    t.integer "time_left_min"
+    t.integer "time_left_sec"
+    t.string "channel"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["season_id"], name: "index_games_on_season_id"
+    t.index ["sport_id"], name: "index_games_on_sport_id"
+  end
+
   create_table "leagues", force: :cascade do |t|
     t.string "name"
     t.bigint "sport_id", null: false
@@ -35,12 +67,53 @@ ActiveRecord::Schema.define(version: 2020_02_10_051800) do
     t.index ["sport_id"], name: "index_leagues_on_sport_id"
   end
 
+  create_table "seasons", force: :cascade do |t|
+    t.bigint "sport_id", null: false
+    t.string "name"
+    t.boolean "active", default: false
+    t.date "start_date"
+    t.date "end_date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "sportsdata_id"
+    t.index ["sport_id"], name: "index_seasons_on_sport_id"
+  end
+
   create_table "sports", force: :cascade do |t|
     t.string "name"
     t.string "abbreviation"
     t.boolean "active", default: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "stadiums", force: :cascade do |t|
+    t.string "name"
+    t.string "city"
+    t.string "state"
+    t.string "country"
+    t.integer "surface"
+    t.integer "altitude"
+    t.float "geo_lat"
+    t.float "geo_lng"
+    t.integer "capacity"
+    t.boolean "active", default: true
+    t.string "stadium_type"
+    t.integer "home_plate_direction"
+    t.integer "left_field"
+    t.integer "mid_left_field"
+    t.integer "left_center_field"
+    t.integer "mid_left_center_field"
+    t.integer "center_field"
+    t.integer "mid_right_center_field"
+    t.integer "right_center_field"
+    t.integer "mid_right_field"
+    t.integer "right_field"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "sport_id"
+    t.integer "sportsdata_id"
+    t.index ["sport_id"], name: "index_stadiums_on_sport_id"
   end
 
   create_table "subdivisions", force: :cascade do |t|
@@ -71,7 +144,10 @@ ActiveRecord::Schema.define(version: 2020_02_10_051800) do
   end
 
   add_foreign_key "divisions", "leagues"
+  add_foreign_key "games", "seasons"
+  add_foreign_key "games", "sports"
   add_foreign_key "leagues", "sports"
+  add_foreign_key "seasons", "sports"
   add_foreign_key "subdivisions", "divisions"
   add_foreign_key "teams", "divisions"
   add_foreign_key "teams", "leagues"

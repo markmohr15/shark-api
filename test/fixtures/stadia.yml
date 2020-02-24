@@ -1,0 +1,29 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  city: MyString
+  state: MyString
+  country: MyString
+  surface: 1
+  altitude: 1
+  geo_lat: 1.5
+  geo_lng: 1.5
+  capacity: 1
+  active: false
+  stadium_type: MyString
+  home_plate_direction: 1
+
+two:
+  name: MyString
+  city: MyString
+  state: MyString
+  country: MyString
+  surface: 1
+  altitude: 1
+  geo_lat: 1.5
+  geo_lng: 1.5
+  capacity: 1
+  active: false
+  stadium_type: MyString
+  home_plate_direction: 1

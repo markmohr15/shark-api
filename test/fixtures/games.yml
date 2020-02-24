@@ -1,0 +1,89 @@
+# == Schema Information
+#
+# Table name: games
+#
+#  id                 :bigint           not null, primary key
+#  channel            :string
+#  conference_game    :boolean
+#  home_ml            :integer
+#  home_rl            :integer
+#  home_rot           :integer
+#  home_score         :integer
+#  neutral            :boolean
+#  period             :integer
+#  spread             :float
+#  status             :integer
+#  time_left_min      :integer
+#  time_left_sec      :integer
+#  total              :float
+#  visitor_ml         :integer
+#  visitor_rl         :integer
+#  visitor_rot        :integer
+#  visitor_score      :integer
+#  week               :integer
+#  when               :datetime
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#  home_id            :integer
+#  season_id          :bigint           not null
+#  sport_id           :bigint           not null
+#  sportsdata_game_id :integer
+#  stadium_id         :integer
+#  visitor_id         :integer
+#
+# Indexes
+#
+#  index_games_on_season_id  (season_id)
+#  index_games_on_sport_id   (sport_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (season_id => seasons.id)
+#  fk_rails_...  (sport_id => sports.id)
+#
+
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  visitor_id: 1
+  home_id: 1
+  stadium_id: 1
+  neutral: false
+  visitor_score: 1
+  home_score: 1
+  visitor_rot: 1
+  home_rot: 1
+  when: 2020-02-16 00:37:31
+  status: 1
+  sportsdata_game_id: 1
+  season_id: 1
+  week: 1
+  spread: 1.5
+  total: 1.5
+  visitor_ml: 1
+  home_ml: 1
+  period: 1
+  time_left_min: 1
+  time_left_sec: 1
+
+two:
+  visitor_id: 1
+  home_id: 1
+  stadium_id: 1
+  neutral: false
+  visitor_score: 1
+  home_score: 1
+  visitor_rot: 1
+  home_rot: 1
+  when: 2020-02-16 00:37:31
+  status: 1
+  sportsdata_game_id: 1
+  season_id: 1
+  week: 1
+  spread: 1.5
+  total: 1.5
+  visitor_ml: 1
+  home_ml: 1
+  period: 1
+  time_left_min: 1
+  time_left_sec: 1

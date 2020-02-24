@@ -138,10 +138,17 @@ d1.divisions.where(name: "Western Athletic Conference", abbreviation: "WAC").fir
 macb.subdivisions.where(name: "East").first_or_create
 macb.subdivisions.where(name: "West").first_or_create
 
-
-
-
-
+mlb.seasons.where(active: true, name: "2020", start_date: "2020-03-26", end_date: "2020-09-27", sportsdata_id: 2020).first_or_create
+mlb.seasons.where(active: true, name: "2019", start_date: "2019-03-20", end_date: "2019-09-29", sportsdata_id: 2019).first_or_create
+nfl.seasons.where(active: false, name: "2019", start_date: "2019-09-05", end_date: "2019-12-29", sportsdata_id: 2019).first_or_create
+nba.seasons.where(active: true, name: "2019-20", start_date: "2019-10-22", end_date: "2020-04-18", sportsdata_id: 2020).first_or_create
+nba.seasons.where(active: true, name: "2018-19", start_date: "2019-10-16", end_date: "2020-04-10", sportsdata_id: 2019).first_or_create
+nhl.seasons.where(active: true, name: "2019-20", start_date: "2019-10-01", end_date: "2020-04-11", sportsdata_id: 2020).first_or_create
+nhl.seasons.where(active: true, name: "2018-19", start_date: "2018-10-10", end_date: "2019-04-07", sportsdata_id: 2019).first_or_create
+cfb.seasons.where(active: true, name: "2020", start_date: "2020-08-29", end_date: "2020-12-12", sportsdata_id: 2020).first_or_create
+cfb.seasons.where(active: true, name: "2019", start_date: "2019-08-24", end_date: "2019-12-14", sportsdata_id: 2019).first_or_create
+cbb.seasons.where(active: true, name: "2019-20", start_date: "2019-11-01", end_date: "2020-03-15", sportsdata_id: 2020).first_or_create
+cbb.seasons.where(active: true, name: "2018-19", start_date: "2018-11-06", end_date: "2019-03-17", sportsdata_id: 2019).first_or_create
 
 
 
