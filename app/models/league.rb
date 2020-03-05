@@ -21,8 +21,15 @@
 
 class League < ApplicationRecord
   belongs_to :sport
-  has_many :divisions
+  
+  has_many :divisions, dependent: :destroy
   has_many :subdivisions, through: :divisions
   has_many :teams
+
+  validates_presence_of :name
+
+  before_create do
+    self.abbreviation ||= self.name
+  end
 
 end

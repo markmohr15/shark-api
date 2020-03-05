@@ -41,4 +41,6 @@ class Stadium < ApplicationRecord
 
   enum surface: { Grass: 0, AstroTurf: 1, FieldTurf: 2,
                   Artificial: 3, Dome: 4 }
+
+  validates_presence_of :name
 end

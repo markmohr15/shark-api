@@ -22,8 +22,14 @@
 class Division < ApplicationRecord
   belongs_to :league
 
-  has_many :subdivisions
+  has_many :subdivisions, dependent: :destroy
   has_many :teams
  
   delegate :sport, to: :league
+
+  validates_presence_of :name
+
+  before_create do
+    self.abbreviation ||= self.name
+  end
 end

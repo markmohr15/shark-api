@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_17_222226) do
+ActiveRecord::Schema.define(version: 2020_03_05_054937) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 2020_02_17_222226) do
     t.integer "visitor_id"
     t.integer "home_id"
     t.integer "stadium_id"
-    t.boolean "neutral"
+    t.boolean "neutral", default: false
     t.integer "visitor_score"
     t.integer "home_score"
     t.integer "visitor_rot"
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2020_02_17_222226) do
     t.integer "status"
     t.integer "sportsdata_game_id"
     t.integer "week"
-    t.boolean "conference_game"
+    t.boolean "conference_game", default: false
     t.float "spread"
     t.float "total"
     t.integer "visitor_ml"

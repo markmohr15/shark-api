@@ -25,4 +25,12 @@ class Season < ApplicationRecord
   belongs_to :sport
 
   has_many :games
+
+  before_destroy :check_games
+
+  validates_presence_of :name, :start_date, :end_date
+
+  def check_games
+    return false if games.any?
+  end
 end

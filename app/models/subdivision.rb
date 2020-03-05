@@ -26,4 +26,6 @@ class Subdivision < ApplicationRecord
   delegate :league, to: :division
   delegate :sport, to: :division
 
+  validates_presence_of :name
+
 end

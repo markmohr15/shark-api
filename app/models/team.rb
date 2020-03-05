@@ -43,4 +43,10 @@ class Team < ApplicationRecord
     games_as_visitor.or(games_as_home)
   end
 
+  validates_presence_of :name, :nickname
+
+  before_create do
+    self.short_display_name ||= self.name
+  end
+
 end

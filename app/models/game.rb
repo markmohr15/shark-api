@@ -4,12 +4,12 @@
 #
 #  id                 :bigint           not null, primary key
 #  channel            :string
-#  conference_game    :boolean
+#  conference_game    :boolean          default(FALSE)
 #  home_ml            :integer
 #  home_rl            :integer
 #  home_rot           :integer
 #  home_score         :integer
-#  neutral            :boolean
+#  neutral            :boolean          default(FALSE)
 #  period             :integer
 #  spread             :float
 #  status             :integer

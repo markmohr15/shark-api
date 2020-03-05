@@ -11,13 +11,13 @@
 #
 
 class Sport < ApplicationRecord
-  has_many :leagues
+  has_many :leagues, dependent: :destroy
   has_many :divisions, through: :leagues
   has_many :subdivisions, through: :divsions
-  has_many :teams
-  has_many :seasons
+  has_many :teams, dependent: :destroy
+  has_many :seasons, dependent: :destroy
   has_many :games
-  has_many :stadiums
+  has_many :stadiums, dependent: :destroy
 
   scope :mlb, -> {find_by_abbreviation "MLB"}
   scope :cfb, -> {find_by_abbreviation "CFB"}
@@ -25,4 +25,16 @@ class Sport < ApplicationRecord
   scope :cbb, -> {find_by_abbreviation "CBB"}
   scope :nfl, -> {find_by_abbreviation "NFL"}
   scope :nhl, -> {find_by_abbreviation "NHL"}
+
+  before_destroy :check_games
+
+  validates_presence_of :name
+
+  before_create do
+    self.abbreviation ||= self.name
+  end
+
+  def check_games
+    return false if games.any?
+  end
 end
