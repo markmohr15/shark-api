@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_05_054937) do
+ActiveRecord::Schema.define(version: 2020_03_09_032021) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -143,6 +143,19 @@ ActiveRecord::Schema.define(version: 2020_03_05_054937) do
     t.index ["subdivision_id"], name: "index_teams_on_subdivision_id"
   end
 
+  create_table "triggers", force: :cascade do |t|
+    t.bigint "game_id", null: false
+    t.integer "operator"
+    t.float "target"
+    t.integer "wager_type"
+    t.integer "status", default: 0
+    t.bigint "team_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["game_id"], name: "index_triggers_on_game_id"
+    t.index ["team_id"], name: "index_triggers_on_team_id"
+  end
+
   add_foreign_key "divisions", "leagues"
   add_foreign_key "games", "seasons"
   add_foreign_key "games", "sports"
@@ -153,4 +166,6 @@ ActiveRecord::Schema.define(version: 2020_03_05_054937) do
   add_foreign_key "teams", "leagues"
   add_foreign_key "teams", "sports"
   add_foreign_key "teams", "subdivisions"
+  add_foreign_key "triggers", "games"
+  add_foreign_key "triggers", "teams"
 end

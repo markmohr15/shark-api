@@ -1,0 +1,40 @@
+# == Schema Information
+#
+# Table name: triggers
+#
+#  id         :bigint           not null, primary key
+#  operator   :integer
+#  status     :integer          default(0)
+#  target     :float
+#  wager_type :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  game_id    :bigint           not null
+#  team_id    :bigint           not null
+#
+# Indexes
+#
+#  index_triggers_on_game_id  (game_id)
+#  index_triggers_on_team_id  (team_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (game_id => games.id)
+#  fk_rails_...  (team_id => teams.id)
+#
+
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  game: one
+  operator: 1
+  target: 1.5
+  wager_type: 1
+  status: 1
+
+two:
+  game: two
+  operator: 1
+  target: 1.5
+  wager_type: 1
+  status: 1

@@ -46,10 +46,11 @@ class Game < ApplicationRecord
   belongs_to :sport
   belongs_to :season
   belongs_to :stadium
-
   belongs_to :visitor, class_name: "Team"
   belongs_to :home, class_name: "Team"
 
+  has_many :triggers
+  
   enum status: { Scheduled: 0, InProgress: 1, Final: 2, Postponed: 3, Canceled: 4, "F/OT" => 5, "F/SO" => 6, Cancelled: 7 }
 
   after_initialize do

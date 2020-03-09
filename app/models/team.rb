@@ -38,7 +38,8 @@ class Team < ApplicationRecord
 
   has_many :games_as_visitor, foreign_key: "visitor_id", class_name: "Game"
   has_many :games_as_home, foreign_key: "home_id", class_name: "Game"
-
+  has_many :triggers
+  
   def games
     games_as_visitor.or(games_as_home)
   end
