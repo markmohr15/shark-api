@@ -4,7 +4,7 @@
 #
 #  id         :bigint           not null, primary key
 #  operator   :integer
-#  status     :integer          default(0)
+#  status     :integer          default("open")
 #  target     :float
 #  wager_type :integer
 #  created_at :datetime         not null
@@ -31,5 +31,6 @@ class Trigger < ApplicationRecord
   enum status: { open: 0, triggered: 1, expired: 2, canceled: 3 }
   enum wager_type: { spread: 0, total: 1, moneyline: 2, runline: 3 }
 
+  validates_presence_of :target, :operator, :status, :wager_type
 
 end

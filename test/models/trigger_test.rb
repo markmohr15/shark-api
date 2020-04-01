@@ -4,7 +4,7 @@
 #
 #  id         :bigint           not null, primary key
 #  operator   :integer
-#  status     :integer          default(0)
+#  status     :integer          default("open")
 #  target     :float
 #  wager_type :integer
 #  created_at :datetime         not null
