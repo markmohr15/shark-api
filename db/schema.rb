@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_09_032021) do
+ActiveRecord::Schema.define(version: 2020_04_03_021416) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2020_03_09_032021) do
     t.integer "home_score"
     t.integer "visitor_rot"
     t.integer "home_rot"
-    t.datetime "when"
+    t.datetime "gametime"
     t.integer "status"
     t.integer "sportsdata_game_id"
     t.integer "week"

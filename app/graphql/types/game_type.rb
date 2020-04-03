@@ -20,7 +20,7 @@ module Types
     field :visitor_rot, Integer, null: true
     field :visitor_score, Integer, null: true
     field :week, Integer, null: true
-    field :when, GraphQL::Types::ISO8601DateTime, null: true
+    field :gametime, GraphQL::Types::ISO8601DateTime, null: true
     field :home, Types::TeamType, null: false
     field :season, Types::SeasonType, null: false
     field :sport, Types::SportType, null: false

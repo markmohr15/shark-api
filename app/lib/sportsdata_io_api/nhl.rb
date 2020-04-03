@@ -53,7 +53,7 @@ class SportsdataIoApi::Nhl < SportsdataIoApi::Base
                                   visitor: teams.find_by_sportsdata_id(t[:AwayTeamID]), 
                                   home: teams.find_by_sportsdata_id(t[:HomeTeamID]),
                                   stadium: stadiums.find_by_sportsdata_id(t[:StadiumID])).first_or_create        
-        game.update(status: t[:Status], when: t[:DateTime], channel: t[:Channel],
+        game.update(status: t[:Status], gametime: t[:DateTime], channel: t[:Channel],
                     spread: t[:PointSpread], total: t[:OverUnder],
                     visitor_score: t[:AwayTeamScore], home_score: t[:HomeTeamScore],
                     visitor_ml: t[:AwayTeamMoneyLine], home_ml: t[:HomeTeamMoneyLine],

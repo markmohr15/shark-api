@@ -5,6 +5,7 @@
 #  id                 :bigint           not null, primary key
 #  channel            :string
 #  conference_game    :boolean          default(FALSE)
+#  gametime           :datetime
 #  home_ml            :integer
 #  home_rl            :integer
 #  home_rot           :integer
@@ -21,7 +22,6 @@
 #  visitor_rot        :integer
 #  visitor_score      :integer
 #  week               :integer
-#  when               :datetime
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
 #  home_id            :integer

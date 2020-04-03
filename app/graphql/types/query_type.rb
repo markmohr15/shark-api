@@ -36,8 +36,8 @@ module Types
 
     def games_by_sport_and_date sport_id:, date:
       Game.where('sport_id = ? and
-                  games.when >= ? and
-                  games.when <= ?', 
+                  games.gametime >= ? and
+                  games.gametime <= ?', 
                   sport_id, date.beginning_of_day, date.end_of_day)
     end
 

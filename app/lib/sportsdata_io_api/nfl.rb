@@ -52,7 +52,7 @@ class SportsdataIoApi::Nfl < SportsdataIoApi::Base
                                   visitor: teams.find_by_sportsdata_id(t[:GlobalAwayTeamID]), 
                                   home: teams.find_by_sportsdata_id(t[:GlobalHomeTeamID]),
                                   stadium: stadiums.find_by_sportsdata_id(t[:StadiumID])).first_or_create        
-        game.update(status: t[:Status], when: t[:DateTime], channel: t[:Channel],
+        game.update(status: t[:Status], gametime: t[:DateTime], channel: t[:Channel],
                     spread: t[:PointSpread], total: t[:OverUnder],
                     visitor_score: t[:AwayScore], home_score: t[:HomeScore],
                     visitor_ml: t[:AwayTeamMoneyLine], home_ml: t[:HomeTeamMoneyLine],
