@@ -59,4 +59,21 @@ class Game < ApplicationRecord
     end
   end
 
+  def display_time
+    gametime.strftime('%R')
+  end
+
+  def display_home_spread
+    return "" if spread.blank?
+    return spread.to_s if spread < 0
+    return "PK" if spread == 0
+    return "+#{spread}"
+  end
+
+  def display_visitor_spread
+    return "" if spread.blank?
+    return "+#{spread * -1}" if spread < 0
+    return "PK" if spread == 0
+    return "-#{spread}"
+  end
 end

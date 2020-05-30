@@ -1,8 +1,6 @@
 module Types
   class QueryType < Types::BaseObject
-    # Add root-level fields here.
-    # They will be entry points for queries on your schema.
-
+    field :me, resolver: Resolvers::Me
     field :all_sports, [Types::SportType], null: false
     field :game, Types::GameType, null: true do
       argument :id, ID, required: true
@@ -14,8 +12,8 @@ module Types
       argument :id, ID, required: true
     end
     field :games_by_sport_and_date, [Types::GameType], null: true do
-      argument :sport_id, ID, required: true 
-      argument :date, GraphQL::Types::ISO8601Date, required: true
+      argument :sport_id, Integer, required: true 
+      argument :date, String, required: true
     end
 
     def all_sports
@@ -34,11 +32,19 @@ module Types
       Trigger.find id
     end
 
+    def active_triggers
+      if context[:current_user]
+        current_user.triggers.active
+      else
+        raise GraphQL::ExecutionError, "Authentication Error"
+      end
+    end
+
     def games_by_sport_and_date sport_id:, date:
       Game.where('sport_id = ? and
                   games.gametime >= ? and
                   games.gametime <= ?', 
-                  sport_id, date.beginning_of_day, date.end_of_day)
+                  sport_id, date.to_date.beginning_of_day, date.to_date.end_of_day)
     end
 
   end

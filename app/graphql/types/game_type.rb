@@ -10,7 +10,7 @@ module Types
     field :neutral, Boolean, null: false
     field :period, Integer, null: true
     field :spread, Float, null: true
-    field :status, BaseEnum, null: true
+    field :status, String, null: true
     field :time_left_min, Integer, null: true
     field :time_left_sec, Integer, null: true
     field :total, Float, null: true
@@ -26,5 +26,8 @@ module Types
     field :sport, Types::SportType, null: false
     field :stadium, Types::StadiumType, null: false
     field :visitor, Types::TeamType, null: false
+    field :display_time, String, null: false
+    field :display_home_spread, String, null: false
+    field :display_visitor_spread, String, null: false
   end
 end

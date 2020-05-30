@@ -21,7 +21,7 @@ module Types
     field :right_field, Integer, null: true
     field :stadium_type, String, null: true
     field :state, String, null: true
-    field :surface, BaseEnum, null: true
+    field :surface, String, null: true
     field :sport, Types::SportType, null: false
   end
 end
