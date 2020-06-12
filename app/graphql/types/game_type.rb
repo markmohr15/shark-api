@@ -29,5 +29,9 @@ module Types
     field :display_time, String, null: false
     field :display_home_spread, String, null: false
     field :display_visitor_spread, String, null: false
+    field :display_home_rl, String, null: false
+    field :display_visitor_rl, String, null: false
+    field :display_home_ml, String, null: false
+    field :display_visitor_ml, String, null: false
   end
 end

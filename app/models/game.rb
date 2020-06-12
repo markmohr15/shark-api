@@ -74,6 +74,30 @@ class Game < ApplicationRecord
     return "" if spread.blank?
     return "+#{spread * -1}" if spread < 0
     return "PK" if spread == 0
-    return "-#{spread}"
+    "-#{spread}"
+  end
+
+  def display_home_rl
+    return "" if home_rl.blank?
+    return "+#{home_rl}" if home_rl > 0
+    home_rl
+  end
+
+  def display_home_ml
+    return "" if home_ml.blank?
+    return "+#{home_ml}" if home_ml > 0
+    home_ml
+  end
+
+  def display_visitor_rl
+    return "" if visitor_rl.blank?
+    return "+#{visitor_rl}" if visitor_rl > 0
+    visitor_rl
+  end
+
+  def display_visitor_ml
+    return "" if visitor_ml.blank?
+    return "+#{visitor_ml}" if visitor_ml > 0
+    visitor_ml
   end
 end

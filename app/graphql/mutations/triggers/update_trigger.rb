@@ -2,28 +2,28 @@ module Mutations
   module Triggers
     class UpdateTrigger < Mutations::BaseMutation
 
+      null true
+      description "Update a trigger"
+      payload_type Types::TriggerType
       argument :id, ID, required: true
-      argument :operator, Integer, required: false
-      argument :target, Float, required: false
-      argument :wager_type, Integer, required: false
+      argument :operator, String, required: true
+      argument :target, Float, required: true
+      argument :wager_type, String, required: true
       argument :team_id, ID, required: false
-      argument :status, Integer, required: false
 
-      field :trigger, Types::TriggerType, null: true
-      field :errors, [String], null: false
-
-      def resolve(id:, **attributes)
-        trigger = Trigger.find id
-        if trigger.update attributes
-          {
-            trigger: trigger,
-            errors: [],
-          } 
+      def resolve(id: nil, team_id: nil, operator: nil, wager_type: nil, target: nil)
+        if context[:current_user]
+          trigger = context[:current_user].triggers.find_by_id id
+          if trigger.update operator: operator,
+                            target: target,
+                            wager_type: wager_type,
+                            team_id: team_id
+            trigger
+          else
+            raise GraphQL::ExecutionError, "Invalid Trigger - #{trigger.errors.full_messages.join(", ")}"
+          end
         else
-          {
-            trigger: nil,
-            errors: trigger.errors.full_messages
-          }
+          raise GraphQL::ExecutionError, "Invalid Token"
         end
       end
 

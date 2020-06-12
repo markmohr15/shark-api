@@ -11,6 +11,11 @@ module Types
     field :trigger, Types::TriggerType, null: true do
       argument :id, ID, required: true
     end
+    field :triggers, [Types::TriggerType], null: true do
+      argument :sport_id, Integer, required: false 
+      argument :status, String, required: false 
+      argument :date, String, required: false
+    end
     field :games_by_sport_and_date, [Types::GameType], null: true do
       argument :sport_id, Integer, required: true 
       argument :date, String, required: true
@@ -32,9 +37,26 @@ module Types
       Trigger.find id
     end
 
-    def active_triggers
+    def triggers sport_id:, status:, date: 
+      if status.present? && Trigger.allowed_scopes.exclude?(status.downcase)
+        raise GraphQL::ExecutionError, "Status Error" and return
+      end
       if context[:current_user]
-        current_user.triggers.active
+        triggers = context[:current_user].triggers
+        if status.present?
+          triggers = triggers.send(status.downcase)
+        end
+        if date.present?
+          triggers = triggers.where('triggers.gametime >= ? and
+                                     triggers.gametime <= ?', 
+                                     date.to_date.beginning_of_day, 
+                                     date.to_date.end_of_day)
+        end
+        if sport_id.present?
+          triggers = triggers.joins(:game)
+                             .where('games.sport_id = ?', sport_id)
+        end
+        triggers.order(:gametime, :created_at)
       else
         raise GraphQL::ExecutionError, "Authentication Error"
       end

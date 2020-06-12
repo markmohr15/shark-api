@@ -3,6 +3,7 @@
 # Table name: triggers
 #
 #  id         :bigint           not null, primary key
+#  gametime   :datetime
 #  operator   :integer
 #  status     :integer          default("open")
 #  target     :float
@@ -10,7 +11,7 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  game_id    :bigint           not null
-#  team_id    :bigint           not null
+#  team_id    :bigint
 #  user_id    :bigint
 #
 # Indexes
@@ -28,7 +29,7 @@
 
 class Trigger < ApplicationRecord
   belongs_to :game
-  belongs_to :team
+  belongs_to :team, optional: true
   belongs_to :user
 
   enum operator: { greater_eq: 0, less_eq: 1 }
@@ -36,13 +37,17 @@ class Trigger < ApplicationRecord
   enum wager_type: { spread: 0, total: 1, moneyline: 2, runline: 3 }
 
   validates_presence_of :target, :operator, :status, :wager_type
+  validates_presence_of :team, unless: Proc.new { |t| t.wager_type == "total"}
   validate :game_open, on: :create
   validate :valid_target, on: :create
 
-  scope :active, -> {where status: 0}
-  scope :executed, -> {where status: 1}
-  scope :expd, -> {where status: 2}
-  scope :cxld, -> {where status: 3}
+  before_create do
+    self.gametime = game.gametime
+  end
+
+  def self.allowed_scopes
+    %w[open triggered expired canceled]
+  end
 
   def game_open
     errors.add(:base, "Game is not open") unless game.Scheduled?
@@ -95,6 +100,26 @@ class Trigger < ApplicationRecord
           errors.add(:base, "Target must be worse than the current runline")
         end
       end
+    end
+  end
+
+  def display_target
+    dt = target.to_s.gsub(/(\.)0+$/, '')
+    case wager_type
+    when "total"
+      dt
+    when "runline"
+      if team == game.visitor
+        return "#{game.display_visitor_spread} +#{dt}" if target > 0
+        return "#{game.display_visitor_spread} #{dt}"
+      else
+        return "#{game.display_home_spread} +#{dt}" if target > 0
+        return "#{game.display_home_spread} #{dt}"
+      end
+    else
+      return "PK" if target == 0 && wager_type == "spread"
+      return "+#{dt}" if target > 0
+      dt
     end
   end
 

@@ -5,8 +5,10 @@ module Types
     field :status, String, null: false
     field :target, Float, null: false
     field :wager_type, String, null: false
+    field :gametime, GraphQL::Types::ISO8601DateTime, null: true
     field :game, Types::GameType, null: false
-    field :team, Types::TeamType, null: false
+    field :team, Types::TeamType, null: true
     field :user, Types::UserType, null: false
+    field :display_target, String, null: false
   end
 end
