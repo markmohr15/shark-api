@@ -4,6 +4,7 @@
 #
 #  id         :bigint           not null, primary key
 #  gametime   :datetime
+#  notified   :boolean          default(FALSE)
 #  operator   :integer
 #  status     :integer          default("open")
 #  target     :float

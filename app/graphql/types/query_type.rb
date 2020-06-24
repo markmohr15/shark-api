@@ -20,6 +20,7 @@ module Types
       argument :sport_id, Integer, required: true 
       argument :date, String, required: true
     end
+    field :trigger_notifications, [Types::TriggerType], null: true
 
     def all_sports
       Sport.active
@@ -69,5 +70,14 @@ module Types
                   sport_id, date.to_date.beginning_of_day, date.to_date.end_of_day)
     end
 
+    def trigger_notifications
+      if context[:current_user]
+        triggers = context[:current_user].triggers.where(notified: false, status: "triggered")        
+        MarkTriggersNotifiedWorker.perform_async(triggers.pluck :id)
+        triggers
+      else
+        raise GraphQL::ExecutionError, "Authentication Error"
+      end
+    end
   end
 end

@@ -2,8 +2,8 @@ class UpdateTriggersWorker
   include Sidekiq::Worker
 
   def perform(game_id)
-    game = Game.find game_id
-    triggers = game.triggers
+    g = Game.find game_id
+    triggers = g.triggers
     triggers.open.spread.greater_eq.where('target <= ? and triggers.team_id = ?', g.spread, g.home_id).map {|x| x.update(status: "triggered")}
     triggers.open.spread.less_eq.where('target >= ? and triggers.team_id = ?', g.spread, g.home_id).map {|x| x.update(status: "triggered")}
     triggers.open.spread.greater_eq.where('target <= ? and triggers.team_id = ?', g.spread * -1, g.visitor_id).map {|x| x.update(status: "triggered")}
