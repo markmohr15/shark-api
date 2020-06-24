@@ -53,6 +53,10 @@ class Game < ApplicationRecord
   
   enum status: { Scheduled: 0, InProgress: 1, Final: 2, Postponed: 3, Canceled: 4, "F/OT" => 5, "F/SO" => 6, Cancelled: 7 }
 
+  scope :active_lines, -> {where.not(home_ml: nil, home_rl: nil, visitor_ml: nil, visitor_rl: nil, total: nil, spread: nil) }
+  
+  after_update :update_triggers
+
   after_initialize do
     if new_record?
       self.sport ||= season&.sport
@@ -100,4 +104,13 @@ class Game < ApplicationRecord
     return "+#{visitor_ml}" if visitor_ml > 0
     visitor_ml
   end
+
+  def update_triggers
+    return if triggers.empty?
+    UpdateTriggersWorker.perform_async(self.id)
+  end
+    
+
 end
+
+

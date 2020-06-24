@@ -1,0 +1,4 @@
+fetch_lines:
+  cron: "*/3 * * * *"
+  class: "FetchLinesWorker"
+  queue: default

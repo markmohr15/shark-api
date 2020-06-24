@@ -37,4 +37,5 @@ class Sport < ApplicationRecord
   def check_games
     return false if games.any?
   end
+
 end
