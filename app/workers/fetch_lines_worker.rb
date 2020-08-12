@@ -3,5 +3,6 @@ class FetchLinesWorker
 
   def perform
     BetOnlineLines::Kbo.get_lines
+    BetOnlineLines::Npb.get_lines
   end
 end

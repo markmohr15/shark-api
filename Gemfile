@@ -7,8 +7,6 @@ ruby '2.7.0'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
-# Use Puma as the app server
-
 gem 'devise'                      # Use devise as authentication module
 gem 'devise-jwt', '~> 0.5.8'      # Use JWT token authentication with devise
 gem 'bcrypt', '~> 3.1.7'          # Use ActiveModel has_secure_password
@@ -16,12 +14,8 @@ gem 'dry-configurable', '0.9.0'   # lock this in.  upgrade breaks authentication
 gem 'graphql'
 gem 'graphql-errors'
 gem 'rack-cors'
-gem 'puma', '~> 4.1'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-# gem 'jbuilder', '~> 2.7'
-# Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
 
+gem 'puma', '~> 4.3'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'redis'
