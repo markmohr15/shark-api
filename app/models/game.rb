@@ -55,12 +55,29 @@ class Game < ApplicationRecord
 
   scope :active_lines, -> {where.not(home_ml: nil, home_rl: nil, visitor_ml: nil, visitor_rl: nil, total: nil, spread: nil) }
   
-  after_update :update_triggers
-
   after_initialize do
     if new_record?
       self.sport ||= season&.sport
     end
+  end
+
+  after_update :update_triggers
+
+  after_save :set_in_progress
+
+  def update_triggers
+    return if triggers.empty?
+    UpdateTriggersWorker.perform_async(self.id)
+  end
+
+  def set_in_progress
+    return unless previous_changes.keys.include? "gametime"
+    r = Sidekiq::ScheduledSet.new
+    r.select do |scheduled|
+      scheduled.klass == 'SetInProgressWorker' &&
+      scheduled.args[0] == self.id
+    end.map(&:delete)
+    SetInProgressWorker.perform_at(self.gametime, self.id)
   end
 
   def display_time
@@ -105,10 +122,7 @@ class Game < ApplicationRecord
     visitor_ml
   end
 
-  def update_triggers
-    return if triggers.empty?
-    UpdateTriggersWorker.perform_async(self.id)
-  end
+  
     
 
 end

@@ -1,10 +1,10 @@
-class BetOnlineLines::Kbo < BetOnlineLines::Base
+class BetOnlineLines::Npb < BetOnlineLines::Base
   
   def self.get_lines
-    sport = Sport.find_by_abbreviation 'KBO'
+    sport = Sport.find_by_abbreviation 'NPB'
     agent = Mechanize.new
-    base_dates = agent.get("https://www.betonline.ag/sportsbook/baseball/south-korea").search(".date")
-    base_games = agent.get("https://www.betonline.ag/sportsbook/baseball/south-korea").search(".event")
+    base_dates = agent.get("https://www.betonline.ag/sportsbook/baseball/japan").search(".date")
+    base_games = agent.get("https://www.betonline.ag/sportsbook/baseball/japan").search(".event")
     dates = base_dates.map do |node|
       node.children.map{|n| [n.text.strip] if n.elem? }.compact
     end
@@ -21,14 +21,15 @@ class BetOnlineLines::Kbo < BetOnlineLines::Base
       top = g[0][0].gsub("\n", "").split(" ")
       bottom = g[1][0].gsub("\n", "").split(" ")
       time = top[0]
-      visitor = sport.teams.find_by_nickname top[2]
-      home = sport.teams.find_by_nickname bottom[1]
+      visitor = sport.teams.where('(nickname || name) ilike ?', "%#{top[2]}%").first
+      home = sport.teams.where('(nickname || name) ilike ?', "%#{bottom[1]}%").first
       game = Game.where('sport_id = ? and gametime = ? and visitor_id = ? and home_id = ?', 
                          sport.id, "#{date} #{time}:00 EDT -04:00".to_datetime, 
                          visitor.id, home.id).first
       next if game.nil?
-      vis_lines = top.reject {|x| x == "Suwon"}[3..-1]
-      home_lines = bottom.reject {|x| x == "Suwon"}[2..-1]
+      vis_lines = top.reject {|x| x == "Hawks" || x == "Marines" || x == "Fighters" || x == "Eagles"}[3..-1] 
+      home_lines = bottom.reject {|x| x == "Hawks" || x == "Marines" || x == "Fighters" || x == "Eagles"}[2..-1]
+
       if vis_lines[0].include?("½")
         runlines = vis_lines[0].split("½")
         spread = runlines[0].to_f 

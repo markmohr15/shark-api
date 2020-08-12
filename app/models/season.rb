@@ -30,6 +30,8 @@ class Season < ApplicationRecord
 
   validates_presence_of :name, :start_date, :end_date
 
+  scope :active, -> { where active: true }
+
   def check_games
     return false if games.any?
   end

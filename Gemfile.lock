@@ -204,6 +204,7 @@ GEM
     sidekiq-cron (1.2.0)
       fugit (~> 1.1)
       sidekiq (>= 4.2.1)
+    smarter_csv (1.2.6)
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -259,6 +260,7 @@ DEPENDENCIES
   redis
   sidekiq
   sidekiq-cron
+  smarter_csv
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
