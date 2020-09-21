@@ -1,10 +1,10 @@
-class BetOnlineLines::Kbo < BetOnlineLines::Base
+class BetOnlineLines::Nhl < BetOnlineLines::Base
   
   def self.get_lines
-    sport = Sport.find_by_abbreviation 'KBO'
+    sport = Sport.find_by_abbreviation 'NHL'
     agent = Mechanize.new
-    base_dates = agent.get("https://www.betonline.ag/sportsbook/baseball/south-korea").search(".date")
-    base_games = agent.get("https://www.betonline.ag/sportsbook/baseball/south-korea").search(".event")
+    base_dates = agent.get("https://www.betonline.ag/sportsbook/hockey/nhl").search(".date")
+    base_games = agent.get("https://www.betonline.ag/sportsbook/hockey/nhl").search(".event")
     dates = base_dates.map do |node|
       node.children.map{|n| [n.text.strip] if n.elem? }.compact
     end
@@ -22,43 +22,27 @@ class BetOnlineLines::Kbo < BetOnlineLines::Base
       bottom = g[1][0].gsub("\n", "").split(" ")
       time = top[0]
       time_adjust = top[1][0..1] == "PM" ? 12 : 0
-      if top[0][0..1] == "12" && top[1][0..1] == "AM"
-        time_adjust = -12
+      vis_rot = top[1][2..4]
+      if top.include?('Wings') || top.include?("Leafs") || top.include?("Jackets") || top.include?("Knights")
+        visitor = sport.teams.where('nickname = ?', top[2] + " " + top[3]).first
+      else
+        visitor = sport.teams.where('(nickname || name) ilike ?', "%#{top[2]}%").first
       end
-      home_rot = bottom[0].delete("^0-9")
-      home_name = [bottom[0][home_rot.size..-1]]
-      vis_lines = []
-      home_lines = []
-      top[2..-1].each do |x|
-        next if x.length < 3
-        if x[0] == "-" || x[0] == "+" || x[0..1] == "pk" || x[0..1] == "Ov" || x[0..1] == "Un"
-          vis_lines << x
-        end
+      if bottom.include?('Wings') || bottom.include?("Leafs") || bottom.include?("Jackets") || bottom.include?("Knights")
+        home = sport.teams.where('nickname = ?', bottom[1] + " " + bottom[2]).first
+      else
+          home = sport.teams.where('(nickname || name) ilike ?', "%#{bottom[1]}%").first
       end
-
-      bottom[1..-1].each do |x|
-        next if x.length < 3 || x == "Game"
-        if x[0] == "-" || x[0] == "+" || x[0..1] == "pk" || x[0..1] == "Ov" || x[0..1] == "Un"
-          home_lines << x
-        else
-          home_name << x
-        end
-      end
-      next if vis_lines.empty? || home_lines.empty?
-      home = sport.teams.find_by_nickname home_name.last
-      home = sport.teams.find_by_nickname home_name[-2..-1].join(" ") if home.nil?
-      game = Game.where('sport_id = ? and gametime >= ? and gametime <= ? and home_id = ?', 
-                         sport.id, "#{date} #{time}:00 EDT -04:00".to_datetime - 70.minutes + time_adjust.hours,
-                         "#{date} #{time}:00 EDT -04:00".to_datetime + 70.minutes + time_adjust.hours,
-                        home&.id).first
+      game = Game.where('sport_id = ? and gametime = ? and visitor_id = ? and home_id = ?', 
+                         sport.id, "#{date} #{time}:00 EDT -04:00".to_datetime + time_adjust.hours, 
+                         visitor.id, home.id).first
             
       if game.nil? && dates.size < 2
         next
       elsif game.nil?
-        game = Game.where('sport_id = ? and gametime >= ? and gametime <= ? and home_id = ?', 
-                         sport.id, "#{date2} #{time}:00 EDT -04:00".to_datetime - 70.minutes + time_adjust.hours,
-                         "#{date2} #{time}:00 EDT -04:00".to_datetime + 70.minutes + time_adjust.hours,
-                         home&.id).first
+        game = Game.where('sport_id = ? and gametime = ? and visitor_id = ? and home_id = ?', 
+                         sport.id, "#{date2} #{time}:00 EDT -04:00".to_datetime + time_adjust.hours, 
+                         visitor.id, home.id).first
       end
       next if game.nil?
 
@@ -69,13 +53,17 @@ class BetOnlineLines::Kbo < BetOnlineLines::Base
       home_ml = game.home_ml
       total = game.total
 
+      vis_lines = top.select {|x| x.length > 2 && (x.include?("Ov") || x.include?("Un") || x.include?("+") || x.include?("-") || x.include?("½"))}
+      home_lines = bottom.select {|x| x.length > 2 && (x.include?("Ov") || x.include?("Un") || x.include?("+") || x.include?("-") || x.include?("½"))}
+
+      next if vis_lines.empty? || home_lines.empty?
       if vis_lines[0].include?("½")
         runlines = vis_lines[0].split("½")
         spread = runlines[0].to_f 
         half = spread > 0 ? 0.5 : -0.5
         spread = (spread + half) * -1
         vis_rl = runlines[1].gsub("o", "").to_i
-      elsif vis_lines[0].exclude?("Ov")
+      elsif vis_lines[0].exclude?("Ov") && vis_lines[0].exclude?("Un")
         spread = nil
         vis_rl = nil
         vis_ml = vis_lines[0].gsub("o", "").to_i
@@ -96,7 +84,7 @@ class BetOnlineLines::Kbo < BetOnlineLines::Base
       if home_lines[0].include?("½")
         runlines = home_lines[0].split("½")
         home_rl = runlines[1].gsub("o", "").to_i
-      elsif home_lines[0].exclude?("Un")
+      elsif home_lines[0].exclude?("Ov") && home_lines[0].exclude?("Un")
         home_rl = nil
         home_ml = home_lines[0].gsub("o", "").to_i
       end
@@ -105,7 +93,7 @@ class BetOnlineLines::Kbo < BetOnlineLines::Base
       end
       game.update spread: spread, home_ml: home_ml, home_rl: home_rl, 
                   visitor_ml: vis_ml, visitor_rl: vis_rl, total: total,
-                  visitor_rot: home_rot.to_i - 1, home_rot: home_rot
+                  visitor_rot: vis_rot, home_rot: vis_rot.to_i + 1
     end
   rescue StandardError => exception
     raise_api_error exception.message

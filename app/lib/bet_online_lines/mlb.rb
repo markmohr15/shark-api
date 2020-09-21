@@ -1,10 +1,10 @@
-class BetOnlineLines::Kbo < BetOnlineLines::Base
+class BetOnlineLines::Mlb < BetOnlineLines::Base
   
   def self.get_lines
-    sport = Sport.find_by_abbreviation 'KBO'
+    sport = Sport.find_by_abbreviation 'MLB'
     agent = Mechanize.new
-    base_dates = agent.get("https://www.betonline.ag/sportsbook/baseball/south-korea").search(".date")
-    base_games = agent.get("https://www.betonline.ag/sportsbook/baseball/south-korea").search(".event")
+    base_dates = agent.get("https://www.betonline.ag/sportsbook/baseball/mlb").search(".date")
+    base_games = agent.get("https://www.betonline.ag/sportsbook/baseball/mlb").search(".event")
     dates = base_dates.map do |node|
       node.children.map{|n| [n.text.strip] if n.elem? }.compact
     end
@@ -22,9 +22,6 @@ class BetOnlineLines::Kbo < BetOnlineLines::Base
       bottom = g[1][0].gsub("\n", "").split(" ")
       time = top[0]
       time_adjust = top[1][0..1] == "PM" ? 12 : 0
-      if top[0][0..1] == "12" && top[1][0..1] == "AM"
-        time_adjust = -12
-      end
       home_rot = bottom[0].delete("^0-9")
       home_name = [bottom[0][home_rot.size..-1]]
       vis_lines = []

@@ -41,6 +41,8 @@ class Trigger < ApplicationRecord
   validates_presence_of :team, unless: Proc.new { |t| t.wager_type == "total"}
   validate :game_open, on: :create
   validate :valid_target, on: :create
+  validate :valid_target, on: :update, if: Proc.new { |t| t.operator_changed? || t.target_changed? || 
+                                                          t.wager_type_changed? || t.team_id_changed? }
 
   before_create do
     self.gametime = game.gametime

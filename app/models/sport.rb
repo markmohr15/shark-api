@@ -25,6 +25,8 @@ class Sport < ApplicationRecord
   scope :cbb, -> {find_by_abbreviation "CBB"}
   scope :nfl, -> {find_by_abbreviation "NFL"}
   scope :nhl, -> {find_by_abbreviation "NHL"}
+  scope :kbo, -> {find_by_abbreviation "KBO"}
+  scope :npb, -> {find_by_abbreviation "NPB"}
 
   before_destroy :check_games
 

@@ -64,10 +64,12 @@ module Types
     end
 
     def games_by_sport_and_date sport_id:, date:
-      Game.where('sport_id = ? and
+      Game.Scheduled
+          .where('sport_id = ? and
                   games.gametime >= ? and
                   games.gametime <= ?', 
                   sport_id, date.to_date.beginning_of_day, date.to_date.end_of_day)
+          .order(:visitor_rot, :gametime)
     end
 
     def trigger_notifications

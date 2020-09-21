@@ -1,10 +1,10 @@
-class BetOnlineLines::Kbo < BetOnlineLines::Base
+class BetOnlineLines::Nba < BetOnlineLines::Base
   
   def self.get_lines
-    sport = Sport.find_by_abbreviation 'KBO'
+    sport = Sport.find_by_abbreviation 'NBA'
     agent = Mechanize.new
-    base_dates = agent.get("https://www.betonline.ag/sportsbook/baseball/south-korea").search(".date")
-    base_games = agent.get("https://www.betonline.ag/sportsbook/baseball/south-korea").search(".event")
+    base_dates = agent.get("https://www.betonline.ag/sportsbook/basketball/nba").search(".date")
+    base_games = agent.get("https://www.betonline.ag/sportsbook/basketball/nba").search(".event")
     dates = base_dates.map do |node|
       node.children.map{|n| [n.text.strip] if n.elem? }.compact
     end
@@ -22,9 +22,6 @@ class BetOnlineLines::Kbo < BetOnlineLines::Base
       bottom = g[1][0].gsub("\n", "").split(" ")
       time = top[0]
       time_adjust = top[1][0..1] == "PM" ? 12 : 0
-      if top[0][0..1] == "12" && top[1][0..1] == "AM"
-        time_adjust = -12
-      end
       home_rot = bottom[0].delete("^0-9")
       home_name = [bottom[0][home_rot.size..-1]]
       vis_lines = []
@@ -51,7 +48,7 @@ class BetOnlineLines::Kbo < BetOnlineLines::Base
                          sport.id, "#{date} #{time}:00 EDT -04:00".to_datetime - 70.minutes + time_adjust.hours,
                          "#{date} #{time}:00 EDT -04:00".to_datetime + 70.minutes + time_adjust.hours,
                         home&.id).first
-            
+      
       if game.nil? && dates.size < 2
         next
       elsif game.nil?
@@ -69,39 +66,47 @@ class BetOnlineLines::Kbo < BetOnlineLines::Base
       home_ml = game.home_ml
       total = game.total
 
-      if vis_lines[0].include?("½")
-        runlines = vis_lines[0].split("½")
-        spread = runlines[0].to_f 
-        half = spread > 0 ? 0.5 : -0.5
-        spread = (spread + half) * -1
-        vis_rl = runlines[1].gsub("o", "").to_i
-      elsif vis_lines[0].exclude?("Ov")
-        spread = nil
-        vis_rl = nil
-        vis_ml = vis_lines[0].gsub("o", "").to_i
-      else
-        total = vis_lines[0].gsub("Ov", "").split(/[-,+]/)[0]
-      end
-      if vis_lines[1].present?
-        if vis_lines[1].exclude?("Ov") && vis_lines[1].exclude?("Un")
-          vis_ml = vis_lines[1].gsub("o", "").to_i
-          total = vis_lines[2].gsub("Ov", "").split(/[-,+]/)[0] if vis_lines[2].present?
+      vis_lines[0..2].each do |vl|
+        if vl.include? "Ov"
+          total = vl.gsub("Ov", "").split(/[-,+]/)[0]
+          half = total.include?("½") ? 0.5 : 0
+          total = total.to_f + half
+        elsif vl.include? "pk"
+          spread = 0
+          vis_rl = vl.gsub("pk", "").gsub("o", "").to_i
+          vis_ml = vis_rl
+        elsif vl.scan(/[+ -]/).length == 1
+          vis_ml = vl.gsub("o", "").to_i
         else
-          total = vis_lines[1].gsub("Ov", "").split(/[-,+]/)[0]
+          if vl.include? "½"
+            runlines = vl.split("½")
+            spread = runlines[0].to_f 
+            half = spread > 0 ? 0.5 : -0.5
+            spread = (spread + half) * -1
+            vis_rl = runlines[1].gsub("o", "").to_i
+          else
+            split_index = vl[1..-1].index(/[+ -]/)
+            spread = vl[0..split_index].to_f * -1
+            vis_rl = vl[split_index + 1..-2].to_i
+          end
         end
-
-        half = total.include?("½") ? 0.5 : 0
-        total = total.to_f + half      
       end
-      if home_lines[0].include?("½")
-        runlines = home_lines[0].split("½")
-        home_rl = runlines[1].gsub("o", "").to_i
-      elsif home_lines[0].exclude?("Un")
-        home_rl = nil
-        home_ml = home_lines[0].gsub("o", "").to_i
-      end
-      if home_lines[1].present? && home_lines[1].exclude?("Ov") && home_lines[1].exclude?("Un")
-        home_ml = home_lines[1].gsub("o", "").to_i
+      home_lines[0..2].each do |hl|
+        if hl.include? "Un"
+        elsif hl.include? "pk"
+          home_rl = hl.gsub("pk", "").gsub("o", "").to_i
+          home_ml = home_rl
+        elsif hl.scan(/[+ -]/).length == 1
+          home_ml = hl.gsub("o", "").to_i
+        else
+          if hl.include? "½"
+            runlines = hl.split("½")
+            home_rl = runlines[1].gsub("o", "").to_i
+          else
+            split_index = hl[1..-1].index(/[+ -]/)
+            home_rl = hl[split_index + 1..-2].to_i
+          end
+        end
       end
       game.update spread: spread, home_ml: home_ml, home_rl: home_rl, 
                   visitor_ml: vis_ml, visitor_rl: vis_rl, total: total,
