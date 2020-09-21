@@ -14,7 +14,6 @@ gem 'dry-configurable', '0.9.0'   # lock this in.  upgrade breaks authentication
 gem 'graphql'
 gem 'graphql-errors'
 gem 'rack-cors'
-
 gem 'puma', '~> 4.3'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
