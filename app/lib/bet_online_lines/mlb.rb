@@ -14,8 +14,10 @@ class BetOnlineLines::Mlb < BetOnlineLines::Base
     date = dates[0][0][0].split(" -")[0].to_date
     if dates.size > 1
       date2 = dates[1][0][0].split(" -")[0].to_date
+      t = agent.get("https://www.betonline.ag/sportsbook/baseball/mlb").search('#contestDetailTable').to_html.encode("UTF-8", invalid: :replace).split('date')
+      date1_games_count = t[1].scan(/event/).length
     end
-
+    counter = 0
     games.each do |g|
       next if g[0][0].blank?
       top = g[0][0].gsub("\n", "").split(" ")
@@ -44,14 +46,13 @@ class BetOnlineLines::Mlb < BetOnlineLines::Base
       next if vis_lines.empty? || home_lines.empty?
       home = sport.teams.find_by_nickname home_name.last
       home = sport.teams.find_by_nickname home_name[-2..-1].join(" ") if home.nil?
-      game = Game.where('sport_id = ? and gametime >= ? and gametime <= ? and home_id = ?', 
-                         sport.id, "#{date} #{time}:00 EDT -04:00".to_datetime - 70.minutes + time_adjust.hours,
-                         "#{date} #{time}:00 EDT -04:00".to_datetime + 70.minutes + time_adjust.hours,
-                        home&.id).first
+      if dates.size == 1 || counter < date1_games_count
+        game = Game.where('sport_id = ? and gametime >= ? and gametime <= ? and home_id = ?', 
+                          sport.id, "#{date} #{time}:00 EDT -04:00".to_datetime - 70.minutes + time_adjust.hours,
+                          "#{date} #{time}:00 EDT -04:00".to_datetime + 70.minutes + time_adjust.hours,
+                          home&.id).first
             
-      if game.nil? && dates.size < 2
-        next
-      elsif game.nil?
+      elsif dates.size > 1
         game = Game.where('sport_id = ? and gametime >= ? and gametime <= ? and home_id = ?', 
                          sport.id, "#{date2} #{time}:00 EDT -04:00".to_datetime - 70.minutes + time_adjust.hours,
                          "#{date2} #{time}:00 EDT -04:00".to_datetime + 70.minutes + time_adjust.hours,
@@ -103,6 +104,7 @@ class BetOnlineLines::Mlb < BetOnlineLines::Base
       game.update spread: spread, home_ml: home_ml, home_rl: home_rl, 
                   visitor_ml: vis_ml, visitor_rl: vis_rl, total: total,
                   visitor_rot: home_rot.to_i - 1, home_rot: home_rot
+      counter += 1
     end
   rescue StandardError => exception
     raise_api_error exception.message
