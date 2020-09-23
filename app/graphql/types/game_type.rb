@@ -27,6 +27,7 @@ module Types
     field :stadium, Types::StadiumType, null: false
     field :visitor, Types::TeamType, null: false
     field :display_time, String, null: false
+    field :display_date, String, null: false
     field :display_home_spread, String, null: false
     field :display_visitor_spread, String, null: false
     field :display_home_rl, String, null: false
