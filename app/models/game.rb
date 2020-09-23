@@ -86,6 +86,7 @@ class Game < ApplicationRecord
 
   def display_date
     gametime.strftime('%m/%d')
+  end
 
   def display_home_spread
     return "" if spread.blank?
