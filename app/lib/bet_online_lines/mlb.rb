@@ -15,7 +15,7 @@ class BetOnlineLines::Mlb < BetOnlineLines::Base
     if dates.size > 1
       date2 = dates[1][0][0].split(" -")[0].to_date
       t = agent.get("https://www.betonline.ag/sportsbook/baseball/mlb").search('#contestDetailTable').to_html.encode("UTF-8", invalid: :replace).split('date')
-      date1_games_count = t[1].scan(/event/).length
+      date1_games_count = t[1].scan(/event/).length - t[1].scan(/eventinfo/).length
     end
     counter = 0
     games.each do |g|
@@ -59,6 +59,7 @@ class BetOnlineLines::Mlb < BetOnlineLines::Base
                          home&.id).first
       end
       counter += 1
+      byebug
       next if game.nil?
 
       spread = game.spread
