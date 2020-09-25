@@ -73,20 +73,20 @@ class BetOnlineLines::Mlb < BetOnlineLines::Base
         spread = runlines[0].to_f 
         half = spread > 0 ? 0.5 : -0.5
         spread = (spread + half) * -1
-        vis_rl = runlines[1].gsub("o", "").to_i
+        vis_rl = runlines[1].to_s.gsub("o", "").to_i
       elsif vis_lines[0].exclude?("Ov")
         spread = nil
         vis_rl = nil
-        vis_ml = vis_lines[0].gsub("o", "").to_i
+        vis_ml = vis_lines[0].to_s.gsub("o", "").to_i
       else
-        total = vis_lines[0].gsub("Ov", "").split(/[-,+]/)[0]
+        total = vis_lines[0].to_s.gsub("Ov", "").split(/[-,+]/)[0]
       end
       if vis_lines[1].present?
         if vis_lines[1].exclude?("Ov") && vis_lines[1].exclude?("Un")
-          vis_ml = vis_lines[1].gsub("o", "").to_i
-          total = vis_lines[2].gsub("Ov", "").split(/[-,+]/)[0] if vis_lines[2].present?
+          vis_ml = vis_lines[1].to_s.gsub("o", "").to_i
+          total = vis_lines[2].to_s.gsub("Ov", "").split(/[-,+]/)[0] if vis_lines[2].present?
         else
-          total = vis_lines[1].gsub("Ov", "").split(/[-,+]/)[0]
+          total = vis_lines[1].to_s.gsub("Ov", "").split(/[-,+]/)[0]
         end
 
         half = total.include?("½") ? 0.5 : 0
@@ -94,13 +94,13 @@ class BetOnlineLines::Mlb < BetOnlineLines::Base
       end
       if home_lines[0].include?("½")
         runlines = home_lines[0].split("½")
-        home_rl = runlines[1].gsub("o", "").to_i
+        home_rl = runlines[1].to_s.gsub("o", "").to_i
       elsif home_lines[0].exclude?("Un")
         home_rl = nil
-        home_ml = home_lines[0].gsub("o", "").to_i
+        home_ml = home_lines[0].to_s.gsub("o", "").to_i
       end
       if home_lines[1].present? && home_lines[1].exclude?("Ov") && home_lines[1].exclude?("Un")
-        home_ml = home_lines[1].gsub("o", "").to_i
+        home_ml = home_lines[1].to_s.gsub("o", "").to_i
       end
       game.update spread: spread, home_ml: home_ml, home_rl: home_rl, 
                   visitor_ml: vis_ml, visitor_rl: vis_rl, total: total,
