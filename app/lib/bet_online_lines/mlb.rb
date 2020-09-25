@@ -58,6 +58,7 @@ class BetOnlineLines::Mlb < BetOnlineLines::Base
                          "#{date2} #{time}:00 EDT -04:00".to_datetime + 70.minutes + time_adjust.hours,
                          home&.id).first
       end
+      counter += 1
       next if game.nil?
 
       spread = game.spread
@@ -104,7 +105,6 @@ class BetOnlineLines::Mlb < BetOnlineLines::Base
       game.update spread: spread, home_ml: home_ml, home_rl: home_rl, 
                   visitor_ml: vis_ml, visitor_rl: vis_rl, total: total,
                   visitor_rot: home_rot.to_i - 1, home_rot: home_rot
-      counter += 1
     end
   rescue StandardError => exception
     raise_api_error exception.message
