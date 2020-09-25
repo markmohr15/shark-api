@@ -59,7 +59,6 @@ class BetOnlineLines::Mlb < BetOnlineLines::Base
                          home&.id).first
       end
       counter += 1
-      byebug
       next if game.nil?
 
       spread = game.spread
