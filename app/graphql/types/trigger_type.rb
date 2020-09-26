@@ -11,5 +11,6 @@ module Types
     field :user, Types::UserType, null: false
     field :display_target, String, null: false
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
+    field :tag, String, null: false
   end
 end

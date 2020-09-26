@@ -125,4 +125,8 @@ class Trigger < ApplicationRecord
     end
   end
 
+  def tag
+    "#{id}-#{updated_at.strftime('%F-%T')}"
+  end
+
 end
