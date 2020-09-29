@@ -4,6 +4,7 @@ class BetOnlineLines::Cfb < BetOnlineLines::Base
     sport = Sport.find_by_abbreviation 'CFB'
     agent = Mechanize.new
     base_dates = agent.get("https://www.betonline.ag/sportsbook/football/ncaa").search(".date")
+    return if base_dates.empty?
     base_games = agent.get("https://www.betonline.ag/sportsbook/football/ncaa").search(".event")
     dates = base_dates.map do |node|
       node.children.map{|n| [n.text.strip] if n.elem? }.compact

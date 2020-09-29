@@ -4,6 +4,7 @@ class BetOnlineLines::Nfl < BetOnlineLines::Base
     sport = Sport.find_by_abbreviation 'NFL'
     agent = Mechanize.new
     base_dates = agent.get("https://www.betonline.ag/sportsbook/football/nfl").search(".date")
+    return if base_dates.empty?
     base_games = agent.get("https://www.betonline.ag/sportsbook/football/nfl").search(".event")
     dates = base_dates.map do |node|
       node.children.map{|n| [n.text.strip] if n.elem? }.compact

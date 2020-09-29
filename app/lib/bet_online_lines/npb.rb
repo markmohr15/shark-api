@@ -4,6 +4,7 @@ class BetOnlineLines::Npb < BetOnlineLines::Base
     sport = Sport.find_by_abbreviation 'NPB'
     agent = Mechanize.new
     base_dates = agent.get("https://www.betonline.ag/sportsbook/baseball/japan").search(".date")
+    return if base_dates.empty?
     base_games = agent.get("https://www.betonline.ag/sportsbook/baseball/japan").search(".event")
     dates = base_dates.map do |node|
       node.children.map{|n| [n.text.strip] if n.elem? }.compact

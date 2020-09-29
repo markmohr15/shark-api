@@ -4,13 +4,37 @@ class FetchLinesWorker
   def perform
     begin
       BetOnlineLines::Cfb.get_lines
-      BetOnlineLines::Kbo.get_lines
+    rescue => err
+      Sidekiq.logger.info err
+    end
+    begin
       BetOnlineLines::Mlb.get_lines
-      BetOnlineLines::Nba.get_lines
+    rescue => err
+      Sidekiq.logger.info err
+    end
+    begin
       BetOnlineLines::Nfl.get_lines
-      BetOnlineLines::Nhl.get_lines
+    rescue => err
+      Sidekiq.logger.info err
+    end
+    begin
+      BetOnlineLines::Kbo.get_lines
+    rescue => err
+      Sidekiq.logger.info err
+    end
+    begin
       BetOnlineLines::Npb.get_lines
-    rescue => err 
+    rescue => err
+      Sidekiq.logger.info err
+    end
+    begin
+      BetOnlineLines::Nba.get_lines
+    rescue => err
+      Sidekiq.logger.info err
+    end
+    begin
+      BetOnlineLines::Nhl.get_lines
+    rescue => err
       Sidekiq.logger.info err
     end
   end
