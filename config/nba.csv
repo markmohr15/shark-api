@@ -1,60 +1,9 @@
-gametime,visitor,home
-2020-08-08 13:00:00 EDT,Clippers,Trail Blazers
-2020-08-08 15:30:00 EDT,Jazz,Nuggets
-2020-08-08 18:00:00 EDT,Lakers,Pacers
-2020-08-08 19:30:00 EDT,Suns,Heat
-2020-08-08 20:30:00 EDT,Bucks,Mavericks
-2020-08-09 12:30:00 EDT,Wizards,Thunder
-2020-08-09 14:00:00 EDT,Grizzlies,Raptors
-2020-08-09 15:00:00 EDT,Spurs,Pelicans
-2020-08-09 17:00:00 EDT,Magic,Celtics
-2020-08-09 18:30:00 EDT,76ers,Trail Blazers
-2020-08-09 20:00:00 EDT,Rockets,Kings
-2020-08-09 21:30:00 EDT,Nets,Clippers
-2020-08-10 14:30:00 EDT,Thunder,Suns
-2020-08-10 15:00:00 EDT,Mavericks,Jazz
-2020-08-10 18:30:00 EDT,Raptors,Bucks
-2020-08-10 20:00:00 EDT,Pacers,Heat
-2020-08-10 21:00:00 EDT,Nuggets,Lakers
-2020-08-11 13:00:00 EDT,Nets,Magic
-2020-08-11 14:00:00 EDT,Rockets,Spurs
-2020-08-11 16:30:00 EDT,Suns,76ers
-2020-08-11 17:00:00 EDT,Celtics,Grizzlies
-2020-08-11 18:30:00 EDT,Trail Blazers,Mavericks
-2020-08-11 21:00:00 EDT,Pelicans,Kings
-2020-08-11 21:00:00 EDT,Bucks,Wizards
-2020-08-12 16:00:00 EDT,Pacers,Rockets
-2020-08-12 18:30:00 EDT,Raptors,76ers
-2020-08-12 20:00:00 EDT,Heat,Thunder
-2020-08-12 21:00:00 EDT,Clippers,Nuggets
-2020-08-13 12:00:00 EDT,Wizards,Celtics
-2020-08-13 12:00:00 EDT,Trail Blazers,Nets
-2020-08-13 12:00:00 EDT,Kings,Lakers
-2020-08-13 12:00:00 EDT,Bucks,Grizzlies
-2020-08-13 12:00:00 EDT,Pelicans,Magic
-2020-08-13 12:00:00 EDT,Mavericks,Suns
-2020-08-13 12:00:00 EDT,Spurs,Jazz
-2020-08-14 12:00:00 EDT,76ers,Rockets
-2020-08-14 12:00:00 EDT,Heat,Pacers
-2020-08-14 12:00:00 EDT,Thunder,Clippers
-2020-08-14 12:00:00 EDT,Nuggets,Raptors
-2020-08-26 16:00:00 EDT,Magic,Bucks
-2020-08-26 18:30:00 EDT,Thunder,Rockets
-2020-08-26 21:00:00 EDT,Trail Blazers,Lakers
-2020-08-27 16:00:00 EDT,Nuggets,Jazz
-2020-08-27 18:35:00 EDT,Celtics,Raptors
-2020-08-31 18:30:00 EDT,Heat,Bucks
-2020-08-31 21:00:00 EDT,Rockets,Thunder
-2020-09-01 17:30:00 EDT,Celtics,Raptors
-2020-09-01 20:30:00 EDT,Jazz,Nuggets
-2020-09-02 18:30:00 EDT,Heat,Bucks
-2020-09-02 21:00:00 EDT,Thunder,Rockets
-2020-09-03 18:30:00 EDT,Raptors,Celtics
-2020-09-05 18:30:00 EDT,Raptors,Celtics
-2020-09-05 21:00:00 EDT,Nuggets,Clippers
-2020-09-06 15:30:00 EDT,Bucks,Heat
-2020-09-06 20:30:00 EDT,Rockets,Lakers
-2020-09-07 18:30:00 EDT,Celtics,Raptors
-2020-09-07 21:00:00 EDT,Clippers,Nuggets
+gametime,visitor,home,channel
 2020-09-30 21:00:00 EDT,Heat,Lakers,ABC
+2020-10-02 21:00:00 EDT,Heat,Lakers,ABC
+2020-10-04 19:30:00 EDT,Lakers,Heat,ABC
+2020-10-06 21:00:00 EDT,Lakers,Heat,ABC
+2020-10-09 21:00:00 EDT,Heat,Lakers,ABC
+2020-10-11 19:30:00 EDT,Lakers,Heat,ABC
+2020-10-13 21:00:00 EDT,Heat,Lakers,ABC
 
