@@ -13,7 +13,6 @@ class BetOnlineLines::Cfb < BetOnlineLines::Base
     end
     date = dates[0][0][0].split(" -")[0].to_date
     date2 = dates[dates.size - 1][0][0].split(" -")[0].to_date
-
     games.each do |g|
       next if g[0][0].blank?
       top = g[0][0].gsub("\n", "").split(" ")
@@ -39,7 +38,7 @@ class BetOnlineLines::Cfb < BetOnlineLines::Base
       end
       next if vis_lines.empty? || home_lines.empty?
       
-      home = sport.teams.where('name ilike ?', "%#{home_name}%").first
+      home = sport.teams.find_by_name home_name
       game = Game.where('sport_id = ? and gametime > ? and gametime < ? and home_id = ?', 
                          sport.id, date.to_datetime, date2.to_datetime.end_of_day, 
                          home&.id).first
