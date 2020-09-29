@@ -42,7 +42,9 @@ class BetOnlineLines::Nfl < BetOnlineLines::Base
       end
       next if vis_lines.empty? || home_lines.empty?
       visitor = sport.teams.find_by_nickname vis_name.last
+      visitor = sport.teams.find_by_nickname vis_name.last[-2..-1].join(" ") if visitor.nil?
       home = sport.teams.find_by_nickname home_name.last
+      home = sport.teams.find_by_nickname home_name[-2..-1].join(" ") if home.nil?
       game = Game.where('sport_id = ? and gametime > ? and gametime < ? and visitor_id = ? and home_id = ?', 
                          sport.id, date.to_datetime, date2.to_datetime.end_of_day, 
                          visitor&.id, home&.id).first

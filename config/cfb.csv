@@ -1,58 +1,37 @@
-gametime,visitor,home,channel
-2020-09-03 20:00:00 EDT,Central Arkansas,UAB,ESPN3
-2020-09-03 21:00:00 EDT,South Alabama,Southern Miss,CBSSN
-2020-09-03 21:00:00 EDT,Eastern Kentucky,Marshall,ESPN
-2020-09-05 13:30:00 EDT,Middle Tennessee State,Army,CBSSN
-2020-09-05 16:30:00 EDT,SMU,Texas State,ESPN
-2020-09-05 19:30:00 EDT,Houston Baptist,North Texas,ESPN3
-2020-09-05 20:00:00 EDT,Arkansas State,Memphis,ESPN
-2020-09-05 21:00:00 EDT,Stephen F. Austin,UTEP,ESPN3
-2020-09-07 21:00:00 EDT,BYU,Navy,ESPN
-2020-09-10 20:00:00 EDT,UAB,Miami,ACC
-2020-09-11 21:00:00 EDT,SMU,TCU,FS1
-2020-09-12 12:00:00 EDT,Charlotte,Appalachian State,ESPN2
-2020-09-12 12:00:00 EDT,Eastern Kentucky,West Virginia,FS1
-2020-09-12 12:00:00 EDT,Louisiana,Iowa State,ESPN
-2020-09-12 12:00:00 EDT,Louisiana Tech,Baylor,FOX
-2020-09-12 12:00:00 EDT,Syracuse,North Carolina,ACC
-2020-09-12 13:30:00 EDT,Army,UL Monroe,CBSSN
-2020-09-12 14:30:00 EDT,Duke,Notre Dame,NBC
-2020-09-12 15:30:00 EDT,Arkansas State,Kansas State,FS1
-2020-09-12 15:30:00 EDT,Campbell,Georgia Southern,ESPNU
-2020-09-12 15:30:00 EDT,Georgia Tech,Florida State,ABC
-2020-09-12 15:30:00 EDT,UTSA,Texas State,ESPN2
-2020-09-12 16:00:00 EDT,Austin Peay,Pittsburgh,ACC
-2020-09-12 19:00:00 EDT,Missouri State,Oklahoma,PPV
-2020-09-12 19:30:00 EDT,Clemson,Wake Forest,ABC
-2020-09-12 19:30:00 EDT,Tulane,South Alabama,ESPN2
-2020-09-12 19:30:00 EDT,Tulsa,Oklahoma State,ESPN
-2020-09-12 20:00:00 EDT,UTEP,Texas,LHN
-2020-09-12 20:00:00 EDT,Western Kentucky,Louisville,ACC
-2020-09-12 22:00:00 EDT,Coastal Carolina,Kansas,FS1
-2020-09-12 13:00:00 EDT,The Citadel,South Florida,ESPN+
-2020-09-12 20:00:00 EDT,Houston Baptist,Texas Tech,ESPN+
-2020-09-18 19:30:00 EDT,Houston,Memphis,ESPN
-2020-09-19 12:00:00 EDT,Austin Peay,Cincinnati,ESPN
-2020-09-19 12:00:00 EDT,Boston College,Duke,ACC RSN
-2020-09-19 12:00:00 EDT,Liberty,Western Kentucky,ESPNU
-2020-09-19 12:00:00 EDT,Louisiana,Georgia State,ESPN2
-2020-09-19 12:00:00 EDT,Navy,Tulane,ABC
-2020-09-19 12:00:00 EDT,Syracuse,Pittsburgh,ACC
-2020-09-19 13:30:00 EDT,Appalachian State,Marshall,CBSSN
-2020-09-19 14:30:00 EDT,South Florida,Notre Dame,USA
-2020-09-19 15:30:00 EDT,BYU,Army,CBS
-2020-09-19 15:30:00 EDT,Charlotte,North Carolina,ACC RSN
-2020-09-19 15:30:00 EDT,UCF,Georgia Tech,ESPN
-2020-09-19 16:00:00 EDT,The Citadel,Clemson,ACC
-2020-09-19 16:00:00 EDT,Florida Atlantic,Georgia Southern,ESPN2
-2020-09-19 16:00:00 EDT,Troy,Middle Tennessee State,ESPNU
-2020-09-19 18:00:00 EDT,SMU,North Texas,CBSSN
-2020-09-19 19:30:00 EDT,Louisiana Tech,Southern Miss,ESPN2
-2020-09-19 19:30:00 EDT,Texas State,UL Monroe,ESPNU
-2020-09-19 20:00:00 EDT,Wake Forest,NC State,ACC
-2020-09-19 21:00:00 EDT,Abilene Christian,UTEP,ESPN3
-2020-09-19 00:00:00 EDT,Campbell,Coastal Carolina,ESPN3
-2020-09-19 19:00:00 EDT,Central Arkansas,Arkansas State,ESPN+
-2020-09-19 15:30:00 EDT,Miami,Louisville,ABC
-2020-09-19 15:00:00 EDT,Stephen F. Austin,UTSA,ESPN3
-2020-09-19 15:30:00 EDT,Virginia,Virginia Tech,ABC
+visitor,home,gametime,channel
+Campbell,Wake Forest,2020-10-02 19:00:00 EDT,ACC 
+Louisiana Tech,BYU,2020-10-02 21:00:00 EDT,ESPN2
+Arkansas State,Coastal Carolina,2020-10-03 12:00:00 EDT,ESPN2
+Baylor,West Virginia,2020-10-03 12:00:00 EDT,ABC
+East Carolina,Georgia State,2020-10-03 12:00:00 EDT,ESPNU
+Missouri,Tennessee,2020-10-03 12:00:00 EDT,SEC 
+NC State,Pittsburgh,2020-10-03 12:00:00 EDT,ACC 
+South Carolina,Florida,2020-10-03 12:00:00 EDT,ESPN
+TCU,Texas,2020-10-03 12:00:00 EDT,FOX
+Abilene Christian,Army,2020-10-03 13:30:00 EDT,CBSSN
+Memphis,SMU,2020-10-03 15:30:00 EDT,ESPN2
+North Carolina,Boston College,2020-10-03 15:30:00 EDT,ABC
+Oklahoma State,Kansas,2020-10-03 15:30:00 EDT,ESPN
+Texas A&M,Alabama,2020-10-03 15:30:00 EDT,CBS
+Texas Tech,Kansas State,2020-10-03 15:30:00 EDT,FS1
+Charlotte,Florida Atlantic,2020-10-03 16:00:00 EDT,ESPNU
+Jacksonville State,Florida State,2020-10-03 16:00:00 EDT,FSN
+Ole Miss,Kentucky,2020-10-03 16:00:00 EDT,SEC 
+Virginia Tech,Duke,2020-10-03 16:00:00 EDT,ACC 
+Navy,Air Force,2020-10-03 18:00:00 EDT,CBSSN
+Arkansas,Mississippi State,2020-10-03 19:30:00 EDT,SEC Network alternate / ESPN Video
+Auburn,Georgia,2020-10-03 19:30:00 EDT,ESPN
+LSU,Vanderbilt,2020-10-03 19:30:00 EDT,SEC 
+Oklahoma,Iowa State,2020-10-03 19:30:00 EDT,ABC
+Tulsa,UCF,2020-10-03 19:30:00 EDT,ESPN2
+Troy,South Alabama,2020-10-03 20:00:00 EDT,ESPNU
+Virginia,Clemson,2020-10-03 20:00:00 EDT,ACC 
+Central Arkansas,North Dakota State,2020-10-03 15:30:00 EDT,ESPN+
+Georgia Southern,Louisiana Monroe,2020-10-03 19:00:00 EDT,ESPN+
+Houston Baptist,Eastern Kentucky,2020-10-03 15:00:00 EDT,ESPN+
+North Alabama,Liberty,2020-10-03 13:00:00 EDT,ESPN3
+South Florida,Cincinnati,2020-10-03 15:30:00 EDT,ESPN+
+Southern Miss,North Texas,2020-10-03 19:30:00 EDT,
+UTSA,UAB,2020-10-03 12:30:00 EDT,
+West Texas A&M,Stephen F. Austin,2020-10-03 16:00:00 EDT,ESPN+
+Western Kentucky,MTSU,2020-10-03 17:00:00 EDT,ESPN3

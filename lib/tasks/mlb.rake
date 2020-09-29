@@ -8,10 +8,11 @@ namespace :importer do
     season = sport.seasons.active.last
     stadium = Stadium.find_by_name 'Unknown'
     csv.each_entry do |line|
-      Game.where(sport: sport, stadium: stadium, gametime: line[:gametime],
+      game = Game.where(sport: sport, stadium: stadium, gametime: line[:gametime],
                  status: "Scheduled", season: season, 
                  visitor: sport.teams.find_by_short_display_name(line[:visitor]),
                  home: sport.teams.find_by_short_display_name(line[:home])).first_or_create
+      game.update channel: line[:channel]
     end
 
     puts "Finished MLB Import"
