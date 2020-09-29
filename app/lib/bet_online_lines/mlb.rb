@@ -23,7 +23,7 @@ class BetOnlineLines::Mlb < BetOnlineLines::Base
       top = g[0][0].gsub("\n", "").split(" ")
       bottom = g[1][0].gsub("\n", "").split(" ")
       time = top[0]
-      time_adjust = top[1][0..1] == "PM" ? 12 : 0
+      time_adjust = top[1][0..1] == "PM" && top[0][0..1] != "12" ? 12 : 0
       home_rot = bottom[0].delete("^0-9")
       home_name = [bottom[0][home_rot.size..-1]]
       vis_lines = []
@@ -58,6 +58,7 @@ class BetOnlineLines::Mlb < BetOnlineLines::Base
                          "#{date2} #{time}:00 EDT -04:00".to_datetime + 70.minutes + time_adjust.hours,
                          home&.id).first
       end
+      byebug
       counter += 1
       next if game.nil?
 
