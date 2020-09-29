@@ -42,7 +42,6 @@ class BetOnlineLines::Cfb < BetOnlineLines::Base
       game = Game.where('sport_id = ? and gametime > ? and gametime < ? and home_id = ?', 
                          sport.id, date.to_datetime, date2.to_datetime.end_of_day + 6.hours, 
                          home&.id).first
-      byebug
       next if game.nil?
 
       spread = game.spread
