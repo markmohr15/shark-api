@@ -58,7 +58,6 @@ class BetOnlineLines::Mlb < BetOnlineLines::Base
                          "#{date2} #{time}:00 EDT -04:00".to_datetime + 70.minutes + time_adjust.hours,
                          home&.id).first
       end
-      byebug
       counter += 1
       next if game.nil?
 
