@@ -51,7 +51,7 @@ class BetOnlineLines::Cfb < BetOnlineLines::Base
       home_rl = game.home_rl
       home_ml = game.home_ml
       total = game.total
-      byebug
+
       vis_lines[0..2].each do |vl|
         if vl.include? "Ov"
           total = vl.gsub("Ov", "").split(/[-,+]/)[0]

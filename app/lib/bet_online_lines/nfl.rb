@@ -59,7 +59,6 @@ class BetOnlineLines::Nfl < BetOnlineLines::Base
       total = game.total
 
       vis_lines.each do |vl|
-        byebug if home_name.last == "Chiefs"
         if vl.include? "Ov"
           total = vl.gsub("Ov", "").split(/[-,+]/)[0]
           half = total.include?("½") ? 0.5 : 0
@@ -85,7 +84,6 @@ class BetOnlineLines::Nfl < BetOnlineLines::Base
         end
       end
       home_lines.each do |hl|
-        byebug if home_name.last == "Chiefs"
         if hl.include? "Un"
         elsif hl.include? "pk"
           home_rl = hl.gsub("pk", "").gsub("o", "").to_i
