@@ -59,6 +59,7 @@ class BetOnlineLines::Nfl < BetOnlineLines::Base
       total = game.total
 
       vis_lines.each do |vl|
+        byebug if home_name.last == "Chiefs"
         if vl.include? "Ov"
           total = vl.gsub("Ov", "").split(/[-,+]/)[0]
           half = total.include?("½") ? 0.5 : 0
@@ -79,11 +80,12 @@ class BetOnlineLines::Nfl < BetOnlineLines::Base
           else
             split_index = vl[1..-1].index(/[+ -]/)
             spread = vl[0..split_index].to_f * -1
-            vis_rl = vl[split_index + 1..-2].to_i
+            vis_rl = vl[split_index + 1..-1].gsub("o", "").to_i
           end
         end
       end
       home_lines.each do |hl|
+        byebug if home_name.last == "Chiefs"
         if hl.include? "Un"
         elsif hl.include? "pk"
           home_rl = hl.gsub("pk", "").gsub("o", "").to_i
@@ -96,7 +98,7 @@ class BetOnlineLines::Nfl < BetOnlineLines::Base
             home_rl = runlines[1].gsub("o", "").to_i
           else
             split_index = hl[1..-1].index(/[+ -]/)
-            home_rl = hl[split_index + 1..-2].to_i
+            home_rl = hl[split_index + 1..-1].gsub("o", "").to_i
           end
         end
       end

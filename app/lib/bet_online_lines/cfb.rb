@@ -51,7 +51,7 @@ class BetOnlineLines::Cfb < BetOnlineLines::Base
       home_rl = game.home_rl
       home_ml = game.home_ml
       total = game.total
-
+      byebug
       vis_lines[0..2].each do |vl|
         if vl.include? "Ov"
           total = vl.gsub("Ov", "").split(/[-,+]/)[0]
@@ -73,7 +73,7 @@ class BetOnlineLines::Cfb < BetOnlineLines::Base
           else
             split_index = vl[1..-1].index(/[+ -]/)
             spread = vl[0..split_index].to_f * -1
-            vis_rl = vl[split_index + 1..-2].to_i
+            vis_rl = vl[split_index + 1..-1].gsub("o", "").to_i
           end
         end
       end
@@ -90,7 +90,7 @@ class BetOnlineLines::Cfb < BetOnlineLines::Base
             home_rl = runlines[1].gsub("o", "").to_i
           else
             split_index = hl[1..-1].index(/[+ -]/)
-            home_rl = hl[split_index + 1..-2].to_i
+            home_rl = hl[split_index + 1..-1].gsub("o", "").to_i
           end
         end
       end
