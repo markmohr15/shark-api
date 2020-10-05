@@ -26,7 +26,7 @@ class BetOnlineLines::Nfl < BetOnlineLines::Base
       home_lines = []
       top[2..-1].each do |x|
         next if x.length < 3
-        if x[0] == "-" || x[0] == "+" || x[0..1] == "pk" || x[0..1] == "Ov"
+        if x[0] == "-" || x[0] == "+" || x[0..1] == "pk" || x[0..1] == "Ov" || x[0..1] == "Un"
           vis_lines << x
         else
           vis_name << x
@@ -35,7 +35,7 @@ class BetOnlineLines::Nfl < BetOnlineLines::Base
 
       bottom[1..-1].each do |x|
         next if x.length < 3
-        if x[0] == "-" || x[0] == "+" || x[0..1] == "pk" || x[0..1] == "Un"
+        if x[0] == "-" || x[0] == "+" || x[0..1] == "pk" || x[0..1] == "Ov" || x[0..1] == "Un"
           home_lines << x
         else
           home_name << x
