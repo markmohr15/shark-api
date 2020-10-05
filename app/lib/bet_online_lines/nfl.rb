@@ -47,7 +47,7 @@ class BetOnlineLines::Nfl < BetOnlineLines::Base
       home = sport.teams.find_by_nickname home_name.last
       home = sport.teams.find_by_nickname home_name[-2..-1].join(" ") if home.nil?
       game = Game.where('sport_id = ? and gametime > ? and gametime < ? and visitor_id = ? and home_id = ?', 
-                         sport.id, date.to_datetime, date2.to_datetime.end_of_day, 
+                         sport.id, date.to_datetime, date2.to_datetime.end_of_day + 6.hours, 
                          visitor&.id, home&.id).first
       next if game.nil?
 
