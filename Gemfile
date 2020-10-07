@@ -5,7 +5,6 @@ ruby '2.7.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
-# Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'devise'                      # Use devise as authentication module
 gem 'devise-jwt', '~> 0.5.8'      # Use JWT token authentication with devise
@@ -23,6 +22,7 @@ gem 'sidekiq-cron'
 gem 'httparty'
 gem 'mechanize'
 gem 'smarter_csv'
+gem 'bugsnag'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
