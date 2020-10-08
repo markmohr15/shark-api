@@ -1,4 +1,4 @@
-class BetOnlineLines::Base
+class BookmakerLines::Base
 
   def self.raise_api_error err
     Sidekiq.logger.info err
