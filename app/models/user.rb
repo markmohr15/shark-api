@@ -57,6 +57,8 @@ class User < ApplicationRecord
   after_initialize :setup_new_user, if: :new_record?
 
   has_many :triggers
+  has_and_belongs_to_many :sportsbooks
+
 
   # Send mail through activejob
   def send_devise_notification(notification, *args)

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_24_051905) do
+ActiveRecord::Schema.define(version: 2020_10_12_164501) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -85,6 +85,19 @@ ActiveRecord::Schema.define(version: 2020_06_24_051905) do
     t.boolean "active", default: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "sportsbooks", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "sportsbooks_users", id: false, force: :cascade do |t|
+    t.bigint "sportsbook_id", null: false
+    t.bigint "user_id", null: false
+    t.index ["sportsbook_id"], name: "index_sportsbooks_users_on_sportsbook_id"
+    t.index ["user_id"], name: "index_sportsbooks_users_on_user_id"
   end
 
   create_table "stadiums", force: :cascade do |t|
@@ -194,6 +207,8 @@ ActiveRecord::Schema.define(version: 2020_06_24_051905) do
   add_foreign_key "games", "sports"
   add_foreign_key "leagues", "sports"
   add_foreign_key "seasons", "sports"
+  add_foreign_key "sportsbooks_users", "sportsbooks"
+  add_foreign_key "sportsbooks_users", "users"
   add_foreign_key "subdivisions", "divisions"
   add_foreign_key "teams", "divisions"
   add_foreign_key "teams", "leagues"
