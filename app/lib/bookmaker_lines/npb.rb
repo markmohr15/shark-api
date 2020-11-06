@@ -1,11 +1,11 @@
-class BookmakerLines::Mlb < BookmakerLines::Base
+class BookmakerLines::Npb < BookmakerLines::Base
 
   def self.url
-    @url ||= "https://www.bookmaker.eu/live-lines/baseball/major-league-baseball"
+    @url ||= "https://www.bookmaker.eu/live-lines/baseball/japan-professionalbaseball"
   end
 
   def self.sport
-    @sport ||= Sport.find_by_abbreviation "MLB"
+    @sport ||= Sport.find_by_abbreviation "NPB"
   end
 
   def self.team name

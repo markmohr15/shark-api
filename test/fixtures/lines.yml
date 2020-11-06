@@ -1,0 +1,32 @@
+# == Schema Information
+#
+# Table name: lines
+#
+#  id             :bigint           not null, primary key
+#  home_ml        :integer
+#  home_rl        :integer
+#  home_spread    :float
+#  total          :float
+#  visitor_ml     :integer
+#  visitor_rl     :integer
+#  visitor_spread :float
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#  game_id        :bigint
+#  sportsbook_id  :bigint
+#
+# Indexes
+#
+#  index_lines_on_game_id        (game_id)
+#  index_lines_on_sportsbook_id  (sportsbook_id)
+#
+
+# This model initially had no columns defined. If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one: {}
+# column: value
+#
+two: {}
+# column: value

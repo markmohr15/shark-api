@@ -7,25 +7,33 @@ class BetOnlineLines::Base
   end
 
   def self.agent
-    Mechanize.new
+    @agent ||= Mechanize.new
+  end
+
+  def self.sportsbook
+    @sportsbook ||= Sportsbook.find_by_name "BetOnline"
+  end
+
+  def self.fetch
+    @fetch ||= agent.get(url)
   end
 
   def self.base_dates
-    self.agent.get(self.url).search(".date")
+    @base_dates ||= fetch.search(".date")
   end
 
   def self.base_games
-    self.agent.get(self.url).search(".event")
+    @base_games ||= fetch.search(".event")
   end
 
   def self.dates
-    dates ||= self.base_dates.map do |node|
+    @dates ||= base_dates.map do |node|
       node.children.map{|n| [n.text.strip] if n.elem? }.compact
     end
   end
 
   def self.games
-    games ||= self.base_games.map do |node|
+    @games ||= base_games.map do |node|
       node.children.map{|n| [n.text.strip] if n.elem? }.compact
     end
   end
@@ -65,7 +73,7 @@ class BetOnlineLines::Base
       half = total.include?("½") ? 0.5 : 0
       {total: total.to_f + half}
     elsif vl.include? "pk"
-      {spread: 0, vis_rl: vl.gsub("pk", "").gsub("o", "").to_i}
+      {vis_spread: 0, vis_rl: vl.gsub("pk", "").gsub("o", "").to_i}
     elsif vl.scan(/[+ -]/).length == 1
       {vis_ml: vl.gsub("o", "").to_i}
     else
@@ -73,11 +81,11 @@ class BetOnlineLines::Base
         runlines = vl.split("½")
         spread = runlines[0].to_f 
         half = spread > 0 ? 0.5 : -0.5
-        spread = (spread + half) * -1
-        {spread: spread, vis_rl: runlines[1].gsub("o", "").to_i}
+        spread = (spread + half)
+        {vis_spread: spread, vis_rl: runlines[1].gsub("o", "").to_i}
       else
         split_index = vl[1..-1].index(/[+ -]/)
-        {spread: vl[0..split_index].to_f * -1,
+        {vis_spread: vl[0..split_index].to_f,
          vis_rl: vl[split_index + 1..-1].gsub("o", "").to_i}
       end
     end
@@ -99,6 +107,25 @@ class BetOnlineLines::Base
         {home_rl: hl[split_index + 1..-1].gsub("o", "").to_i}
       end
     end
+  end
+
+  def self.create_line game_info, game
+    total_set = false
+    lines = {vis_spread: nil, vis_rl: nil, vis_ml: nil, 
+             home_rl: nil, home_ml: nil, total: nil}
+    game_info[:vis_lines][0..2].each do |vl|
+      next if vl.include?("Ov") && total_set
+      lines.merge!(self.parse_vis_line(vl))
+      total_set = true if vl.include? "Ov"
+    end
+    game_info[:home_lines][0..2].each do |hl|
+      lines.merge!(self.parse_home_line(hl))
+    end
+    game.update home_rot: game_info[:home_rot]
+    game.lines.create visitor_spread: lines[:vis_spread], home_ml: lines[:home_ml], 
+                      home_rl: lines[:home_rl], visitor_ml: lines[:vis_ml],
+                      visitor_rl: lines[:vis_rl], total: lines[:total],
+                      game: game, sportsbook: sportsbook
   end
 
 end

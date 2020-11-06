@@ -59,46 +59,46 @@ class Trigger < ApplicationRecord
     if greater_eq?
       case wager_type 
       when "spread"
-        if team == game.visitor && game.spread * -1 >= target
+        if team == game.visitor && game.user_visitor_spread(user) >= target
           errors.add(:base, "Target must be better than the current spread")
-        elsif team == game.home && game.spread >= target
+        elsif team == game.home && game.user_home_spread(user) >= target
           errors.add(:base, "Target must be better than the current spread")
         end
       when "total"
-        errors.add(:base, "Target must be higher than the current total") if game.total >= target
+        errors.add(:base, "Target must be higher than the current total") if game.user_under(user) >= target
       when "moneyline"
-        if team == game.visitor && game.visitor_ml >= target
+        if team == game.visitor && game.user_visitor_ml(user) >= target
           errors.add(:base, "Target must be better than the current moneyline")
-        elsif team == game.home && game.home_ml >= target
+        elsif team == game.home && game.user_home_ml(user) >= target
           errors.add(:base, "Target must be better than the current moneyline")
         end
       when "runline"
-        if team == game.visitor && game.visitor_rl >= target
+        if team == game.visitor && game.user_visitor_rl(user) >= target
           errors.add(:base, "Target must be better than the current runline")
-        elsif team == game.home && game.home_rl >= target
+        elsif team == game.home && game.user_home_rl(user) >= target
           errors.add(:base, "Target must be better than the current runline")
         end
       end
     else
       case wager_type
       when "spread"
-        if team == game.visitor && game.spread * -1 <= target
+        if team == game.visitor && game.user_visitor_spread(user) <= target
           errors.add(:base, "Target must be worse than the current spread")
-        elsif team == game.home && game.spread <= target
+        elsif team == game.home && game.user_home_spread(user) <= target
           errors.add(:base, "Target must be worse than the current spread")
         end
       when "total"
-        errors.add(:base, "Target must be lower than the current total") if game.total <= target
+        errors.add(:base, "Target must be lower than the current total") if game.user_over(user) <= target
       when "moneyline"
-        if team == game.visitor && game.visitor_ml <= target
+        if team == game.visitor && game.user_visitor_ml(user) <= target
           errors.add(:base, "Target must be worse than the current moneyline")
-        elsif team == game.home && game.home_ml <= target
+        elsif team == game.home && game.user_home_ml(user) <= target
           errors.add(:base, "Target must be worse than the current moneyline")
         end
       when "runline"
-        if team == game.visitor && game.visitor_rl <= target
+        if team == game.visitor && game.user_visitor_rl(user) <= target
           errors.add(:base, "Target must be worse than the current runline")
-        elsif team == game.home && game.home_rl <= target
+        elsif team == game.home && game.user_home_rl(user) <= target
           errors.add(:base, "Target must be worse than the current runline")
         end
       end

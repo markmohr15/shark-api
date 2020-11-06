@@ -3,20 +3,14 @@ module Types
     field :id, ID, null: false
     field :channel, String, null: true
     field :conference_game, Boolean, null: false
-    field :home_ml, Integer, null: true
-    field :home_rl, Integer, null: true
     field :home_rot, Integer, null: true
     field :home_score, Integer, null: true
     field :neutral, Boolean, null: false
     field :period, Integer, null: true
-    field :spread, Float, null: true
     field :status, String, null: true
     field :time_left_min, Integer, null: true
     field :time_left_sec, Integer, null: true
-    field :total, Float, null: true
     field :time_left_min, Integer, null: true
-    field :visitor_ml, Integer, null: true
-    field :visitor_rl, Integer, null: true
     field :visitor_rot, Integer, null: true
     field :visitor_score, Integer, null: true
     field :week, Integer, null: true
@@ -28,11 +22,46 @@ module Types
     field :visitor, Types::TeamType, null: false
     field :display_time, String, null: false
     field :display_date, String, null: false
+    field :total, Float, null: true
     field :display_home_spread, String, null: false
     field :display_visitor_spread, String, null: false
     field :display_home_rl, String, null: false
     field :display_visitor_rl, String, null: false
     field :display_home_ml, String, null: false
     field :display_visitor_ml, String, null: false
+    field :display_over, String, null: false
+    field :display_under, String, null: false
+    
+    def display_home_spread
+      object.display_home_spread context[:current_user]
+    end
+
+    def display_visitor_spread
+      object.display_visitor_spread context[:current_user]
+    end
+    
+    def display_home_rl
+      object.display_home_rl context[:current_user]
+    end
+    
+    def display_visitor_rl
+      object.display_visitor_rl context[:current_user]
+    end
+
+    def display_home_ml
+      object.display_home_ml context[:current_user]
+    end
+
+    def display_visitor_ml
+      object.display_visitor_ml context[:current_user]
+    end
+
+    def display_over
+      object.display_over context[:current_user]
+    end
+
+    def display_under
+      object.display_under context[:current_user]
+    end
   end
 end

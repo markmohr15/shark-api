@@ -50,6 +50,7 @@ class Game < ApplicationRecord
   belongs_to :home, class_name: "Team"
 
   has_many :triggers
+  has_many :lines
   
   enum status: { Scheduled: 0, InProgress: 1, Final: 2, Postponed: 3, Canceled: 4, "F/OT" => 5, "F/SO" => 6, Cancelled: 7 }
 
@@ -61,13 +62,11 @@ class Game < ApplicationRecord
     end
   end
 
-  after_update :update_triggers
-
+  before_save :set_visitor_rot
   after_save :set_in_progress
 
-  def update_triggers
-    return if triggers.empty?
-    UpdateTriggersWorker.perform_async(self.id)
+  def set_visitor_rot
+    self.visitor_rot = home_rot.to_i - 1 if home_rot.present?
   end
 
   def set_in_progress
@@ -88,46 +87,104 @@ class Game < ApplicationRecord
     gametime.strftime('%m/%d')
   end
 
-  def display_home_spread
-    return "" if spread.blank?
-    return spread.to_s if spread < 0
-    return "PK" if spread == 0
-    return "+#{spread}"
+  def user_last_lines user
+    user.sportsbooks.map {|s| s.lines.where(game: self).last}
+                    .reject {|l| l.nil?}
   end
 
-  def display_visitor_spread
-    return "" if spread.blank?
-    return "+#{spread * -1}" if spread < 0
-    return "PK" if spread == 0
-    "-#{spread}"
+  def user_home_spread user
+    user_last_lines(user).pluck(:home_spread).reject{|x| x.blank?}.max
   end
 
-  def display_home_rl
-    return "" if home_rl.blank?
-    return "+#{home_rl}" if home_rl > 0
-    home_rl
+  def display_home_spread user
+    Game.display_spread user_home_spread(user)
   end
 
-  def display_home_ml
-    return "" if home_ml.blank?
-    return "+#{home_ml}" if home_ml > 0
-    home_ml
+  def user_visitor_spread user
+    user_last_lines(user).pluck(:visitor_spread).reject{|x| x.blank?}.max
   end
 
-  def display_visitor_rl
-    return "" if visitor_rl.blank?
-    return "+#{visitor_rl}" if visitor_rl > 0
-    visitor_rl
+  def display_visitor_spread user
+    Game.display_spread user_visitor_spread(user)
   end
 
-  def display_visitor_ml
-    return "" if visitor_ml.blank?
-    return "+#{visitor_ml}" if visitor_ml > 0
-    visitor_ml
+  def user_home_ml user
+    user_last_lines(user).pluck(:home_ml).reject{|x| x.blank?}.max
   end
 
-  
-    
+  def display_home_ml user
+    Game.display_ml user_home_ml(user)
+  end
+
+  def user_visitor_ml user
+    user_last_lines(user).pluck(:visitor_ml).reject{|x| x.blank?}.max
+  end
+
+  def display_visitor_ml user
+    Game.display_ml user_visitor_ml(user)
+  end
+
+  def user_home_rl user
+    spread = user_home_spread user
+    rls = user_last_lines(user).select {|x| x.home_spread == spread}
+                               .pluck(:home_rl).max
+  end
+
+  def display_home_rl user
+    Game.display_ml user_home_rl(user)
+  end
+
+  def user_visitor_rl user
+    spread = user_visitor_spread user
+    rls = user_last_lines(user).select {|x| x.visitor_spread == spread}
+                               .pluck(:visitor_rl).max
+  end
+
+  def display_visitor_rl user
+    Game.display_ml user_visitor_rl(user)
+  end
+
+  def user_over user
+    user_last_lines(user).pluck(:total).reject{|x| x.blank?}.min
+  end
+
+  def display_over user
+    uo = user_over user
+    uo.present? ? "Ov #{uo}" : ""
+  end
+
+  def user_under user
+    user_last_lines(user).pluck(:total).reject{|x| x.blank?}.max
+  end
+
+  def display_under user
+    uu = user_under user
+    uu.present? ? "Un #{uu}" : ""
+  end
+
+  def self.display_spread spr
+    case spr
+    when blank?
+      "" 
+    when 0
+      "PK"
+    when 0..1000
+      "+#{spr}"
+    else
+      spr.to_s
+    end
+  end
+
+  def self.display_ml ml
+    case ml
+    when blank?
+      ""
+    when 100..100000
+      "+#{ml}"
+    else
+      ml.to_s
+    end
+  end
 
 end
 

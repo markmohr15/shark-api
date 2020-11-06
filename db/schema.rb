@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_12_164501) do
+ActiveRecord::Schema.define(version: 2020_10_16_060554) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,6 +65,22 @@ ActiveRecord::Schema.define(version: 2020_10_12_164501) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["sport_id"], name: "index_leagues_on_sport_id"
+  end
+
+  create_table "lines", force: :cascade do |t|
+    t.bigint "game_id"
+    t.bigint "sportsbook_id"
+    t.integer "home_rl"
+    t.integer "home_ml"
+    t.float "home_spread"
+    t.integer "visitor_rl"
+    t.integer "visitor_ml"
+    t.float "total"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.float "visitor_spread"
+    t.index ["game_id"], name: "index_lines_on_game_id"
+    t.index ["sportsbook_id"], name: "index_lines_on_sportsbook_id"
   end
 
   create_table "seasons", force: :cascade do |t|
@@ -150,6 +166,7 @@ ActiveRecord::Schema.define(version: 2020_10_12_164501) do
     t.integer "sportsdata_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "bookmaker_name"
     t.index ["division_id"], name: "index_teams_on_division_id"
     t.index ["league_id"], name: "index_teams_on_league_id"
     t.index ["sport_id"], name: "index_teams_on_sport_id"

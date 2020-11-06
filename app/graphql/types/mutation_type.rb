@@ -15,6 +15,9 @@ module Types
     field :create_trigger, mutation: Mutations::Triggers::CreateTrigger
     field :update_trigger, mutation: Mutations::Triggers::UpdateTrigger
     field :cancel_trigger, mutation: Mutations::Triggers::CancelTrigger
+
+    #Settings
+    field :update_settings, mutation: Mutations::Settings::UpdateSettings
   end
 end
 

@@ -11,7 +11,7 @@ namespace :importer do
       Game.where(sport: sport, stadium: stadium, gametime: line[:gametime],
                  status: "Scheduled", season: season, 
                  visitor: sport.teams.find_by_nickname(line[:visitor]),
-                 home: sport.teams.find_by_nickname(line[:home])).first_or_create
+                 home: sport.teams.find_by_nickname(line[:home])).first_or_create!
     end
 
     puts "Finished KBO Import"
