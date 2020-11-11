@@ -13,6 +13,8 @@ class BetOnlineLines::Nhl < BetOnlineLines::Base
   end
 
   def self.get_lines
+    @url = @fetch = @base_dates = @base_games = @dates = @games = nil
+
     return if base_dates.empty?
     date = dates[0][0][0].split(" -")[0].to_date
     date2 = dates[dates.size - 1][0][0].split(" -")[0].to_date

@@ -13,6 +13,9 @@ class BookmakerLines::Kbo < BookmakerLines::Base
   end
 
   def self.get_lines
+    @url = @fetch = @base_times = @times = @base_teams = @teams = @base_spreads = nil
+    @spread = @base_totals = @totals = @base_moneylines = @moneylines = nil
+
     teams.each_with_index do |t,i|
       next if i % 2 == 1
       gametime = "#{times[i / 2]} PDT".to_datetime

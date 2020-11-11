@@ -13,6 +13,9 @@ class BookmakerLines::Cfb < BookmakerLines::Base
   end
 
   def self.get_lines
+    @url = @fetch = @base_times = @times = @base_teams = @teams = @base_spreads = nil
+    @spreads = @base_totals = @totals = @base_moneylines = @moneylines = nil
+
     teams.each_with_index do |t,i|
       next if i % 2 == 1
       game = sport.games.Scheduled.where('home_id = ? and visitor_id = ?', 
