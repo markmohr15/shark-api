@@ -2,6 +2,7 @@ module Types
   class QueryType < Types::BaseObject
     field :me, resolver: Resolvers::Me
     field :all_sports, [Types::SportType], null: false
+    field :sportsbooks, [Types::SportsbookType], null: true
     field :game, Types::GameType, null: true do
       argument :id, ID, required: true
     end
@@ -21,6 +22,14 @@ module Types
       argument :date, String, required: true
     end
     field :trigger_notifications, [Types::TriggerType], null: true
+
+    def sportsbooks
+      if context[:current_user]
+        context[:current_user].sportsbooks
+      else
+        raise GraphQL::ExecutionError, "Authentication Error"
+      end
+    end
 
     def all_sports
       Sport.active

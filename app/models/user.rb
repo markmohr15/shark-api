@@ -69,6 +69,8 @@ class User < ApplicationRecord
 
   def setup_new_user
     self.role ||= :customer
+    self.sportsbooks << Sportsbook.find_by_name('BetOnline')
+    self.sportsbooks << Sportsbook.find_by_name('Bookmaker')
   end
 
 end
