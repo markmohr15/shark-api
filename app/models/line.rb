@@ -36,7 +36,11 @@ class Line < ApplicationRecord
 
   def set_home_spread
     return if visitor_spread.blank?
-    self.home_spread = visitor_spread * -1
+    if visitor_spread == 0
+      self.home_spread = 0
+    else
+      self.home_spread = visitor_spread * -1
+    end
   end
 
   def update_triggers
