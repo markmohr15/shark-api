@@ -4,7 +4,7 @@ class UpdateTriggersWorker
   def perform(line_id)
     l = Line.find line_id
     g = l.game
-    triggers = Trigger.open.joins(:user).merge(l.sportsbook.users)
+    triggers = g.triggers.open.joins(:user).merge(l.sportsbook.users)
     if l.home_spread.present? && l.visitor_spread.present?
       triggers.spread.greater_eq.where('target <= ? and triggers.team_id = ?', l.home_spread, g.home_id).map {|x| x.update(status: "triggered")}
       triggers.spread.less_eq.where('target >= ? and triggers.team_id = ?', l.home_spread, g.home_id).map {|x| x.update(status: "triggered")}
@@ -29,4 +29,3 @@ class UpdateTriggersWorker
     end
   end
 end
-
