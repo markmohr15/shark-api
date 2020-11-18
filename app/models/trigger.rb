@@ -90,15 +90,15 @@ class Trigger < ApplicationRecord
       when "total"
         errors.add(:base, "Target must be lower than the current total") if game.user_over(user) <= target
       when "moneyline"
-        if team == game.visitor && game.user_home_ml(user) * -1 <= target
+        if team == game.visitor && game.user_visitor_ml(user) <= target
           errors.add(:base, "Target must be worse than the current moneyline")
-        elsif team == game.home && game.user_visitor_ml(user) * -1 <= target
+        elsif team == game.home && game.user_home_ml(user) <= target
           errors.add(:base, "Target must be worse than the current moneyline")
         end
       when "runline"
-        if team == game.visitor && game.user_home_rl(user) * -1 <= target
+        if team == game.visitor && game.user_visitor_rl(user) <= target
           errors.add(:base, "Target must be worse than the current runline")
-        elsif team == game.home && game.user_visitor_rl(user) * -1 <= target
+        elsif team == game.home && game.user_home_rl(user) <= target
           errors.add(:base, "Target must be worse than the current runline")
         end
       end
