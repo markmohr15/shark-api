@@ -82,23 +82,23 @@ class Trigger < ApplicationRecord
     else
       case wager_type
       when "spread"
-        if team == game.visitor && game.user_visitor_spread(user) <= target
+        if team == game.visitor && game.user_home_spread(user) <= target
           errors.add(:base, "Target must be worse than the current spread")
-        elsif team == game.home && game.user_home_spread(user) <= target
+        elsif team == game.home && game.user_visitor_spread(user) <= target
           errors.add(:base, "Target must be worse than the current spread")
         end
       when "total"
         errors.add(:base, "Target must be lower than the current total") if game.user_over(user) <= target
       when "moneyline"
-        if team == game.visitor && game.user_visitor_ml(user) <= target
+        if team == game.visitor && game.user_home_ml(user) <= target
           errors.add(:base, "Target must be worse than the current moneyline")
-        elsif team == game.home && game.user_home_ml(user) <= target
+        elsif team == game.home && game.user_visitor_ml(user) <= target
           errors.add(:base, "Target must be worse than the current moneyline")
         end
       when "runline"
-        if team == game.visitor && game.user_visitor_rl(user) <= target
+        if team == game.visitor && game.user_home_rl(user) <= target
           errors.add(:base, "Target must be worse than the current runline")
-        elsif team == game.home && game.user_home_rl(user) <= target
+        elsif team == game.home && game.user_visitor_rl(user) <= target
           errors.add(:base, "Target must be worse than the current runline")
         end
       end
