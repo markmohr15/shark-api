@@ -126,6 +126,7 @@ class Game < ApplicationRecord
 
   def user_home_rl user
     spread = user_home_spread user
+    return nil if spread.nil?
     rls = user_last_lines(user).select {|x| x.home_spread == spread}
                                .pluck(:home_rl).max
   end
@@ -136,6 +137,7 @@ class Game < ApplicationRecord
 
   def user_visitor_rl user
     spread = user_visitor_spread user
+    return nil if spread.nil?
     rls = user_last_lines(user).select {|x| x.visitor_spread == spread}
                                .pluck(:visitor_rl).max
   end
