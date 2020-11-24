@@ -27,11 +27,11 @@ class Line < ApplicationRecord
   before_save :validate_ml_rl, :set_home_spread
   after_create :update_triggers
 
-  scope :user_last_lines, -> (user) { joins(:sportsbook)
+  scope :user_last_lines, -> (user, game) { joins(:sportsbook)
                                             .merge(user.sportsbooks)
-                                            .where(game: self)
+                                            .where(game: game)
                                             .select("DISTINCT ON (sportsbook_id) lines.*")
-                                            .order('lines.sportsbook_id') }
+                                            .order("lines.sportsbook_id, lines.created_at DESC") }
 
 
   def validate_ml_rl
