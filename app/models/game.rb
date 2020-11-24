@@ -55,7 +55,7 @@ class Game < ApplicationRecord
   enum status: { Scheduled: 0, InProgress: 1, Final: 2, Postponed: 3, Canceled: 4, "F/OT" => 5, "F/SO" => 6, Cancelled: 7 }
 
   scope :active_lines, -> {where.not(home_ml: nil, home_rl: nil, visitor_ml: nil, visitor_rl: nil, total: nil, spread: nil) }
-  
+
   after_initialize do
     if new_record?
       self.sport ||= season&.sport
@@ -87,13 +87,8 @@ class Game < ApplicationRecord
     gametime.strftime('%m/%d')
   end
 
-  def user_last_lines user
-    user.sportsbooks.map {|s| s.lines.where(game: self).last}
-                    .reject {|l| l.nil?}
-  end
-
   def user_home_spread user
-    user_last_lines(user).pluck(:home_spread).reject{|x| x.blank?}.max
+    Line.user_last_lines(user).pluck(:home_spread).reject{|x| x.blank?}.max
   end
 
   def display_home_spread user
@@ -101,7 +96,7 @@ class Game < ApplicationRecord
   end
 
   def user_visitor_spread user
-    user_last_lines(user).pluck(:visitor_spread).reject{|x| x.blank?}.max
+    Line.user_last_lines(user).pluck(:visitor_spread).reject{|x| x.blank?}.max
   end
 
   def display_visitor_spread user
@@ -109,7 +104,7 @@ class Game < ApplicationRecord
   end
 
   def user_home_ml user
-    user_last_lines(user).pluck(:home_ml).reject{|x| x.blank?}.max
+    Line.user_last_lines(user).pluck(:home_ml).reject{|x| x.blank?}.max
   end
 
   def display_home_ml user
@@ -117,7 +112,7 @@ class Game < ApplicationRecord
   end
 
   def user_visitor_ml user
-    user_last_lines(user).pluck(:visitor_ml).reject{|x| x.blank?}.max
+    Line.user_last_lines(user).pluck(:visitor_ml).reject{|x| x.blank?}.max
   end
 
   def display_visitor_ml user
@@ -127,7 +122,7 @@ class Game < ApplicationRecord
   def user_home_rl user
     spread = user_home_spread user
     return nil if spread.nil?
-    rls = user_last_lines(user).select {|x| x.home_spread == spread}
+    rls = Line.user_last_lines(user).select {|x| x.home_spread == spread}
                                .pluck(:home_rl).reject{|x| x.blank?}.max
   end
 
@@ -138,7 +133,7 @@ class Game < ApplicationRecord
   def user_visitor_rl user
     spread = user_visitor_spread user
     return nil if spread.nil?
-    rls = user_last_lines(user).select {|x| x.visitor_spread == spread}
+    rls = Line.user_last_lines(user).select {|x| x.visitor_spread == spread}
                                .pluck(:visitor_rl).reject{|x| x.blank?}.max
   end
 
@@ -147,7 +142,7 @@ class Game < ApplicationRecord
   end
 
   def user_over user
-    user_last_lines(user).pluck(:total).reject{|x| x.blank?}.min
+    Line.user_last_lines(user).pluck(:total).reject{|x| x.blank?}.min
   end
 
   def display_over user
@@ -156,7 +151,7 @@ class Game < ApplicationRecord
   end
 
   def user_under user
-    user_last_lines(user).pluck(:total).reject{|x| x.blank?}.max
+    Line.user_last_lines(user).pluck(:total).reject{|x| x.blank?}.max
   end
 
   def display_under user

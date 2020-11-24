@@ -27,6 +27,13 @@ class Line < ApplicationRecord
   before_save :validate_ml_rl, :set_home_spread
   after_create :update_triggers
 
+  scope :user_last_lines, -> (user) { joins(:sportsbook)
+                                            .merge(user.sportsbooks)
+                                            .where(game: self)
+                                            .select("DISTINCT ON (sportsbook_id) lines.*")
+                                            .order('lines.sportsbook_id') }
+
+
   def validate_ml_rl
     home_ml = nil if home_ml.present? && home_ml > -100 && home_ml < 100
     home_rl = nil if home_rl.present? && home_rl > -100 && home_rl < 100
