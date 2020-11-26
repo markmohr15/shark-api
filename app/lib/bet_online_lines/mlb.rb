@@ -28,12 +28,12 @@ class BetOnlineLines::Mlb < BetOnlineLines::Base
       game_info = game_info g
       next if game_info[:vis_lines].empty? || game_info[:home_lines].empty?
       if dates.size == 1 || counter < date1_games_count
-        game = Game.where('sport_id = ? and gametime >= ? and gametime <= ? and home_id = ?', 
+        game = Game.Scheduled.where('sport_id = ? and gametime >= ? and gametime <= ? and home_id = ?', 
                           sport.id, "#{date} #{game_info[:time]}:00 EDT -04:00".to_datetime - 70.minutes + game_info[:time_adjust].hours,
                           "#{date} #{game_info[:time]}:00 EDT -04:00".to_datetime + 70.minutes + game_info[:time_adjust].hours,
                           home(game_info[:home_name])&.id).first
       elsif dates.size > 1
-        game = Game.where('sport_id = ? and gametime >= ? and gametime <= ? and home_id = ?', 
+        game = Game.Scheduled.where('sport_id = ? and gametime >= ? and gametime <= ? and home_id = ?', 
                          sport.id, "#{date2} #{game_info[:time]}:00 EDT -04:00".to_datetime - 70.minutes + game_info[:time_adjust].hours,
                          "#{date2} #{game_info[:time]}:00 EDT -04:00".to_datetime + 70.minutes + game_info[:time_adjust].hours,
                          home(game_info[:home_name])&.id).first

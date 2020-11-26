@@ -22,7 +22,7 @@ class BetOnlineLines::Nfl < BetOnlineLines::Base
       next if g[0][0].blank?
       game_info = game_info g
       next if game_info[:vis_lines].empty? || game_info[:home_lines].empty?
-      game = Game.where('sport_id = ? and gametime > ? and gametime < ? and visitor_id = ? and home_id = ?', 
+      game = Game.Scheduled.where('sport_id = ? and gametime > ? and gametime < ? and visitor_id = ? and home_id = ?', 
                          sport.id, date.to_datetime, date2.to_datetime.end_of_day + 6.hours, 
                          team(game_info[:vis_name])&.id, team(game_info[:home_name])&.id).first
       next if game.nil?
