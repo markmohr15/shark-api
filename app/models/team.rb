@@ -48,7 +48,7 @@ class Team < ApplicationRecord
   validates_presence_of :name
 
   before_create do
-    self.short_display_name ||= self.name.upcase[0..5]
+    self.short_display_name ||= self.name.upcase[0..4]
     self.nickname ||= ""
   end
 

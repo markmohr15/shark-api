@@ -41,7 +41,7 @@ class BetOnlineLines::Base
   def self.game_info game
     top = game[0][0].gsub("\n", "").split(" ")
     bottom = game[1][0].gsub("\n", "").split(" ")
-    home_rot = bottom[0].delete("^0-9")
+    home_rot = bottom[0].delete("^0-9")[-3..-1]
     vis_name = [top[1][2 + home_rot.size..-1]]
     home_name = [bottom[0][home_rot.size..-1]]
     vis_lines = []
