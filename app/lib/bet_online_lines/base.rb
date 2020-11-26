@@ -41,7 +41,7 @@ class BetOnlineLines::Base
   def self.game_info game
     top = game[0][0].gsub("\n", "").split(" ")
     bottom = game[1][0].gsub("\n", "").split(" ")
-    home_rot = bottom[0].delete("^0-9")[-3..-1]
+    home_rot = bottom[0].delete("^0-9")
     vis_name = [top[1][2 + home_rot.size..-1]]
     home_name = [bottom[0][home_rot.size..-1]]
     vis_lines = []
@@ -63,7 +63,7 @@ class BetOnlineLines::Base
       end
     end
     {vis_lines: vis_lines, home_lines: home_lines, vis_name: vis_name, 
-     home_name: home_name, home_rot: home_rot, time: top[0], 
+     home_name: home_name, home_rot: home_rot[-3..-1], time: top[0], 
      time_adjust: top[1][0..1] == "PM" && top[0][0..1] != "12" ? 12 : 0}
   end
 
