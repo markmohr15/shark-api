@@ -63,7 +63,7 @@ class BetOnlineLines::Base
       end
     end
     {vis_lines: vis_lines, home_lines: home_lines, vis_name: vis_name, 
-     home_name: home_name, home_rot: home_rot[-3..-1], time: top[0], 
+     home_name: home_name, home_rot: home_rot[-4..-1], time: top[0], 
      time_adjust: top[1][0..1] == "PM" && top[0][0..1] != "12" ? 12 : 0}
   end
 
