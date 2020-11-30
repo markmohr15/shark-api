@@ -1,48 +1,59 @@
 visitor,home,gametime,channel
 
-Ball State,Toledo,2020-11-28 12:00:00 EST,ESPN3
-Bowling Green,Ohio,2020-11-28 12:00:00 EST,ESPNU
-Georgia Southern,Georgia State,2020-11-28 12:00:00 EST,ESPN3
-Kent State,Buffalo,2020-11-28 12:00:00 EST,CBSSN
-Kentucky,Florida,2020-11-28 12:00:00 EST,ESPN
-Maryland,Indiana,2020-11-28 12:00:00 EST,ESPN2
-NC State,Syracuse,2020-11-28 12:00:00 EST,ACC
-Ohio State,Illinois,2020-11-28 12:00:00 EST,FS1
-Penn State,Michigan,2020-11-28 12:00:00 EST,ABC
-Texas Tech,Oklahoma State,2020-11-28 12:00:00 EST,FOX
-Vanderbilt,Missouri,2020-11-28 12:00:00 EST,SEC
-Miami Ohio,Akron,2020-11-28 13:00:00 EST,ESPN3
-UTEP,Rice,2020-11-28 13:00:00 EST,ESPN3
-Florida Atlantic,Middle Tennessee State,2020-11-28 13:30:00 EST,CBSSN
-UL Lafayette,UL Monroe,2020-11-28 15:00:00 EST,ESPN3
-South Alabama,Arkansas State,2020-11-28 15:00:00 EST,ESPN3
-North Texas,UTSA,2020-11-28 15:00:00 EST,FSN
-Auburn,Alabama,2020-11-28 15:30:00 EST,CBS
-Colorado,USC,2020-11-28 15:30:00 EST,ABC
-Northwestern,Michigan State,2020-11-28 15:30:00 EST,ESPN2
-Pittsburgh,Clemson,2020-11-28 15:30:00 EST,ESPN
-Louisville,Boston College,2020-11-28 16:00:00 EST,ACC
-Mississippi State,Mississippi,2020-11-28 16:00:00 EST,SEC
-Rutgers,Purdue,2020-11-28 16:00:00 EST,FS1
-San Jose State,Boise State,2020-11-28 16:00:00 EST,FOX
-Duke,Georgia Tech,2020-11-28 19:00:00 EST,FSN
-Kansas State,Baylor,2020-11-28 19:00:00 EST,ESPN2
-LSU,Texas A&M,2020-11-28 19:00:00 EST,ESPN
-Memphis,Navy,2020-11-28 19:00:00 EST,CBSSN
-Georgia,South Carolina,2020-11-28 19:30:00 EST,SEC
-TCU,Kansas,2020-11-28 20:00:00 EST,FS1
-Arizona,UCLA,2020-11-28 20:00:00 EST,FOX
-Troy,Appalachian State,2020-11-28 20:00:00 EST,ESPNU
-Virginia,Florida State,2020-11-28 20:00:00 EST,ACC
-Utah,Washington,2020-11-28 22:30:00 EST,ESPN
-Coastal Carolina,Texas State,2020-11-28 15:00:00 EST,ESPN+
-Nevada,Hawaii,2020-11-28 23:00:00 EST,
-Northern Illinois,Western Michigan,2020-11-28 12:00:00 EST,ESPN+
-SMU,East Carolina,2020-11-28 12:00:00 EST,ESPN+
 Western Kentucky,Charlotte,2020-12-01 10:30:00 EST,CBSSN
-Louisiana Tech,North Texas,2020-12-03 18:00:00 EST,CBSSN
-Air Force,Utah State,2020-12-03 21:30:00 EST,CBSSN
-UL Lafayette,Appalachian State,2020-12-04 19:00:00 EST,ESPN2
-Southern Miss,UTEP,2020-12-04 20:00:00 EST,ESPN3
-Washington State,USC,2020-12-04 21:00:00 EST,FS1
-Boise State,UNLV,2020-12-04 21:30:00 EST,CBSSN
+Arkansas,Missouri,2020-12-05 12:00:00 EST,SEC
+Kansas,Texas Tech,2020-12-05 12:00:00 EST,FS2
+Kent State,Miami Ohio,2020-12-05 12:00:00 EST,CBSSN
+Nebraska,Purdue,2020-12-05 12:00:00 EST,BTN
+Northwestern,Minnesota,2020-12-05 12:00:00 EST,FS1
+Ohio State,Michigan State,2020-12-05 12:00:00 EST,ABC
+Oklahoma State,TCU,2020-12-05 12:00:00 EST,ESPN2
+Penn State,Rutgers,2020-12-05 12:00:00 EST,BTN
+Texas,Kansas State,2020-12-05 12:00:00 EST,FOX
+Texas A&M,Auburn,2020-12-05 12:00:00 EST,ESPN
+Western Carolina,North Carolina,2020-12-05 12:00:00 EST,ACC
+Liberty,Coastal Carolina,2020-12-05 14:00:00 EST,ESPNU
+Syracuse,Notre Dame,2020-12-05 14:30:00 EST,NBC
+Boston College,Virginia,2020-12-05 15:30:00 EST,FSN
+Buffalo,Ohio,2020-12-05 15:30:00 EST,CBSSN
+Florida,Tennessee,2020-12-05 15:30:00 EST,CBS
+Indiana,Wisconsin,2020-12-05 15:30:00 EST,ABC
+Iowa,Illinois,2020-12-05 15:30:00 EST,BTN
+Maryland,Michigan,2020-12-05 15:30:00 EST,BTN
+Tulsa,Navy,2020-12-05 15:30:00 EST,ESPN2
+West Virginia,Iowa State,2020-12-05 15:30:00 EST,ESPN
+Georgia Tech,NC State,2020-12-05 16:00:00 EST,ACC
+Stanford,Washington,2020-12-05 16:00:00 EST,FOX
+Vanderbilt,Georgia,2020-12-05 16:00:00 EST,SEC
+Ball State,Central Michigan,2020-12-05 17:30:00 EST,ESPNU
+Colorado,Arizona,2020-12-05 19:00:00 EST,FS1
+Colorado State,San Diego State,2020-12-05 19:00:00 EST,CBSSN
+Oregon,California,2020-12-05 19:00:00 EST,ESPN
+Clemson,Virginia Tech,2020-12-05 19:30:00 EST,ABC
+South Carolina,Kentucky,2020-12-05 19:30:00 EST,SEC
+Alabama,LSU,2020-12-05 20:00:00 EST,CBS
+Baylor,Oklahoma,2020-12-05 20:00:00 EST,FOX
+Miami Florida,Duke,2020-12-05 20:00:00 EST,ACC
+Houston,SMU,2020-12-05 21:00:00 EST,ESPNU
+Oregon State,Utah,2020-12-05 22:30:00 EST,ESPN
+UCLA,Arizona State,2020-12-05 22:30:00 EST,FS1
+Wyoming,New Mexico,2020-12-05 22:30:00 EST,CBSSN
+Fresno State,Nevada,2020-12-05 23:00:00 EST,FS1/2
+Bowling Green,Akron,2020-12-05 14:00:00 EST,ESPN3
+Eastern Michigan,Western Michigan,2020-12-05 14:00:00 EST,ESPN+
+Florida Atlantic,Georgia Southern,2020-12-05 18:00:00 EST,ESPN+
+Florida International,Charlotte,2020-12-05 12:00:00 EST,ESPN3
+Hawaii,San Jose State,2020-12-05 16:00:00 EST,
+UL Monroe,Arkansas State,2020-12-05 15:00:00 EST,ESPN3
+Memphis,Tulane,2020-12-05 12:00:00 EST,ESPN+
+Rice,Marshall,2020-12-05 12:00:00 EST,ESPN+
+Toledo,Northern Illinois,2020-12-05 12:00:00 EST,ESPN3
+Troy,South Alabama,2020-12-05 14:00:00 EST,ESPN3
+UAB,Middle Tennessee State,2020-12-06 14:30:00 EST,
+Washington State,USC,2020-12-06 21:00:00 EST,FS1
+Florida Atlantic,Southern Miss,2020-12-10 18:30:00 EST,CBSSN
+Pittsburgh,Georgia Tech,2020-12-10 19:00:00 EST,FSN
+Marshall,Florida International,2020-12-11 18:30:00 EST,CBSSN
+Arizona State,Arizona,2020-12-11 19:30:00 EST,ESPN
+Utah,Colorado,2020-12-11 21:30:00 EST,FS1
+Nevada,San Jose State,2020-12-11 22:00:00 EST,CBSSN
