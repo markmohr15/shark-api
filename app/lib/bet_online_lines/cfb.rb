@@ -9,7 +9,7 @@ class BetOnlineLines::Cfb < BetOnlineLines::Base
   end
 
   def self.team name
-    sport.teams.find_by_name name.join(" ")
+    sport.teams.find_by_name(name.join(" ")) || sport.teams.find_by_name(name[0..1].join(" ")) || sport.teams.find_by_name(name[0..2].join(" "))
   end
   
   def self.get_lines
