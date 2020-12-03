@@ -32,6 +32,18 @@ class FetchLinesWorker
       Sidekiq.logger.info err
       Bugsnag.notify(err)
     end
+    begin
+      BookmakerLines::Cbb.get_lines
+    rescue => err
+      Sidekiq.logger.info err
+      Bugsnag.notify(err)
+    end
+    begin
+      BookmakerLines::Cbbe.get_lines
+    rescue => err
+      Sidekiq.logger.info err
+      Bugsnag.notify(err)
+    end
     #begin
      # BetOnlineLines::Kbo.get_lines
     #rescue => err
