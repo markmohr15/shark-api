@@ -50,6 +50,7 @@ class Team < ApplicationRecord
   before_create do
     self.short_display_name ||= self.name.upcase[0..4]
     self.nickname ||= ""
+    self.bookmaker_name ||= self.name
   end
 
 end
