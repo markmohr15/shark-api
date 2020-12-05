@@ -47,7 +47,6 @@ class BetOnlineLines::Base
     vis_lines = []
     home_lines = []
     top[2..-1].each do |x|
-      next if x.length < 3
       if x[0] == "-" || x[0] == "+" || x[0..1] == "pk" || x[0..1] == "Ov" || (x[0..1] == "Un" && x.exclude?(","))
         vis_lines << x
       else
@@ -55,7 +54,7 @@ class BetOnlineLines::Base
       end
     end
     bottom[1..-1].each do |x|
-      next if x.length < 3 || x == "Game"
+      next if x == "Game"
       if x[0] == "-" || x[0] == "+" || x[0..1] == "pk" || x[0..1] == "Ov" || (x[0..1] == "Un" && x.exclude?(","))
         home_lines << x
       else
