@@ -41,8 +41,8 @@ class BovadaLines::Base
   end
 
   def self.game_info game
-    vis_name = game["competitors"].find {|x| x["home"] == false}["name"].split("(")[0].strip
-    home_name = game["competitors"].find {|x| x["home"] == true}["name"].split("(")[0].strip
+    vis_name = game["competitors"].find {|x| x["home"] == false}["name"].split("(")[0].squish
+    home_name = game["competitors"].find {|x| x["home"] == true}["name"].split("(")[0].squish
     time = Time.at(game["startTime"] / 1000).to_datetime  
     lines = game["displayGroups"]&.first["markets"]
     vis_spread = vis_rl = home_rl = total = vis_ml = home_ml = nil
