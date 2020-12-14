@@ -35,10 +35,13 @@ class Line < ApplicationRecord
 
 
   def validate_ml_rl
-    home_ml = nil if home_ml.present? && home_ml > -100 && home_ml < 100
-    home_rl = nil if home_rl.present? && home_rl > -100 && home_rl < 100
-    visitor_ml = nil if visitor_ml.present? && visitor_ml > -100 && visitor_ml < 100
-    visitor_rl = nil if visitor_rl.present? && visitor_rl > -100 && visitor_rl < 100
+    if visitor_ml.present?
+      byebug
+    end
+    self.home_ml = nil if home_ml.present? && home_ml > -100 && home_ml < 100
+    self.home_rl = nil if home_rl.present? && home_rl > -100 && home_rl < 100
+    self.visitor_ml = nil if visitor_ml.present? && visitor_ml > -100 && visitor_ml < 100
+    self.visitor_rl = nil if visitor_rl.present? && visitor_rl > -100 && visitor_rl < 100
   end
 
   def set_home_spread
