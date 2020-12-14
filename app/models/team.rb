@@ -5,6 +5,7 @@
 #  id                 :bigint           not null, primary key
 #  active             :boolean          default(TRUE)
 #  bookmaker_name     :string
+#  bovada_name        :string
 #  name               :string
 #  nickname           :string
 #  short_display_name :string
@@ -51,6 +52,7 @@ class Team < ApplicationRecord
     self.short_display_name ||= self.name.upcase[0..4]
     self.nickname ||= ""
     self.bookmaker_name ||= self.name
+    self.bovada_name ||= self.name
   end
 
 end

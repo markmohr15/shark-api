@@ -71,6 +71,7 @@ class User < ApplicationRecord
     self.role ||= :customer
     self.sportsbooks << Sportsbook.find_by_name('BetOnline')
     self.sportsbooks << Sportsbook.find_by_name('Bookmaker')
+    self.sportsbooks << Sportsbook.find_by_name('Bovada')
   end
 
 end
