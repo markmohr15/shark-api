@@ -7,8 +7,9 @@ module Mutations
       payload_type Types::UserType 
       argument :bet_online, Boolean, required: true
       argument :bookmaker, Boolean, required: true
+      argument :bovada, Boolean, required: false
 
-      def resolve(bet_online: nil, bookmaker: nil)
+      def resolve(bet_online: nil, bookmaker: nil, bovada: nil)
         if context[:current_user]
           context[:current_user].sportsbooks = []
           if bet_online
@@ -16,6 +17,9 @@ module Mutations
           end
           if bookmaker
             context[:current_user].sportsbooks << Sportsbook.find_by_name('Bookmaker')
+          end
+          if bovada
+            context[:current_user].sportsbooks << Sportsbook.find_by_name('Bovada')
           end
           context[:current_user]
         else
