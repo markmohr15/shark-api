@@ -7,14 +7,19 @@ namespace :importer do
     sport = Sport.find_by_abbreviation 'NBA'
     season = sport.seasons.active.last
     stadium = Stadium.find_by_name 'Unknown'
+    @nf = []
     csv.each_entry do |line|
       game = Game.where(sport: sport, stadium: stadium, gametime: line[:gametime],
                  status: "Scheduled", season: season, 
                  visitor: sport.teams.find_by_nickname(line[:visitor]),
                  home: sport.teams.find_by_nickname(line[:home])).first_or_create
-      game.update channel: line[:channel]
+      if game.valid?
+        game.update channel: line[:channel]
+      else
+        @nf << line
+      end
     end
-
     puts "Finished NBA Import"
+    puts @nf
   end
 end

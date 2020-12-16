@@ -1,9 +1,23 @@
-gametime,visitor,home,channel
-2020-09-30 21:00:00 EDT,Heat,Lakers,ABC
-2020-10-02 21:00:00 EDT,Heat,Lakers,ABC
-2020-10-04 19:30:00 EDT,Lakers,Heat,ABC
-2020-10-06 21:00:00 EDT,Lakers,Heat,ABC
-2020-10-09 21:00:00 EDT,Heat,Lakers,ABC
-2020-10-11 19:30:00 EDT,Lakers,Heat,ABC
-2020-10-13 21:00:00 EDT,Heat,Lakers,ABC
-
+visitor,home,gametime,channel
+Cavaliers,Knicks,2020-12-16 19:30:00 EDT,
+Bulls,Thunder,2020-12-16 20:00:00 EDT,
+Trail Blazers,Nuggets,2020-12-16 21:00:00 EDT,
+Lakers,Suns,2020-12-16 21:00:00 EDT,NBATV
+Hornets,Magic,2020-12-17 19:00:00 EDT,
+Pistons,Wizards,2020-12-17 19:00:00 EDT,
+Spurs,Rockets,2020-12-17 20:00:00 EDT,
+Hawks,Grizzlies,2020-12-17 20:00:00 EDT,
+Timberwolves,Mavericks,2020-12-17 20:30:00 EDT,
+Warriors,Kings,2020-12-17 21:00:00 EDT,ESPN
+Jazz,Clippers,2020-12-17 22:00:00 EDT,
+76ers,Pacers,2020-12-18 18:00:00 EDT,
+Heat,Raptors,2020-12-18 19:00:00 EDT,
+Cavaliers,Knicks,2020-12-18 19:30:00 EDT,
+Nets,Celtics,2020-12-18 20:00:00 EDT,ESPN2
+Bucks,Pelicans,2020-12-18 20:00:00 EDT,
+Bulls,Thunder,2020-12-18 20:00:00 EDT,
+Trail Blazers,Nuggets,2020-12-18 21:00:00 EDT,
+Lakers,Suns,2020-12-18 22:30:00 EDT,ESPN
+Hornets,Magic,2020-12-19 19:00:00 EDT,
+Pistons,Wizards,2020-12-19 19:00:00 EDT,
+Hawks,Grizzlies,2020-12-19 20:00:00 EDT,NBATV
