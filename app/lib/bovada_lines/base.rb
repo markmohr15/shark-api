@@ -22,10 +22,15 @@ class BovadaLines::Base
     @games ||= JSON.parse(fetch.body)&.first["events"]
   end
 
+  def self.team name
+    sport.teams.find_by_bovada_name name
+  end
+
   def self.get_lines
     @nf = []
     games.each do |g|
       game_info = game_info g
+      byebug
       game = Game.Scheduled.where('sport_id = ? and gametime > ? and gametime < ? and home_id = ? and visitor_id = ?', 
                          sport.id, game_info[:time] - 12.hours, game_info[:time] + 12.hours, 
                          team(game_info[:home_name])&.id, team(game_info[:vis_name])&.id).first

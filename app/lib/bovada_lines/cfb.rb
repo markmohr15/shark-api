@@ -8,8 +8,4 @@ class BovadaLines::Cfb < BovadaLines::Base
     @sport ||= Sport.find_by_abbreviation "CFB"
   end
 
-  def self.team name
-    sport.teams.find_by_bovada_name name
-  end
-
 end
