@@ -15,6 +15,7 @@
 #  league_id          :bigint
 #  sport_id           :bigint           not null
 #  sportsdata_id      :integer
+#  stadium_id         :bigint
 #  subdivision_id     :bigint
 #
 # Indexes
@@ -22,6 +23,7 @@
 #  index_teams_on_division_id     (division_id)
 #  index_teams_on_league_id       (league_id)
 #  index_teams_on_sport_id        (sport_id)
+#  index_teams_on_stadium_id      (stadium_id)
 #  index_teams_on_subdivision_id  (subdivision_id)
 #
 # Foreign Keys
@@ -37,6 +39,7 @@ class Team < ApplicationRecord
   belongs_to :league, optional: true
   belongs_to :division, optional: true
   belongs_to :subdivision, optional: true
+  belongs_to :stadium, optional: true
 
   has_many :games_as_visitor, foreign_key: "visitor_id", class_name: "Game"
   has_many :games_as_home, foreign_key: "home_id", class_name: "Game"

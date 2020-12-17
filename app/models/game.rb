@@ -56,17 +56,16 @@ class Game < ApplicationRecord
 
   scope :active_lines, -> {where.not(home_ml: nil, home_rl: nil, visitor_ml: nil, visitor_rl: nil, total: nil, spread: nil) }
 
-  after_initialize do
-    if new_record?
-      self.sport ||= season&.sport
-    end
-  end
-
-  before_save :set_visitor_rot
+  before_validation :set_defaults
   after_save :set_in_progress
 
-  def set_visitor_rot
+  def set_defaults
     self.visitor_rot = home_rot.to_i - 1 if home_rot.present?
+    self.season ||= sport&.seasons&.active&.last
+    self.status ||= "Scheduled"
+    if self.stadium.blank? || self.stadium&.name == "Unknown"
+      self.stadium = (home&.stadium || Stadium.find_by_name('Unknown'))
+    end
   end
 
   def set_in_progress

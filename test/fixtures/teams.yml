@@ -15,6 +15,7 @@
 #  league_id          :bigint
 #  sport_id           :bigint           not null
 #  sportsdata_id      :integer
+#  stadium_id         :bigint
 #  subdivision_id     :bigint
 #
 # Indexes
@@ -22,6 +23,7 @@
 #  index_teams_on_division_id     (division_id)
 #  index_teams_on_league_id       (league_id)
 #  index_teams_on_sport_id        (sport_id)
+#  index_teams_on_stadium_id      (stadium_id)
 #  index_teams_on_subdivision_id  (subdivision_id)
 #
 # Foreign Keys

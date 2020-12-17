@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_14_020415) do
+ActiveRecord::Schema.define(version: 2020_12_17_222358) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -168,9 +168,11 @@ ActiveRecord::Schema.define(version: 2020_12_14_020415) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "bookmaker_name"
     t.string "bovada_name"
+    t.bigint "stadium_id"
     t.index ["division_id"], name: "index_teams_on_division_id"
     t.index ["league_id"], name: "index_teams_on_league_id"
     t.index ["sport_id"], name: "index_teams_on_sport_id"
+    t.index ["stadium_id"], name: "index_teams_on_stadium_id"
     t.index ["subdivision_id"], name: "index_teams_on_subdivision_id"
   end
 
