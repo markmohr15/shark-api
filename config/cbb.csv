@@ -1,43 +1,81 @@
 visitor,home,gametime,channel
 
-Idaho,Utah,2020-12-18 21:00:00 EST,
-Santa Clara,San José State,2020-12-18 21:00:00 EST,
-Montana State,Washington State,2020-12-18 21:00:00 EST,PAC12
-VMI,Gardner-Webb,2020-12-18 12:00:00 EST,ESPN+
-Central Michigan,Western Michigan,2020-12-18 14:00:00 EST,ESPN3
-Carver College,Georgia State,2020-12-18 14:00:00 EST,ESPN+
-Eastern Washington,Northern Arizona,2020-12-18 14:00:00 EST,
-Greensboro,North Carolina A&T,2020-12-18 15:00:00 EST,
-Columbia College (MO),Appalachian State,2020-12-18 16:00:00 EST,ESPN+
-North Dakota,Southern Illinois,2020-12-18 16:00:00 EST,ESPN3
-Fairfield,Niagara,2020-12-18 16:00:00 EST,ESPN3
-NC Wilmington,Norfolk State,2020-12-18 16:00:00 EST,
-BYU,San Diego State,2020-12-18 17:00:00 EST,CBSSN
-Hampton,Howard,2020-12-18 17:00:00 EST,ESPN+
-St. Peter's,Monmouth,2020-12-18 17:00:00 EST,ESPN3
-Bowling Green,Robert Morris,2020-12-18 18:00:00 EST,ESPN3
-Drake,South Dakota,2020-12-18 18:00:00 EST,
-Dickinson State,Montana,2020-12-18 18:00:00 EST,
-Alice Lloyd College,Coastal Carolina,2020-12-18 18:00:00 EST,ESPN+
-Thomas,Stetson,2020-12-18 18:00:00 EST,ESPN+
-South Carolina State,Presbyterian,2020-12-18 18:00:00 EST,ESPN+
-SIU Edwardsville,Morehead State,2020-12-18 18:00:00 EST,ESPN+
-Richmond,Loyola Chicago,2020-12-18 18:00:00 EST,ESPN+
-Tennessee Tech,Tennessee,2020-12-18 19:00:00 EST,SEC
-Emporia State,Wichita State,2020-12-18 19:00:00 EST,ESPN+
-Iona,Rider,2020-12-18 19:00:00 EST,ESPN+
-Davidson,Rhode Island,2020-12-18 19:00:00 EST,ESPNU
-Northwestern State,Tulsa,2020-12-18 19:00:00 EST,ESPN+
-Webber International,Fla Gulf Coast,2020-12-18 19:00:00 EST,ESPN+
-Georgia Southwestern,Jacksonville State,2020-12-18 19:00:00 EST,ESPN+
-Western Carolina,Coll Of Charleston,2020-12-18 19:00:00 EST,
-Chicago State,Northern Illinois,2020-12-18 19:00:00 EST,ESPN3
-Florida A&M,Georgia Tech,2020-12-18 19:00:00 EST,ACC
-Champion Christian College,Arkansas Little Rock,2020-12-18 19:30:00 EST,ESPN+
-Belmont,Tennessee State,2020-12-18 19:30:00 EST,ESPN+
-UT Martin,Southeast Missouri State,2020-12-18 19:30:00 EST,ESPN+
-Prairie View A&M,Missouri,2020-12-18 20:00:00 EST,
-Iowa State,West Virginia,2020-12-18 21:00:00 EST,ESPNU
-SAGU American Indian College,Southern Utah,2020-12-18 21:00:00 EST,
-Air Force,Nevada,2020-12-18 22:00:00 EST,
-Weber State,Portland State,2020-12-18 22:05:00 EST,
+CS Northridge,California,2020-12-19 17:00:00 EST,,
+Butler,Indiana,2020-12-19 11:30:00 EST,FS1,
+Gonzaga,Iowa,2020-12-19 12:00:00 EST,,
+Louisville,Wisconsin,2020-12-19 12:00:00 EST,ESPN2,
+West Virginia Tech,Morgan State,2020-12-19 12:00:00 EST,,
+North Texas,LSU,2020-12-19 12:00:00 EST,,
+Troy,Auburn,2020-12-19 12:00:00 EST,SEC,
+The Citadel,Longwood,2020-12-19 12:30:00 EST,ESPN+,
+Kansas Christian,UMKC,2020-12-19 13:00:00 EST,,
+NC Greensboro,Elon,2020-12-19 13:00:00 EST,,
+Central Connecticut,Fordham,2020-12-19 13:00:00 EST,,
+James Madison,East Carolina,2020-12-19 13:00:00 EST,ESPN+,
+Ball State,Indiana State,2020-12-19 13:00:00 EST,ESPN3,
+North Carolina,Kentucky,2020-12-19 14:00:00 EST,CBS,
+Malone University,Akron,2020-12-19 14:00:00 EST,,
+Western Kentucky,Alabama,2020-12-19 14:00:00 EST,ESPNU,
+Marist,Manhattan,2020-12-19 14:00:00 EST,ESPN3,
+Hofstra,St. Bonaventure,2020-12-19 14:00:00 EST,ESPN+,
+Drexel,Fairleigh Dickinson,2020-12-19 14:00:00 EST,,
+Grambling,Tulane,2020-12-19 14:00:00 EST,ESPN+,
+Duquesne,Richmond,2020-12-19 14:00:00 EST,,
+High Point,William & Mary,2020-12-19 14:00:00 EST,,
+Georgia Southwestern,Mercer,2020-12-19 14:00:00 EST,ESPN+,
+Milwaukee,Wisc Green Bay,2020-12-19 14:00:00 EST,ESPN3,
+Youngstown State,Northern Kentucky,2020-12-19 14:00:00 EST,ESPN3,
+Wright State,Detroit,2020-12-19 14:00:00 EST,ESPN3,
+Valparaiso,Toledo,2020-12-19 14:00:00 EST,ESPN3,
+Stony Brook,Binghamton,2020-12-19 14:00:00 EST,ESPN3,
+Maine,Hartford,2020-12-19 14:00:00 EST,ESPN3,
+Lamar,Louisiana Tech,2020-12-19 14:00:00 EST,,
+Purdue,Notre Dame,2020-12-19 14:30:00 EST,ESPN2,
+Mississippi,Dayton,2020-12-19 14:30:00 EST,NBCSN,
+Rice,Sam Houston State,2020-12-19 15:00:00 EST,,
+South Alabama,Alabama A&M,2020-12-19 15:00:00 EST,,
+Our Lady of the Lake,Texas A&M Corpus,2020-12-19 15:00:00 EST,,
+UL Monroe,Southern Miss,2020-12-19 15:00:00 EST,,
+Chattanooga,UAB,2020-12-19 15:00:00 EST,,
+Jacksonville,Miami Florida,2020-12-19 15:30:00 EST,ACCNX,
+Baylor,Kansas State,2020-12-19 16:00:00 EST,ESPN+,
+Lee University,East Tennessee State,2020-12-19 16:00:00 EST,ESPN+,
+Life Pacific,CS Bakersfield,2020-12-19 16:00:00 EST,,
+North Carolina A&T,Charlotte U,2020-12-19 16:00:00 EST,,
+Furman,Winthrop,2020-12-19 16:00:00 EST,ESPN+,
+Fairfield,Niagara,2020-12-19 16:00:00 EST,ESPN3,
+Campbell,NC State,2020-12-19 16:00:00 EST,,
+Idaho State,Utah Valley,2020-12-19 16:00:00 EST,,
+MD Baltimore Co,Albany,2020-12-19 16:00:00 EST,ESPN3,
+UCLA,Ohio State,2020-12-19 16:15:00 EST,CBS,
+NJIT,Temple,2020-12-19 16:30:00 EST,ESPN+,
+Delaware,La Salle,2020-12-19 16:30:00 EST,NBCSN,
+Samford,Kennesaw State,2020-12-19 16:30:00 EST,ESPN+,
+Flagler,North Florida,2020-12-19 17:00:00 EST,ESPN+,
+St. Peter's,Monmouth,2020-12-19 17:00:00 EST,ESPN3,
+Houston Baptist,Oklahoma,2020-12-19 17:00:00 EST,,
+Coppin State,Virginia Tech,2020-12-19 17:30:00 EST,ACCNX,
+Kansas Christian,UMKC,2020-12-19 18:00:00 EST,,
+Carver College,Stetson,2020-12-19 18:00:00 EST,ESPN+,
+Cal Santa Barbara,Pepperdine,2020-12-19 18:00:00 EST,,
+Buffalo,Syracuse,2020-12-19 18:00:00 EST,,
+Eastern Washington,Northern Arizona,2020-12-19 18:05:00 EST,,
+Fresno Pacific,Fresno State,2020-12-19 19:00:00 EST,,
+Georgia Southern,Florida Intl,2020-12-19 19:00:00 EST,,
+Iona,Rider,2020-12-19 19:00:00 EST,ESPN+,
+Middle Tenn St,Bellarmine,2020-12-19 19:00:00 EST,ESPN+,
+IUPUI,Purdue Fort Wayne,2020-12-19 19:00:00 EST,ESPN3,
+Oakland,Illinois Chicago,2020-12-19 19:00:00 EST,ESPN+,
+Crowley's Ridge College,Tennessee State,2020-12-19 20:00:00 EST,ESPN+,
+McNeese,UL Lafayette,2020-12-19 20:00:00 EST,ESPN+,
+Cincinnati,Georgia,2020-12-19 20:00:00 EST,SEC,
+Northwestern State,Missouri State,2020-12-19 20:00:00 EST,ESPN3,
+Radford,Vanderbilt,2020-12-19 20:00:00 EST,SEC,
+Miami Ohio,Bradley,2020-12-19 20:00:00 EST,ESPN3,
+Colorado State,Saint Marys CA,2020-12-19 20:00:00 EST,,
+Arizona,Stanford,2020-12-19 20:00:00 EST,PAC12,
+Texas State,Denver,2020-12-19 20:00:00 EST,,
+St. Josephs,Villanova,2020-12-19 21:00:00 EST,FS1,
+Central Florida,Florida State,2020-12-19 21:00:00 EST,,
+SAGU American Indian College,Dixie State,2020-12-19 21:00:00 EST,,
+Cal Poly SLO,Loyola Marymount,2020-12-19 21:00:00 EST,,
