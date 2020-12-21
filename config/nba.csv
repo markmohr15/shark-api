@@ -1,23 +1,46 @@
 visitor,home,gametime,channel
-Cavaliers,Knicks,2020-12-16 19:30:00 EDT,
-Bulls,Thunder,2020-12-16 20:00:00 EDT,
-Trail Blazers,Nuggets,2020-12-16 21:00:00 EDT,
-Lakers,Suns,2020-12-16 21:00:00 EDT,NBATV
-Hornets,Magic,2020-12-17 19:00:00 EDT,
-Pistons,Wizards,2020-12-17 19:00:00 EDT,
-Spurs,Rockets,2020-12-17 20:00:00 EDT,
-Hawks,Grizzlies,2020-12-17 20:00:00 EDT,
-Timberwolves,Mavericks,2020-12-17 20:30:00 EDT,
-Warriors,Kings,2020-12-17 21:00:00 EDT,ESPN
-Jazz,Clippers,2020-12-17 22:00:00 EDT,
-76ers,Pacers,2020-12-18 18:00:00 EDT,
-Heat,Raptors,2020-12-18 19:00:00 EDT,
-Cavaliers,Knicks,2020-12-18 19:30:00 EDT,
-Nets,Celtics,2020-12-18 20:00:00 EDT,ESPN2
-Bucks,Pelicans,2020-12-18 20:00:00 EDT,
-Bulls,Thunder,2020-12-18 20:00:00 EDT,
-Trail Blazers,Nuggets,2020-12-18 21:00:00 EDT,
-Lakers,Suns,2020-12-18 22:30:00 EDT,ESPN
-Hornets,Magic,2020-12-19 19:00:00 EDT,
-Pistons,Wizards,2020-12-19 19:00:00 EDT,
-Hawks,Grizzlies,2020-12-19 20:00:00 EDT,NBATV
+Warriors,Nets,2020-12-22 19:00:00 EDT,TNT
+Clippers,Lakers,2020-12-22 22:00:00 EDT,TNT
+Hornets,Cavaliers,2020-12-23 19:00:00 EDT,
+Knicks,Pacers,2020-12-23 19:00:00 EDT,
+Heat,Magic,2020-12-23 19:00:00 EDT,
+Wizards,76ers,2020-12-23 19:00:00 EDT,
+Bucks,Celtics,2020-12-23 19:30:00 EDT,TNT
+Pelicans,Raptors,2020-12-23 19:30:00 EDT,
+Hawks,Bulls,2020-12-23 20:00:00 EDT,
+Thunder,Rockets,2020-12-23 20:00:00 EDT,
+Spurs,Grizzlies,2020-12-23 20:00:00 EDT,
+Pistons,Timberwolves,2020-12-23 20:00:00 EDT,
+Kings,Nuggets,2020-12-23 21:00:00 EDT,
+Jazz,Trail Blazers,2020-12-23 22:00:00 EDT,
+Mavericks,Suns,2020-12-23 22:30:00 EDT,ESPN
+Pelicans,Heat,2020-12-25 12:00:00 EDT,ESPN
+Warriors,Bucks,2020-12-25 14:30:00 EDT,ABC
+Nets,Celtics,2020-12-25 17:00:00 EDT,ABC
+Mavericks,Lakers,2020-12-25 20:00:00 EDT,ABC
+Clippers,Nuggets,2020-12-25 22:30:00 EDT,ESPN
+Hawks,Grizzlies,2020-12-26 17:00:00 EDT,NBATV
+Thunder,Hornets,2020-12-26 19:00:00 EDT,
+Cavaliers,Pistons,2020-12-26 19:00:00 EDT,
+Magic,Wizards,2020-12-26 19:00:00 EDT,
+76ers,Knicks,2020-12-26 19:30:00 EDT,NBATV
+Pacers,Bulls,2020-12-26 20:00:00 EDT,
+Raptors,Spurs,2020-12-26 20:30:00 EDT,
+Timberwolves,Jazz,2020-12-26 21:00:00 EDT,
+Rockets,Trail Blazers,2020-12-26 22:00:00 EDT,NBATV
+Suns,Kings,2020-12-26 22:00:00 EDT,
+Mavericks,Clippers,2020-12-27 15:30:00 EDT,NBATV
+Nets,Hornets,2020-12-27 19:00:00 EDT,NBATV
+Magic,Wizards,2020-12-27 19:00:00 EDT,
+Spurs,Pelicans,2020-12-27 19:00:00 EDT,
+76ers,Cavaliers,2020-12-27 19:30:00 EDT,
+Bucks,Knicks,2020-12-27 19:30:00 EDT,
+Celtics,Pacers,2020-12-27 20:00:00 EDT,
+Warriors,Bulls,2020-12-27 20:00:00 EDT,
+Suns,Kings,2020-12-27 21:00:00 EDT,
+Timberwolves,Lakers,2020-12-27 22:00:00 EDT,NBATV
+Pistons,Hawks,2020-12-28 19:30:00 EDT,
+Grizzlies,Nets,2020-12-28 19:30:00 EDT,NBATV
+Jazz,Thunder,2020-12-28 20:00:00 EDT,
+Rockets,Nuggets,2020-12-28 21:00:00 EDT,
+Trail Blazers,Lakers,2020-12-28 22:00:00 EDT,NBATV
