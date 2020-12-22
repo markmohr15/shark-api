@@ -20,17 +20,19 @@ class BetOnlineLines::Cfb < BetOnlineLines::Base
     date = dates[0][0][0].split(" -")[0].to_date
     date2 = dates[dates.size - 1][0][0].split(" -")[0].to_date
     @nf = []
+    @found = []
     games.each do |g|
       next if g[0][0].blank?
       game_info = game_info g
       next if game_info[:vis_lines].empty? || game_info[:home_lines].empty?
-      game = Game.Scheduled.where('sport_id = ? and gametime > ? and gametime < ? and home_id = ? and visitor_id = ?', 
+      game = Game.where.not(id: @found).Scheduled.where('sport_id = ? and gametime > ? and gametime < ? and home_id = ? and visitor_id = ?', 
                          sport.id, date.to_datetime, date2.to_datetime.end_of_day + 6.hours, 
                          team(game_info[:home_name])&.id, team(game_info[:vis_name])&.id).first
       if game.nil?
         @nf << game_info[:home_name]
       else
         create_line game_info, game
+        @found << game.id
       end
     end
     @nf

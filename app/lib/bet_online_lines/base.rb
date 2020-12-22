@@ -47,6 +47,7 @@ class BetOnlineLines::Base
     vis_lines = []
     home_lines = []
     top[2..-1].each do |x|
+      next if x == "-"
       if x[0] == "-" || x[0] == "+" || x[0..1] == "pk" || x[0..1] == "Ov" || (x[0..1] == "Un" && x.exclude?(","))
         vis_lines << x
       else
@@ -113,6 +114,7 @@ class BetOnlineLines::Base
     total_set = false
     lines = {vis_spread: nil, vis_rl: nil, vis_ml: nil, 
              home_rl: nil, home_ml: nil, total: nil}
+
     game_info[:vis_lines][0..2].each do |vl|
       next if vl.include?("Ov") && total_set
       lines.merge!(self.parse_vis_line(vl))
