@@ -1,18 +1,21 @@
 visitor,home,gametime,channel
 
-Wisconsin,Michigan State,2020-12-25 12:30:00 EST,FOX
-Maryland,Purdue,2020-12-25 14:30:00 EST,FS1
-Michigan,Nebraska,2020-12-25 18:00:00 EST,BTN
-Iowa,Minnesota,2020-12-25 20:00:00 EST,BTN
-Kentucky,Louisville,2020-12-26 13:00:00 EST,ESPN
-Youngstown State,Cleveland State,2020-12-26 13:00:00 EST,ESPN3
-Houston,Central Florida,2020-12-26 14:00:00 EST,ESPN2
-Ohio State,Northwestern,2020-12-26 14:00:00 EST,
-Coppin State,Towson,2020-12-26 14:00:00 EST,
-Illinois Chicago,Milwaukee,2020-12-26 15:00:00 EST,ESPN+
-Gonzaga,Virginia,2020-12-26 16:00:00 EST,CBS
-Indiana,Illinois,2020-12-26 16:00:00 EST,
-Norfolk State,George Mason,2020-12-26 16:00:00 EST,ESPN+
-Wisc Green Bay,Wright State,2020-12-26 16:00:00 EST,ESPN3
-Texas Southern,LSU,2020-12-26 17:00:00 EST,SEC
-Robert Morris,IPFW,2020-12-26 19:00:00 EST,ESPN+
+Drake,Indiana State,2020-12-27 13:00:00 EST,ESPN+,
+Youngstown State,Cleveland State,2020-12-27 13:00:00 EST,ESPN3,
+Hartford,New Hampshire,2020-12-27 13:00:00 EST,ESPN+,
+Binghamton,MD Baltimore Co,2020-12-27 13:00:00 EST,ESPN3,
+Canisius,Monmouth,2020-12-27 14:00:00 EST,ESPN3,
+Olivet College,Eastern Michigan,2020-12-27 14:00:00 EST,,
+Wisc Green Bay,Wright State,2020-12-27 14:00:00 EST,ESPN3,
+Carver College,Jacksonville State,2020-12-27 15:00:00 EST,ESPN+,
+NJIT,Vermont,2020-12-27 15:00:00 EST,ESPN+,
+Oakland,Detroit,2020-12-27 16:00:00 EST,ESPN3,
+Alcorn State,Vanderbilt,2020-12-27 16:00:00 EST,SEC,
+Evansville,Southern Illinois,2020-12-27 16:00:00 EST,ESPN+,
+Illinois State,Loyola Chicago,2020-12-27 16:00:00 EST,ESPN+,
+Missouri State,Northern Iowa,2020-12-27 16:00:00 EST,ESPN+,
+DePaul,Providence,2020-12-27 16:30:00 EST,FS1,
+Robert Morris,IPFW,2020-12-27 17:00:00 EST,ESPN+,
+UMass Lowell,Stony Brook,2020-12-27 17:00:00 EST,ESPN3,
+Cal Santa Barbara,UC Irvine,2020-12-27 17:00:00 EST,ESPN3,
+Cal Poly SLO,Hawaii,2020-12-27 22:00:00 EST,,
