@@ -29,7 +29,7 @@ class Line < ApplicationRecord
 
   scope :user_last_lines, -> (user, game) { joins(:sportsbook)
                                             .merge(user.sportsbooks)
-                                            .where(game: game)
+                                            .where('game_id = ? and created_at > ?', game.id, (DateTime.current - 1.hour) )
                                             .select("DISTINCT ON (sportsbook_id) lines.*")
                                             .order("lines.sportsbook_id, lines.created_at DESC") }
 
