@@ -27,6 +27,7 @@ class BovadaLines::Base
   end
 
   def self.get_lines
+    @url = @fetch = @games = nil
     @nf = []
     games.each do |g|
       game_info = game_info g
