@@ -9,7 +9,7 @@ class BetOnlineLines::Nfl < BetOnlineLines::Base
   end
 
   def self.team name
-    sport.teams.find_by_nickname(name.last) || sport.teams.find_by_nickname(name[-2..-1].join(" "))
+    sport.teams.find_by_nickname(name[1]) || sport.teams.find_by_nickname(name[2]) || sport.teams.find_by_nickname(name[1..2].join(" "))
   end
 
   def self.get_lines
@@ -18,16 +18,23 @@ class BetOnlineLines::Nfl < BetOnlineLines::Base
     return if base_dates.empty?
     date = dates[0][0][0].split(" -")[0].to_date
     date2 = dates[dates.size - 1][0][0].split(" -")[0].to_date
+    @nf = []
+    @found = []
     games.each do |g|
       next if g[0][0].blank?
       game_info = game_info g
       next if game_info[:vis_lines].empty? || game_info[:home_lines].empty?
-      game = Game.Scheduled.where('sport_id = ? and gametime > ? and gametime < ? and visitor_id = ? and home_id = ?', 
+      game = Game.where.not(id: @found).Scheduled.where('sport_id = ? and gametime > ? and gametime < ? and visitor_id = ? and home_id = ?', 
                          sport.id, date.to_datetime, date2.to_datetime.end_of_day + 6.hours, 
                          team(game_info[:vis_name])&.id, team(game_info[:home_name])&.id).first
-      next if game.nil?
-      create_line game_info, game
+      if game.nil?
+        @nf << game_info[:home_name]
+      else
+        create_line game_info, game
+        @found << game.id
+      end
     end
+    @nf
   rescue StandardError => exception
     raise_api_error exception.message
   end

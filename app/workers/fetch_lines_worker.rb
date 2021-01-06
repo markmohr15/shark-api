@@ -92,12 +92,12 @@ class FetchLinesWorker
      # Sidekiq.logger.info err
      # Bugsnag.notify(err)
     #end
-    #begin
-     # BetOnlineLines::Nhl.get_lines
-    #rescue => err
-     # Sidekiq.logger.info err
-      #Bugsnag.notify(err)
-    #end
+    begin
+      BetOnlineLines::Nhl.get_lines
+    rescue => err
+      Sidekiq.logger.info err
+      Bugsnag.notify(err)
+    end
     #begin
      # BetOnlineLines::Mlb.get_lines
     #rescue => err
