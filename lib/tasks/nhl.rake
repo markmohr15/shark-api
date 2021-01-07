@@ -10,7 +10,11 @@ namespace :importer do
       game = Game.where(sport: sport, gametime: line[:gametime],
                  visitor: sport.teams.find_by_nickname(line[:visitor]),
                  home: sport.teams.find_by_nickname(line[:home])).first_or_create
-      nf << line unless game.valid?
+      if game.valid?
+        game.update channel: line[:channel]
+      else
+        nf << line
+      end
     end
 
     puts "Finished NHL Import"
