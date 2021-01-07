@@ -62,7 +62,7 @@ class BetOnlineLines::Base
         home_name << x
       end
     end
-    home_rot_index = home_rot.size > 3 ? -4 : -3
+    home_rot_index = home_rot.size > 3 ? -4 : 0
     {vis_lines: vis_lines, home_lines: home_lines, vis_name: vis_name, 
      home_name: home_name, home_rot: home_rot[home_rot_index..-1], time: top[0], 
      time_adjust: top[1][0..1] == "PM" && top[0][0..1] != "12" ? 12 : 0}
