@@ -53,7 +53,7 @@ class BovadaLines::Base
     vis_spread = vis_rl = home_rl = total = vis_ml = home_ml = nil
     lines.each do |l|
       next if l["outcomes"].empty?
-      if l["description"] == "Point Spread"
+      if l["description"] == "Point Spread" || l["description"] == "Puck Line"
         vis_spread = l["outcomes"][0]["price"]["handicap"].to_f
         vis_rl = l["outcomes"][0]["price"]["american"]
         vis_rl == "EVEN" ? vis_rl = 100 : vis_rl = vis_rl.to_i
@@ -61,10 +61,10 @@ class BovadaLines::Base
         home_rl == "EVEN" ? home_rl = 100 : home_rl = home_rl.to_i
       elsif l["description"] == "Total"
         total = l["outcomes"][0]["price"]["handicap"].to_f
-      elsif l["description"] == "Moneyline"
-        vis_ml = l["outcomes"][0]["price"]["american"].to_i
+      elsif l["description"] == "Moneyline" 
+        vis_ml = l["outcomes"][0]["price"]["american"]
         vis_ml == "EVEN" ? vis_ml = 100 : vis_ml = vis_ml.to_i
-        home_ml = l["outcomes"][1]["price"]["american"].to_i
+        home_ml = l["outcomes"][1]["price"]["american"]
         home_ml == "EVEN" ? home_ml = 100 : home_ml = home_ml.to_i
       end
     end
