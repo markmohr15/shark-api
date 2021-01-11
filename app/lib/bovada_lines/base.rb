@@ -29,15 +29,18 @@ class BovadaLines::Base
   def self.get_lines
     @url = @fetch = @games = nil
     @nf = []
+    @found = []
+
     games.each do |g|
       game_info = game_info g
-      game = Game.Scheduled.where('sport_id = ? and gametime > ? and gametime < ? and home_id = ? and visitor_id = ?', 
-                         sport.id, game_info[:time] - 12.hours, game_info[:time] + 12.hours, 
+      game = sport.games.Scheduled.where.not(id: @found).where('sport_id = ? and gametime > ? and gametime < ? and home_id = ? and visitor_id = ?', 
+                         sport.id, game_info[:time] - 90.minutes, game_info[:time] + 90.minutes, 
                          team(game_info[:home_name])&.id, team(game_info[:vis_name])&.id).first
       if game.nil?
         @nf << [game_info[:vis_name], game_info[:home_name]]
       else
         create_line game_info, game
+        @found << game.id
       end
     end
     @nf
