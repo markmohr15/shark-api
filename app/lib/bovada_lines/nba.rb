@@ -5,7 +5,7 @@ class BovadaLines::Nba < BovadaLines::Base
   end
 
   def self.sport
-    @sport ||= Sport.find_by_abbreviation "NBA"
+    @sport ||= Sport.nba
   end
 
 end

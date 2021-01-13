@@ -5,7 +5,7 @@ class BovadaLines::Cfb < BovadaLines::Base
   end
 
   def self.sport
-    @sport ||= Sport.find_by_abbreviation "CFB"
+    @sport ||= Sport.cfb
   end
 
 end

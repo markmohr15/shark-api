@@ -5,7 +5,7 @@ class BetOnlineLines::Cbb < BetOnlineLines::Base
   end
 
   def self.sport
-    @sport ||= Sport.find_by_abbreviation "CBB"
+    @sport ||= Sport.cbb
   end
 
   def self.home home_name

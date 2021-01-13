@@ -5,7 +5,7 @@ class BetOnlineLines::Mlb < BetOnlineLines::Base
   end
 
   def self.sport
-    @sport ||= Sport.find_by_abbreviation "MLB"
+    @sport ||= Sport.mlb
   end
 
   def self.home home_name

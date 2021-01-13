@@ -5,7 +5,7 @@ class BookmakerLines::Nfl < BookmakerLines::Base
   end
 
   def self.sport
-    @sport ||= Sport.find_by_abbreviation "NFL"
+    @sport ||= Sport.nfl
   end
 
   def self.team name
