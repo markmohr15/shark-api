@@ -2,6 +2,7 @@ class FetchLinesWorker
   include Sidekiq::Worker
 
   def perform
+=begin
     begin
       BetOnlineLines::Cfb.get_lines
     rescue => err
@@ -26,6 +27,7 @@ class FetchLinesWorker
       Sidekiq.logger.info err
       Bugsnag.notify(err)
     end
+=end
     begin
       BetOnlineLines::Nfl.get_lines
     rescue => err
