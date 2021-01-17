@@ -18,6 +18,7 @@ class Sport < ApplicationRecord
   has_many :seasons, dependent: :destroy
   has_many :games
   has_many :stadiums, dependent: :destroy
+  has_many :tags, through: :teams
 
   scope :mlb, -> {find_by_abbreviation "MLB"}
   scope :cfb, -> {find_by_abbreviation "CFB"}

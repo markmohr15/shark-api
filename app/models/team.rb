@@ -44,6 +44,16 @@ class Team < ApplicationRecord
   has_many :games_as_visitor, foreign_key: "visitor_id", class_name: "Game"
   has_many :games_as_home, foreign_key: "home_id", class_name: "Game"
   has_many :triggers
+  has_many :tags, dependent: :destroy
+
+  scope :mlb, -> {joins(:sport).where('sports.abbreviation = ?', "MLB")}
+  scope :cfb, -> {joins(:sport).where('sports.abbreviation = ?', "CFB")}
+  scope :nba, -> {joins(:sport).where('sports.abbreviation = ?', "NBA")}
+  scope :cbb, -> {joins(:sport).where('sports.abbreviation = ?', "CBB")}
+  scope :nfl, -> {joins(:sport).where('sports.abbreviation = ?', "NFL")}
+  scope :nhl, -> {joins(:sport).where('sports.abbreviation = ?', "NHL")}
+  scope :kbo, -> {joins(:sport).where('sports.abbreviation = ?', "KBO")}
+  scope :npb, -> {joins(:sport).where('sports.abbreviation = ?', "NPB")}
   
   def games
     games_as_visitor.or(games_as_home)
