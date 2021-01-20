@@ -1,29 +1,63 @@
 visitor,home,gametime,channel
 
-NC Wilmington,Towson,2021-01-19 13:00:00 EST,,
-Buffalo,Kent State,2021-01-19 17:00:00 EST,ESPN+,
-High Point,Longwood,2021-01-19 18:00:00 EST,ESPN+,
-Ohio,Northern Illinois,2021-01-19 18:00:00 EST,ESPN+,
-Purdue,Ohio State,2021-01-19 18:30:00 EST,BTN,
-Kansas State,Oklahoma,2021-01-19 18:30:00 EST,,
-Maryland,Michigan,2021-01-19 19:00:00 EST,FS1,
-Tennessee,Florida,2021-01-19 19:00:00 EST,ESPN,
-South Carolina,Missouri,2021-01-19 19:00:00 EST,SEC,
-Radford,Campbell,2021-01-19 19:00:00 EST,ESPN+,
-Butler,Depaul,2021-01-19 19:00:00 EST,CBSSN,
-Miami Florida,Syracuse,2021-01-19 19:00:00 EST,ACC,
-SE Missouri State,Tennessee State,2021-01-19 19:00:00 EST,ESPN+,
-Winthrop,Presbyterian,2021-01-19 19:00:00 EST,ESPNU,
-NC Asheville,Gardner Webb,2021-01-19 19:00:00 EST,ESPN+,
-USC Upstate,Charleston Sou,2021-01-19 19:00:00 EST,ESPN+,
-Central Michigan,Toledo,2021-01-19 19:00:00 EST,ESPN+,
-Ball State,Miami Ohio,2021-01-19 19:00:00 EST,ESPN3,
-Akron,Bowling Green,2021-01-19 19:00:00 EST,ESPN+,
-USC,Oregon State,2021-01-19 19:00:00 EST,ESPN2,
-Penn State,Illinois,2021-01-19 20:30:00 EST,BTN,
-Seton Hall,Villanova,2021-01-19 21:00:00 EST,FS1,
-Duke,Pittsburgh,2021-01-19 21:00:00 EST,ESPN,
-San Diego,Loyola Marymount,2021-01-19 21:00:00 EST,,
-Colorado State,Utah State,2021-01-19 21:00:00 EST,CBSSN,
-Mississippi,Mississippi State,2021-01-19 21:00:00 EST,SEC,
-Alabama,LSU,2021-01-19 21:00:00 EST,ESPN2,
+East Tenn State,Western Carolina,2021-01-20 16:00:00 EST,ESPN+
+Winthrop,Presbyterian,2021-01-20 17:00:00 EST,ESPN+
+Mercer,The Citadel,2021-01-20 17:00:00 EST,ESPN+
+Va Commonwealth,St. Bonaventure,2021-01-20 18:00:00 EST,
+Rhode Island,Duquesne,2021-01-20 18:00:00 EST,ESPN+
+High Point,Longwood,2021-01-20 18:00:00 EST,ESPN+
+Providence,Creighton,2021-01-20 19:00:00 EST,FS1
+Clemson,Georgia Tech,2021-01-20 19:00:00 EST,ACCNX
+Radford,Campbell,2021-01-20 19:00:00 EST,ESPN+
+Loyola Chicago,Valparaiso,2021-01-20 19:00:00 EST,ESPN+
+Wake Forest,North Carolina,2021-01-20 19:00:00 EST,ACC
+St Josephs,George Mason,2021-01-20 19:00:00 EST,ESPN+
+Kentucky,Georgia,2021-01-20 19:00:00 EST,SEC
+NC Asheville,Gardner Webb,2021-01-20 19:00:00 EST,ESPN+
+Furman,VMI,2021-01-20 19:00:00 EST,ESPN+
+SE Louisiana,McNeese State,2021-01-20 19:30:00 EST,
+Northwestern State,Stephen F. Austin,2021-01-20 19:30:00 EST,ESPN+
+Tulsa,Houston,2021-01-20 20:00:00 EST,ESPN+
+Northwestern,Wisconsin,2021-01-20 20:00:00 EST,BTN
+Texas A&M Corpus,New Orleans,2021-01-20 20:00:00 EST,
+Nicholls State,Houston Baptist,2021-01-20 20:00:00 EST,
+Chattanooga,Samford,2021-01-20 20:00:00 EST,ESPN+
+San Diego Christian,California Baptist,2021-01-20 21:00:00 EST,
+Bradley,Illinois State,2021-01-20 21:00:00 EST,ESPN3
+Colorado,Washington,2021-01-20 21:00:00 EST,ESPN2
+Fresno State,Boise State,2021-01-20 21:00:00 EST,FS1
+Auburn,Arkansas,2021-01-20 21:00:00 EST,SEC
+Abilene Christian,Sam Houston State,2021-01-20 21:30:00 EST,ESPN+
+Eastern Michigan,Buffalo,2021-01-21 14:00:00 EST,ESPN+
+San Jose State,New Mexico,2021-01-21 15:00:00 EST,
+USC,Stanford,2021-01-21 17:00:00 EST,FS1
+Bowling Green,Miami Ohio,2021-01-21 17:30:00 EST,ESPN3
+Central Michigan,Akron,2021-01-21 18:00:00 EST,ESPN+
+Cornell College,Northern Iowa,2021-01-21 19:00:00 EST,ESPN+
+Rutgers,Penn State,2021-01-21 19:00:00 EST,BTN
+Wichita State,Memphis,2021-01-21 19:00:00 EST,ESPN2
+St. Francis NY,Long Island,2021-01-21 19:00:00 EST,
+Mt. St. Mary's,Central Connecticut,2021-01-21 19:00:00 EST,
+Fairleigh Dickinson,Merrimack,2021-01-21 19:00:00 EST,
+St. Francis PA,Sacred Heart,2021-01-21 19:00:00 EST,
+SE Missouri State,Morehead State,2021-01-21 19:00:00 EST,ESPNU
+Benedict,UNLV,2021-01-21 20:00:00 EST,
+Tennessee Martin,Eastern Kentucky,2021-01-21 20:00:00 EST,ESPN+
+Eastern Illinois,Belmont,2021-01-21 20:00:00 EST,ESPN+
+Saint Marys CA,Loyola Marymount,2021-01-21 20:00:00 EST,
+Montana State,Northern Arizona,2021-01-21 20:00:00 EST,
+Montana,Sacramento State,2021-01-21 20:05:00 EST,
+Jacksonville State,Murray State,2021-01-21 20:30:00 EST,ESPN+
+Tennessee Tech,Austin Peay,2021-01-21 20:30:00 EST,ESPN+
+Eastern Washington,Northern Colorado,2021-01-21 20:30:00 EST,
+Indiana,Iowa,2021-01-21 21:00:00 EST,FS1
+UCLA,California,2021-01-21 21:00:00 EST,ESPNU
+Arizona,Arizona State,2021-01-21 21:00:00 EST,ESPN
+Portland,BYU,2021-01-21 21:00:00 EST,CBSSN
+SIU Edwardsville,Tennessee State,2021-01-21 21:00:00 EST,ESPN+
+Pacific,Pepperdine,2021-01-21 21:00:00 EST,
+Southern Utah,Weber State,2021-01-21 21:00:00 EST,
+Utah,Washington State,2021-01-21 22:00:00 EST,PAC12
+San Francisco,Santa Clara,2021-01-21 22:00:00 EST,
+Idaho State,Portland State,2021-01-21 22:05:00 EST,
+Colorado State,Utah State,2021-01-21 23:00:00 EST,FS1
