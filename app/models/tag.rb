@@ -14,7 +14,7 @@
 #
 class Tag < ApplicationRecord
   belongs_to :team
-  belongs_to :sport
+  has_one :sport, through: :team
 
   validates_uniqueness_of :name, scope: :team
 end
