@@ -23,7 +23,7 @@ class MyBookieLines::Base
   end
 
   def self.team name
-    sport.tags.find_by_name name
+    sport.tags.find_by_name(name)&.team
   end
 
   def self.get_lines
