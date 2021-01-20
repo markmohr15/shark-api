@@ -68,4 +68,9 @@ class Team < ApplicationRecord
     self.bovada_name ||= self.name
   end
 
+  after_create do
+    self.tags.create(name: self.name)
+    self.tags.create(name: [self.name, self.nickname].join(" ")) if self.nickname.present?
+  end
+
 end

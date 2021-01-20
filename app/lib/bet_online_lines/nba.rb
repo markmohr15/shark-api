@@ -11,7 +11,7 @@ class BetOnlineLines::Nba < BetOnlineLines::Base
 
   def self.team name
     tag = sport.tags.find_by_name(name.last) || sport.tags.find_by_name(name[-2..-1].join(" "))
-    tag&.name
+    tag&.team
   end
 
   def self.get_lines

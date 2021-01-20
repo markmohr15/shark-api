@@ -16,5 +16,6 @@ class Tag < ApplicationRecord
   belongs_to :team
   has_one :sport, through: :team
 
+  validates_presence_of :name
   validates_uniqueness_of :name, scope: :team
 end
