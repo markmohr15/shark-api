@@ -9,7 +9,7 @@ class BetOnlineLines::Cbb < BetOnlineLines::Base
   end
 
   def self.home home_name
-    sport.teams.find_by_name home_name.join(" ")
+    sport.tags.find_by_name(home_name.join(" "))&.team
   end
   
   def self.get_lines

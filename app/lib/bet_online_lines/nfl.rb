@@ -9,7 +9,8 @@ class BetOnlineLines::Nfl < BetOnlineLines::Base
   end
 
   def self.team name
-    sport.teams.find_by_nickname(name[1]) || sport.teams.find_by_nickname(name[2]) || sport.teams.find_by_nickname(name[1..2].join(" "))
+    tag = sport.tags.find_by_name(name[1]) || sport.tags.find_by_name(name[2]) || sport.tags.find_by_name(name[1..2].join(" "))
+    tag&.team
   end
 
   def self.get_lines

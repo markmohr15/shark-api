@@ -23,7 +23,7 @@ class BovadaLines::Base
   end
 
   def self.team name
-    sport.teams.find_by_bovada_name name
+    sport.tags.find_by_name name
   end
 
   def self.get_lines

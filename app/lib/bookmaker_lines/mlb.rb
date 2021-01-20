@@ -8,10 +8,6 @@ class BookmakerLines::Mlb < BookmakerLines::Base
     @sport ||= Sport.mlb
   end
 
-  def self.team name
-    sport.teams.find_by_bookmaker_name name.gsub("Action", "").strip
-  end
-
   def self.get_lines
     @url = @fetch = @base_times = @times = @base_teams = @teams = @base_spreads = nil
     @spread = @base_totals = @totals = @base_moneylines = @moneylines = nil

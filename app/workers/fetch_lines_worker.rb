@@ -77,6 +77,12 @@ class FetchLinesWorker
       Bugsnag.notify(err)
     end
     begin
+      MyBookieLines::Cbb.get_lines
+    rescue => err
+      Sidekiq.logger.info err
+      Bugsnag.notify(err)
+    end
+    begin
       BetOnlineLines::Nba.get_lines
       rescue => err
       Sidekiq.logger.info err
@@ -114,6 +120,12 @@ class FetchLinesWorker
     end
     begin
       BovadaLines::Nhl.get_lines
+    rescue => err
+      Sidekiq.logger.info err
+      Bugsnag.notify(err)
+    end
+    begin
+      MyBookieLines::Nhl.get_lines
     rescue => err
       Sidekiq.logger.info err
       Bugsnag.notify(err)

@@ -68,6 +68,37 @@ class BookmakerLines::Base
     end.flatten.reject { |x| x == "Moneyline"}.map {|x| x == "-" ? nil : x}
   end
 
+  def self.get_lines
+    @url = @fetch = @base_times = @times = @base_teams = @teams = @base_spreads = nil
+    @spreads = @base_totals = @totals = @base_moneylines = @moneylines = nil
+    @nf = []
+    
+    teams.each_with_index do |t,i|
+      next if i % 2 == 1
+      game = sport.games.Scheduled.where('home_id = ? and visitor_id = ?', 
+                team(teams[i + 1])&.id, team(t)&.id).first
+      if game.nil?
+        @nf << t
+      else
+        vis_spread = parse_vis_spread spreads[i]
+        game.lines.create! visitor_spread: vis_spread[0], 
+                          visitor_rl: vis_spread[1],
+                          home_rl: parse_home_spread(spreads[i + 1]),
+                          visitor_ml: parse_moneyline(moneylines[i]),
+                          home_ml: parse_moneyline(moneylines[i + 1]), 
+                          total: parse_total(totals[i]),
+                          game: game, sportsbook: sportsbook
+      end
+    end
+    @nf
+  rescue StandardError => exception
+    raise_api_error exception.message
+  end
+
+  def self.team name
+    sport.tags.find_by_name(name.gsub("Action", "").strip)&.team
+  end
+
   def self.parse_vis_spread vis_spread
     if vis_spread.blank? || vis_spread == "-"
       [nil, nil]
