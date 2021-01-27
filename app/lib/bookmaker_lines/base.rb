@@ -76,7 +76,7 @@ class BookmakerLines::Base
     teams.each_with_index do |t,i|
       next if i % 2 == 1
       game = sport.games.Scheduled.where('home_id = ? and visitor_id = ?', 
-                team(teams[i + 1])&.id, team(t)&.id).first
+                team(teams[i + 1])&.id, team(t)&.id).order(:gametime)&.first
       if game.nil?
         @nf << t
       else
