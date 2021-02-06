@@ -25,7 +25,7 @@ class Line < ApplicationRecord
   belongs_to :game
   belongs_to :sportsbook
 
-  before_save :validate_ml_rl, :set_home_spread
+  before_save :validate_line, :set_home_spread
   after_create :update_triggers
 
   scope :user_last_lines, -> (user, game) { joins(:sportsbook)
@@ -35,11 +35,12 @@ class Line < ApplicationRecord
                                             .order("lines.sportsbook_id, lines.created_at DESC") }
 
 
-  def validate_ml_rl
+  def validate_line
     self.home_ml = nil if home_ml.present? && home_ml > -100 && home_ml < 100
     self.home_rl = nil if home_rl.present? && home_rl > -100 && home_rl < 100
     self.visitor_ml = nil if visitor_ml.present? && visitor_ml > -100 && visitor_ml < 100
     self.visitor_rl = nil if visitor_rl.present? && visitor_rl > -100 && visitor_rl < 100
+    self.total = nil if total.present? && total <= 0
   end
 
   def set_home_spread
