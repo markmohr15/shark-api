@@ -17,9 +17,10 @@
 #
 # Indexes
 #
-#  index_triggers_on_game_id  (game_id)
-#  index_triggers_on_team_id  (team_id)
-#  index_triggers_on_user_id  (user_id)
+#  index_triggers_on_game_id   (game_id)
+#  index_triggers_on_gametime  (gametime)
+#  index_triggers_on_team_id   (team_id)
+#  index_triggers_on_user_id   (user_id)
 #
 # Foreign Keys
 #

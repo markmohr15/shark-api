@@ -17,6 +17,7 @@
 #
 # Indexes
 #
+#  index_lines_on_created_at     (created_at)
 #  index_lines_on_game_id        (game_id)
 #  index_lines_on_sportsbook_id  (sportsbook_id)
 #

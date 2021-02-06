@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_17_052700) do
+ActiveRecord::Schema.define(version: 2021_02_06_054301) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 2021_01_17_052700) do
     t.string "channel"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["gametime"], name: "index_games_on_gametime"
     t.index ["season_id"], name: "index_games_on_season_id"
     t.index ["sport_id"], name: "index_games_on_sport_id"
   end
@@ -79,6 +80,7 @@ ActiveRecord::Schema.define(version: 2021_01_17_052700) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.float "visitor_spread"
+    t.index ["created_at"], name: "index_lines_on_created_at"
     t.index ["game_id"], name: "index_lines_on_game_id"
     t.index ["sportsbook_id"], name: "index_lines_on_sportsbook_id"
   end
@@ -197,6 +199,7 @@ ActiveRecord::Schema.define(version: 2021_01_17_052700) do
     t.datetime "gametime"
     t.boolean "notified", default: false
     t.index ["game_id"], name: "index_triggers_on_game_id"
+    t.index ["gametime"], name: "index_triggers_on_gametime"
     t.index ["team_id"], name: "index_triggers_on_team_id"
     t.index ["user_id"], name: "index_triggers_on_user_id"
   end

@@ -33,6 +33,7 @@
 #
 # Indexes
 #
+#  index_games_on_gametime   (gametime)
 #  index_games_on_season_id  (season_id)
 #  index_games_on_sport_id   (sport_id)
 #
