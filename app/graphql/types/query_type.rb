@@ -20,6 +20,7 @@ module Types
     field :games_by_sport_and_date, [Types::GameType], null: true do
       argument :sport_id, Integer, required: true 
       argument :date, String, required: true
+      argument :status, String, required: true, default_value: "Open"
     end
     field :trigger_notifications, [Types::TriggerType], null: true
 
@@ -72,13 +73,17 @@ module Types
       end
     end
 
-    def games_by_sport_and_date sport_id:, date:
-      Game.Scheduled
-          .where('sport_id = ? and
+    def games_by_sport_and_date sport_id:, date:, status:
+      if status == "Open"
+        games = Game.Scheduled
+      else
+        games = Game.all
+      end
+      games.where('sport_id = ? and
                   games.gametime >= ? and
                   games.gametime <= ?', 
                   sport_id, date.to_date.beginning_of_day, date.to_date.end_of_day)
-          .order(:visitor_rot, :gametime)
+          .order(:status, :visitor_rot, :gametime)
     end
 
     def trigger_notifications

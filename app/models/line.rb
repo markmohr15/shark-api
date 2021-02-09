@@ -40,11 +40,11 @@ class Line < ApplicationRecord
                                             .select("DISTINCT ON (sportsbook_id) lines.*")
                                             .order("lines.sportsbook_id, lines.created_at DESC") }
 
-  scope :last_lines, -> (game) { joins(:sportsbook)
-                                    .merge(Sportsbook.all)
-                                    .where('game_id = ?', game.id)
-                                    .select("DISTINCT ON (sportsbook_id) lines.*")
-                                    .order("lines.sportsbook_id, lines.created_at DESC") }
+  scope :first_or_last_lines, -> (game, direction) { joins(:sportsbook)
+                                        .merge(Sportsbook.all)
+                                        .where('game_id = ?', game.id)
+                                        .select("DISTINCT ON (sportsbook_id) lines.*")
+                                        .order("lines.sportsbook_id, lines.created_at #{direction}") }
 
   def validate_line
     self.home_ml = nil if home_ml.present? && home_ml > -100 && home_ml < 100
