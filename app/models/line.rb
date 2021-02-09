@@ -28,12 +28,23 @@ class Line < ApplicationRecord
   before_save :validate_line, :set_home_spread
   after_create :update_triggers
 
-  scope :user_last_lines, -> (user, game) { joins(:sportsbook)
+  scope :scheduled_last_lines, -> (user, game) { joins(:sportsbook)
                                             .merge(user.sportsbooks)
                                             .where('game_id = ? and lines.created_at > ?', game.id, (DateTime.current - 1.hour) )
                                             .select("DISTINCT ON (sportsbook_id) lines.*")
                                             .order("lines.sportsbook_id, lines.created_at DESC") }
 
+  scope :completed_last_lines, -> (user, game) { joins(:sportsbook)
+                                            .merge(user.sportsbooks)
+                                            .where('game_id = ?', game.id)
+                                            .select("DISTINCT ON (sportsbook_id) lines.*")
+                                            .order("lines.sportsbook_id, lines.created_at DESC") }
+
+  scope :last_lines, -> (game) { joins(:sportsbook)
+                                    .merge(Sportsbook.all)
+                                    .where('game_id = ?', game.id)
+                                    .select("DISTINCT ON (sportsbook_id) lines.*")
+                                    .order("lines.sportsbook_id, lines.created_at DESC") }
 
   def validate_line
     self.home_ml = nil if home_ml.present? && home_ml > -100 && home_ml < 100
@@ -54,6 +65,14 @@ class Line < ApplicationRecord
 
   def update_triggers
     UpdateTriggersWorker.perform_async self.id
+  end
+
+  def self.user_last_lines user, game
+    if game.Scheduled?
+      scheduled_last_lines(user, game)
+    else
+      completed_last_lines(user, game)
+    end
   end
 
 end
