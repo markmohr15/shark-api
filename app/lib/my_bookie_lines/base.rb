@@ -66,9 +66,9 @@ class MyBookieLines::Base
     under_juice = game.search(".game-line__home-line")&.children[15]&.children[2]&.text
     
     {gametime: Time.zone.parse("#{DateTime.now.year}/#{date} #{time}"), vis_name: vis_name, 
-     home_name: home_name, vis_spread: parse_spread(vis_spread), vis_rl: vis_rl, vis_ml: vis_ml, 
-     total: parse_spread(total), over_juice: over_juice, under_juice: under_juice, home_rl: home_rl,
-     home_ml: home_ml}
+     home_name: home_name, vis_spread: parse_spread(vis_spread), vis_rl: parse_juice(vis_rl), vis_ml: parse_juice(vis_ml), 
+     total: parse_spread(total), over_juice: parse_juice(over_juice), under_juice: parse_juice(under_juice), 
+     home_rl: parse_juice(home_rl), home_ml: parse_juice(home_ml)}
   end
 
   def self.parse_spread spread
@@ -77,6 +77,16 @@ class MyBookieLines::Base
       spread += spread > 0 ? 0.5 : -0.5
     else
       spread.to_f
+    end
+  end
+
+  def self.parse_juice juice
+    return juice if juice.exclude?(".")
+    juice = juice.to_f
+    if juice < 2
+      (-100 / (juice - 1)).round(1).to_i
+    else
+      ((juice - 1) * 100).round(1).to_i
     end
   end
 
