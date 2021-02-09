@@ -71,8 +71,9 @@ class BetOnlineLines::Base
   def self.parse_vis_line vl
     if vl.include? "Ov"
       total = vl.gsub("Ov", "").split(/[-,+]/)[0]
+      juice = vl.split(total)[1]
       half = total.include?("½") ? 0.5 : 0
-      {total: total.to_f + half}
+      {total: total.to_f + half, over_juice: juice}
     elsif vl.include? "pk"
       {vis_spread: 0, vis_rl: vl.gsub("pk", "").gsub("o", "").to_i}
     elsif vl.scan(/[+ -]/).length == 1
@@ -94,7 +95,9 @@ class BetOnlineLines::Base
 
   def self.parse_home_line hl
     if hl.include? "Un"
-      {}
+      total = hl.gsub("Un", "").split(/[-,+]/)[0]
+      juice = hl.split(total)[1]
+      {under_juice: juice}
     elsif hl.include? "pk"
       {home_rl: hl.gsub("pk", "").gsub("o", "").to_i}
     elsif hl.scan(/[+ -]/).length == 1
@@ -113,7 +116,8 @@ class BetOnlineLines::Base
   def self.create_line game_info, game
     total_set = false
     lines = {vis_spread: nil, vis_rl: nil, vis_ml: nil, 
-             home_rl: nil, home_ml: nil, total: nil}
+             home_rl: nil, home_ml: nil, total: nil,
+             over_juice: nil, under_juice: nil}
 
     game_info[:vis_lines][0..2].each do |vl|
       next if vl.include?("Ov") && total_set
@@ -127,6 +131,7 @@ class BetOnlineLines::Base
     game.lines.create visitor_spread: lines[:vis_spread], home_ml: lines[:home_ml], 
                       home_rl: lines[:home_rl], visitor_ml: lines[:vis_ml],
                       visitor_rl: lines[:vis_rl], total: lines[:total],
+                      over_odds: lines[:over_juice], under_odds: lines[:under_juice],
                       game: game, sportsbook: sportsbook
   end
 

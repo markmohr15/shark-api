@@ -95,6 +95,7 @@ class MyBookieLines::Base
     game.lines.create visitor_spread: game_info[:vis_spread], home_ml: game_info[:home_ml], 
                       home_rl: game_info[:home_rl], visitor_ml: game_info[:vis_ml],
                       visitor_rl: game_info[:vis_rl], total: game_info[:total],
+                      over_odds: game_info[:over_juice], under_odds: game_info[:under_juice],
                       game: game, sportsbook: sportsbook
   end
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_06_054301) do
+ActiveRecord::Schema.define(version: 2021_02_09_180226) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -80,6 +80,8 @@ ActiveRecord::Schema.define(version: 2021_02_06_054301) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.float "visitor_spread"
+    t.integer "over_odds"
+    t.integer "under_odds"
     t.index ["created_at"], name: "index_lines_on_created_at"
     t.index ["game_id"], name: "index_lines_on_game_id"
     t.index ["sportsbook_id"], name: "index_lines_on_sportsbook_id"

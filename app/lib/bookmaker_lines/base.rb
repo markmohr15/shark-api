@@ -81,12 +81,15 @@ class BookmakerLines::Base
         @nf << t
       else
         vis_spread = parse_vis_spread spreads[i]
+        over_total = parse_total(totals[i])
         game.lines.create! visitor_spread: vis_spread[0], 
                           visitor_rl: vis_spread[1],
                           home_rl: parse_home_spread(spreads[i + 1]),
                           visitor_ml: parse_moneyline(moneylines[i]),
                           home_ml: parse_moneyline(moneylines[i + 1]), 
-                          total: parse_total(totals[i]),
+                          total: over_total[0],
+                          over_odds: over_total[1],
+                          under_odds: parse_total(totals[i + 1])[1],
                           game: game, sportsbook: sportsbook
       end
     end
@@ -131,9 +134,9 @@ class BookmakerLines::Base
 
   def self.parse_total total
     return nil if total.blank? || total == "-"
-    total = total.gsub("o", "").split(/[-,+]/)[0]
-    half = total.include?("½") ? 0.5 : 0
-    total.to_f + half
+    num = total.gsub("o", "").split(/[-,+]/)[0]
+    half = num.include?("½") ? 0.5 : 0
+    [num.to_f + half, total.split(num)[1]] 
   end
 
   def self.parse_moneyline moneyline

@@ -6,7 +6,9 @@
 #  home_ml        :integer
 #  home_rl        :integer
 #  home_spread    :float
+#  over_odds      :integer
 #  total          :float
+#  under_odds     :integer
 #  visitor_ml     :integer
 #  visitor_rl     :integer
 #  visitor_spread :float
