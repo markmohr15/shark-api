@@ -153,6 +153,18 @@ class Game < ApplicationRecord
     uo.present? ? "Ov #{uo}" : ""
   end
 
+  def user_over_odds user
+    over = user_over user
+    return nil if over.nil?
+    Line.user_last_lines(user, self).select {|x| x.total == over}
+                                    .pluck(:over_odds)
+                                    .reject{|x| x.blank?}.max
+  end
+
+  def display_over_odds user
+    Game.display_ml user_over_odds(user)
+  end
+
   def user_under user
     Line.from(Line.user_last_lines(user, self)).pluck(:total).reject{|x| x.blank?}.max
   end
@@ -160,6 +172,18 @@ class Game < ApplicationRecord
   def display_under user
     uu = user_under user
     uu.present? ? "Un #{uu}" : ""
+  end
+
+  def user_under_odds user
+    under = user_under user
+    return nil if under.nil?
+    Line.user_last_lines(user, self).select {|x| x.total == under}
+                                    .pluck(:under_odds)
+                                    .reject{|x| x.blank?}.max
+  end
+
+  def display_under_odds user
+    Game.display_ml user_under_odds(user)
   end
 
   def self.display_spread spr

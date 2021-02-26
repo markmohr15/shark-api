@@ -31,6 +31,8 @@ module Types
     field :display_visitor_ml, String, null: false
     field :display_over, String, null: false
     field :display_under, String, null: false
+    field :display_over_odds, String, null: false
+    field :display_under_odds, String, null: false
     
     def display_home_spread
       object.display_home_spread context[:current_user]
@@ -62,6 +64,14 @@ module Types
 
     def display_under
       object.display_under context[:current_user]
+    end
+
+    def display_over_odds
+      object.display_over_odds context[:current_user]
+    end
+
+    def display_under_odds
+      object.display_under_odds context[:current_user]
     end
   end
 end
