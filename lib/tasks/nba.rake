@@ -10,8 +10,7 @@ namespace :importer do
       game = Game.Scheduled.where(sport: sport,
                  visitor: sport.teams.find_by_nickname(line[:visitor]),
                  home: sport.teams.find_by_nickname(line[:home]),
-                 gametime: line[:date].to_datetime.in_time_zone('America/Chicago').beginning_of_day..line[:date].to_datetime.in_time_zone('America/Chicago').end_of_day).first_or_initialize
-      game.gametime = line[:date] + " " + line[:time] + " " + "CDT"
+                 gametime: line[:date] + " " + line[:time] + " " + "CDT").first_or_initialize
       game.channel = line[:channel]
       if game.valid?
         game.save!
