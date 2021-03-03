@@ -76,7 +76,7 @@ class Game < ApplicationRecord
       scheduled.klass == 'SetInProgressWorker' &&
       scheduled.args[0] == self.id
     end.map(&:delete)
-    SetInProgressWorker.perform_at(self.gametime + 6.minutes, self.id)
+    SetInProgressWorker.perform_at(self.gametime + 1.minutes, self.id)
     DeleteLinesWorker.perform_at(self.gametime + 30.hours, self.id)
   end
 
