@@ -75,6 +75,8 @@ class MyBookieLines::Base
     if spread.to_s.include? "&frac12"
       spread = spread.gsub("&frac12", "").to_f 
       spread += spread > 0 ? 0.5 : -0.5
+    elsif spread == "-"
+      nil
     else
       spread.to_f
     end
