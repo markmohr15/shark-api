@@ -53,14 +53,14 @@ class MyBookieLines::Base
   def self.game_info game
     date = game.search('.game-line__time__date')&.children[0]&.text.gsub("-", "")&.squish
     time = game.search('.game-line__time__date__hour')&.children[0]&.text&.squish
-    vis_name = game.search(".game-line__visitor-team")&.children[1]&.children&.children&.text
+    vis_name = game.search(".game-line__visitor-team")&.children[1]&.children&.children&.text&.squish
     return {next: true} if vis_name.nil?
     vis_spread = game.search(".game-line__visitor-line")&.children[3]&.children[0]&.text&.squish
     vis_rl = game.search(".game-line__visitor-line")&.children[3]&.children[2]&.text&.squish
     vis_ml = game.search(".game-line__visitor-line")&.children[9]&.children[0]&.text&.squish
     total = game.search(".game-line__visitor-line")&.children[15]&.children[0]&.text.to_s.gsub("O", "")&.squish
     over_juice = game.search(".game-line__visitor-line")&.children[15]&.children[2]&.text
-    home_name = game.search(".game-line__home-team")&.children[1]&.children&.children&.text
+    home_name = game.search(".game-line__home-team")&.children[1]&.children&.children&.text&.squish
     home_rl = game.search(".game-line__home-line")&.children[3]&.children[2]&.text&.squish
     home_ml = game.search(".game-line__home-line")&.children[9]&.children[0]&.text&.squish
     under_juice = game.search(".game-line__home-line")&.children[15]&.children[2]&.text

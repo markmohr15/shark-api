@@ -133,7 +133,7 @@ class BookmakerLines::Base
   end
 
   def self.parse_total total
-    return nil if total.blank? || total == "-"
+    return [] if total.blank? || total == "-"
     num = total.gsub("o", "").split(/[-,+]/)[0]
     half = num.include?("½") ? 0.5 : 0
     [num.to_f + half, total.split(num)[1]] 

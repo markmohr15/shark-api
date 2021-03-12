@@ -1,7 +1,8 @@
 class BetOnlineLines::Mlb < BetOnlineLines::Base
 
   def self.url
-    @url ||= "https://www.betonline.ag/sportsbook/baseball/mlb"
+    #@url ||= "https://www.betonline.ag/sportsbook/baseball/mlb"
+    @url ||= "https://www.betonline.ag/sportsbook/baseball/exhibition"
   end
 
   def self.sport
@@ -15,7 +16,7 @@ class BetOnlineLines::Mlb < BetOnlineLines::Base
   
   def self.get_lines
     @url = @fetch = @base_dates = @base_games = @dates = @games = nil
-
+    @nf = []
     return if base_dates.empty?
     date = dates[0][0][0].split(" -")[0].to_date
     if dates.size > 1
@@ -40,9 +41,14 @@ class BetOnlineLines::Mlb < BetOnlineLines::Base
                          home(game_info[:home_name])&.id).first
       end
       counter += 1
-      next if game.nil?
-      create_line game_info, game
+      if game.nil?
+        @nf << g
+        byebug
+      else
+        create_line game_info, game
+      end
     end
+    @nf
   rescue StandardError => exception
     raise_api_error exception.message
   end
