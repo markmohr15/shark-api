@@ -142,12 +142,12 @@ class FetchLinesWorker
       Sidekiq.logger.info err
       Bugsnag.notify(err)
     end
-    #begin
-     # BovadaLines::Mlb.get_lines
-    #rescue => err
-     # Sidekiq.logger.info err
-      #Bugsnag.notify(err)
-    #end
+    begin
+      BovadaLines::Mlb.get_lines
+    rescue => err
+      Sidekiq.logger.info err
+      Bugsnag.notify(err)
+    end
     begin
       MyBookieLines::Mlb.get_lines
     rescue => err
