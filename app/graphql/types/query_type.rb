@@ -83,7 +83,7 @@ module Types
                   games.gametime >= ? and
                   games.gametime <= ?', 
                   sport_id, date.to_date.beginning_of_day, date.to_date.end_of_day)
-          .order(:status, :visitor_rot, :gametime)
+            .order(:status, :gametime, :visitor_rot)
     end
 
     def trigger_notifications
