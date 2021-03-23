@@ -2,3 +2,13 @@ fetch_lines:
   cron: "*/2 * * * *"
   class: "FetchLinesWorker"
   queue: default
+
+fetch_daily_weather:
+  cron: "0 2,14 * * *"
+  class: "FetchDailyWeatherWorker"
+  queue: default
+
+fetch_hourly_weather:
+  cron: "*/30 * * * *"
+  class: "FetchHourlyWeatherWorker"
+  queue: default

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_09_180226) do
+ActiveRecord::Schema.define(version: 2021_03_16_192121) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -235,6 +235,25 @@ ActiveRecord::Schema.define(version: 2021_02_09_180226) do
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
   end
 
+  create_table "weathers", force: :cascade do |t|
+    t.datetime "dt"
+    t.integer "temp"
+    t.integer "high"
+    t.integer "low"
+    t.integer "day"
+    t.integer "morn"
+    t.integer "eve"
+    t.integer "night"
+    t.integer "wind_speed"
+    t.integer "wind_deg"
+    t.string "weather"
+    t.bigint "game_id", null: false
+    t.integer "report_type"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["game_id"], name: "index_weathers_on_game_id"
+  end
+
   add_foreign_key "divisions", "leagues"
   add_foreign_key "games", "seasons"
   add_foreign_key "games", "sports"
@@ -250,4 +269,5 @@ ActiveRecord::Schema.define(version: 2021_02_09_180226) do
   add_foreign_key "triggers", "games"
   add_foreign_key "triggers", "teams"
   add_foreign_key "triggers", "users"
+  add_foreign_key "weathers", "games"
 end

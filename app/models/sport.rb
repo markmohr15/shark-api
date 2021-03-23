@@ -28,6 +28,7 @@ class Sport < ApplicationRecord
   scope :nhl, -> {find_by_abbreviation "NHL"}
   scope :kbo, -> {find_by_abbreviation "KBO"}
   scope :npb, -> {find_by_abbreviation "NPB"}
+  scope :weather, -> { where 'sports.abbreviation IN (?)', ['MLB', 'CFB', 'NFL']}
 
   before_destroy :check_games
 

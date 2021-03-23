@@ -43,7 +43,6 @@ class BetOnlineLines::Mlb < BetOnlineLines::Base
       counter += 1
       if game.nil?
         @nf << g
-        byebug
       else
         create_line game_info, game
       end

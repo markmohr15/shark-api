@@ -1,0 +1,55 @@
+# == Schema Information
+#
+# Table name: weathers
+#
+#  id          :bigint           not null, primary key
+#  day         :integer
+#  dt          :datetime
+#  eve         :integer
+#  high        :integer
+#  low         :integer
+#  morn        :integer
+#  night       :integer
+#  report_type :integer
+#  temp        :integer
+#  weather     :string
+#  wind_deg    :integer
+#  wind_speed  :integer
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  game_id     :bigint           not null
+#
+# Indexes
+#
+#  index_weathers_on_game_id  (game_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (game_id => games.id)
+#
+
+one:
+  dt: 2021-03-16 14:21:21
+  temp: 1
+  high: 1
+  low: 1
+  day: 1
+  morn: 1
+  eve: 1
+  night: 1
+  wind_speed: 1
+  wind_deg: 1
+  weather: MyString
+
+two:
+  dt: 2021-03-16 14:21:21
+  temp: 1
+  high: 1
+  low: 1
+  day: 1
+  morn: 1
+  eve: 1
+  night: 1
+  wind_speed: 1
+  wind_deg: 1
+  weather: MyString

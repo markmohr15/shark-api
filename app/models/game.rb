@@ -52,6 +52,7 @@ class Game < ApplicationRecord
 
   has_many :triggers
   has_many :lines
+  has_many :weathers
   
   enum status: { Scheduled: 0, InProgress: 1, Final: 2, Postponed: 3, Canceled: 4, "F/OT" => 5, "F/SO" => 6, Cancelled: 7 }
 
