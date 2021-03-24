@@ -187,6 +187,18 @@ class Game < ApplicationRecord
     Game.display_ml user_under_odds(user)
   end
 
+  def weather_report
+    if self.weathers.current.any?
+      self.weathers.current.where('dt <= ?', self.gametime + 15.minutes).order(:dt).last
+    elsif self.weathers.hourly.any?
+      self.weathers.hourly.where('dt <= ?', self.gametime + 15.minutes).order(:dt).last
+    elsif self.weathers.daily.any?
+      self.weathers.daily.where('dt <= ?', self.gametime.end_of_day).order(:dt).last
+    else
+      nil
+    end
+  end
+
   def self.display_spread spr
     case spr
     when blank?

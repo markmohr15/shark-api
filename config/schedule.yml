@@ -9,6 +9,11 @@ fetch_daily_weather:
   queue: default
 
 fetch_hourly_weather:
-  cron: "*/30 * * * *"
+  cron: "0 2,8,14,20 * * *"
   class: "FetchHourlyWeatherWorker"
+  queue: default
+
+fetch_current_weather:
+  cron: "*/30 * * * *"
+  class: "FetchCurrentWeatherWorker"
   queue: default
