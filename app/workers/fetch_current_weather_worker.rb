@@ -11,7 +11,7 @@ class FetchCurrentWeatherWorker
       next if g.stadium.nil?
       current = OpenWeatherApi::Current.fetch g.stadium.geo_lat, g.stadium.geo_lng
       g.weathers.create dt: Time.at(current["dt"]).to_datetime,
-                        report_type: "current"), 
+                        report_type: "current", 
                         temp: current["temp"].to_i, 
                         wind_speed: current["wind_speed"].to_i, 
                         wind_deg: current["wind_deg"], 
