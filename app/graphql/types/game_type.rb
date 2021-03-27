@@ -33,6 +33,7 @@ module Types
     field :display_under, String, null: false
     field :display_over_odds, String, null: false
     field :display_under_odds, String, null: false
+    field :last_lines, [Types::LineType], null: false
     
     def display_home_spread
       object.display_home_spread context[:current_user]

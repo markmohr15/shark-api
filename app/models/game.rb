@@ -50,13 +50,13 @@ class Game < ApplicationRecord
   belongs_to :visitor, class_name: "Team"
   belongs_to :home, class_name: "Team"
 
-  has_many :triggers
-  has_many :lines
-  has_many :weathers
+  has_many :triggers, dependent: :destroy
+  has_many :lines, dependent: :destroy
+  has_many :scheduled_last_lines, -> { scheduled_last_lines }, class_name: "Line"
+  has_many :completed_last_lines, -> { completed_last_lines }, class_name: "Line"
+  has_many :weathers, dependent: :destroy
   
   enum status: { Scheduled: 0, InProgress: 1, Final: 2, Postponed: 3, Canceled: 4, "F/OT" => 5, "F/SO" => 6, Cancelled: 7 }
-
-  scope :active_lines, -> {where.not(home_ml: nil, home_rl: nil, visitor_ml: nil, visitor_rl: nil, total: nil, spread: nil) }
 
   before_validation :set_defaults
   after_save :set_in_progress
@@ -81,6 +81,14 @@ class Game < ApplicationRecord
     DeleteLinesWorker.perform_at(self.gametime + 30.hours, self.id)
   end
 
+  def last_lines 
+    if self.Scheduled?
+      self.scheduled_last_lines
+    else
+      self.completed_last_lines
+    end
+  end
+
   def display_time
     gametime.strftime('%R')
   end
@@ -94,7 +102,7 @@ class Game < ApplicationRecord
   end
 
   def display_home_spread user
-    Game.display_spread user_home_spread(user)
+    LineHelper.display_spread user_home_spread(user)
   end
 
   def user_visitor_spread user
@@ -102,7 +110,7 @@ class Game < ApplicationRecord
   end
 
   def display_visitor_spread user
-    Game.display_spread user_visitor_spread(user)
+    LineHelper.display_spread user_visitor_spread(user)
   end
 
   def user_home_ml user
@@ -110,7 +118,7 @@ class Game < ApplicationRecord
   end
 
   def display_home_ml user
-    Game.display_ml user_home_ml(user)
+    LineHelper.display_ml user_home_ml(user)
   end
 
   def user_visitor_ml user
@@ -118,7 +126,7 @@ class Game < ApplicationRecord
   end
 
   def display_visitor_ml user
-    Game.display_ml user_visitor_ml(user)
+    LineHelper.display_ml user_visitor_ml(user)
   end
 
   def user_home_rl user
@@ -130,7 +138,7 @@ class Game < ApplicationRecord
   end
 
   def display_home_rl user
-    Game.display_ml user_home_rl(user)
+    LineHelper.display_ml user_home_rl(user)
   end
 
   def user_visitor_rl user
@@ -142,7 +150,7 @@ class Game < ApplicationRecord
   end
 
   def display_visitor_rl user
-    Game.display_ml user_visitor_rl(user)
+    LineHelper.display_ml user_visitor_rl(user)
   end
 
   def user_over user
@@ -150,8 +158,7 @@ class Game < ApplicationRecord
   end
 
   def display_over user
-    uo = user_over user
-    uo.present? ? "Ov #{uo}" : ""
+    LineHelper.display_total "over", user_over(user)
   end
 
   def user_over_odds user
@@ -163,7 +170,7 @@ class Game < ApplicationRecord
   end
 
   def display_over_odds user
-    Game.display_ml user_over_odds(user)
+    LineHelper.display_ml user_over_odds(user)
   end
 
   def user_under user
@@ -171,8 +178,7 @@ class Game < ApplicationRecord
   end
 
   def display_under user
-    uu = user_under user
-    uu.present? ? "Un #{uu}" : ""
+    LineHelper.display_total "under", user_under(user)
   end
 
   def user_under_odds user
@@ -184,7 +190,7 @@ class Game < ApplicationRecord
   end
 
   def display_under_odds user
-    Game.display_ml user_under_odds(user)
+    LineHelper.display_ml user_under_odds(user)
   end
 
   def weather_report
@@ -196,30 +202,6 @@ class Game < ApplicationRecord
       self.weathers.daily.where('dt <= ?', self.gametime.end_of_day).order(:dt).last
     else
       nil
-    end
-  end
-
-  def self.display_spread spr
-    case spr
-    when blank?
-      "" 
-    when 0
-      "PK"
-    when 0..1000
-      "+#{spr}"
-    else
-      spr.to_s
-    end
-  end
-
-  def self.display_ml ml
-    case ml
-    when blank?
-      ""
-    when 100..100000
-      "+#{ml}"
-    else
-      ml.to_s
     end
   end
 
