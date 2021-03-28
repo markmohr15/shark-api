@@ -56,7 +56,7 @@ class BovadaLines::Base
     vis_spread = vis_rl = home_rl = total = vis_ml = home_ml = over_juice = under_juice = nil
     lines.each do |l|
       next if l["outcomes"].empty?
-      if l["description"] == "Point Spread" || l["description"] == "Puck Line"
+      if ["Point Spread", "Puck Line", "Runline"].include? l["description"]
         vis_spread = l["outcomes"][0]["price"]["handicap"].to_f
         vis_rl = l["outcomes"][0]["price"]["american"]
         vis_rl == "EVEN" ? vis_rl = 100 : vis_rl = vis_rl.to_i
@@ -65,7 +65,9 @@ class BovadaLines::Base
       elsif l["description"] == "Total"
         total = l["outcomes"][0]["price"]["handicap"].to_f
         over_juice = l["outcomes"].find {|x| x["description"] == "Over"}["price"]["american"]
-        under_juice = l["outcomes"].find {|x| x["description"] == "Over"}["price"]["american"]
+        over_juice == "EVEN" ? over_juice = 100 : over_juice = over_juice.to_i
+        under_juice = l["outcomes"].find {|x| x["description"] == "Under"}["price"]["american"]
+        under_juice == "EVEN" ? under_juice = 100 : under_juice = under_juice.to_i
       elsif l["description"] == "Moneyline" 
         vis_ml = l["outcomes"][0]["price"]["american"]
         vis_ml == "EVEN" ? vis_ml = 100 : vis_ml = vis_ml.to_i

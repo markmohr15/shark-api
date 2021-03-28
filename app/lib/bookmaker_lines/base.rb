@@ -72,11 +72,15 @@ class BookmakerLines::Base
     @url = @fetch = @base_times = @times = @base_teams = @teams = @base_spreads = nil
     @spreads = @base_totals = @totals = @base_moneylines = @moneylines = nil
     @nf = []
+    @found = []
     
     teams.each_with_index do |t,i|
       next if i % 2 == 1
-      game = sport.games.Scheduled.where('home_id = ? and visitor_id = ?', 
-                team(teams[i + 1])&.id, team(t)&.id).order(:gametime)&.first
+      game = sport.games.Scheduled
+                  .where.not(id: @found)
+                  .where('home_id = ? and visitor_id = ?', 
+                          team(teams[i + 1])&.id, 
+                          team(t)&.id).order(:gametime)&.first
       if game.nil?
         @nf << t
       else
@@ -91,6 +95,7 @@ class BookmakerLines::Base
                           over_odds: over_total[1],
                           under_odds: parse_total(totals[i + 1])[1],
                           game: game, sportsbook: sportsbook
+        @found << game.id
       end
     end
     @nf

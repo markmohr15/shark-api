@@ -12,12 +12,15 @@ class BookmakerLines::Mlb < BookmakerLines::Base
     @url = @fetch = @base_times = @times = @base_teams = @teams = @base_spreads = nil
     @spread = @base_totals = @totals = @base_moneylines = @moneylines = nil
     @nf = []
+    @found = []
 
     teams.each_with_index do |t,i|
       next if i % 2 == 1
       gametime = "#{times[i / 2]} PDT".to_datetime
-      game = sport.games.Scheduled.where('home_id = ? and visitor_id = ? and gametime >= ? and gametime <= ?', 
-                team(teams[i + 1])&.id, team(t)&.id, gametime - 70.minutes, gametime + 70.minutes).first
+      game = sport.games.Scheduled
+                  .where.not(id: @found)
+                  .where('home_id = ? and visitor_id = ? and gametime >= ? and gametime <= ?', 
+                          team(teams[i + 1])&.id, team(t)&.id, gametime - 70.minutes, gametime + 70.minutes).first
       if game.nil?
         gametime += 1.day
         game = sport.games.Scheduled.where('home_id = ? and visitor_id = ? and gametime >= ? and gametime <= ?', 
@@ -37,6 +40,7 @@ class BookmakerLines::Mlb < BookmakerLines::Base
                            over_odds: over_total[1],
                            under_odds: parse_total(totals[i + 1])[1],
                            game: game, sportsbook: sportsbook
+        @found << game.id
       end
     end
     @nf
