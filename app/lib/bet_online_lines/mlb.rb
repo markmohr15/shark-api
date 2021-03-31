@@ -1,8 +1,8 @@
 class BetOnlineLines::Mlb < BetOnlineLines::Base
 
   def self.url
-    #@url ||= "https://www.betonline.ag/sportsbook/baseball/mlb"
-    @url ||= "https://www.betonline.ag/sportsbook/baseball/exhibition"
+    @url ||= "https://www.betonline.ag/sportsbook/baseball/mlb"
+    #@url ||= "https://www.betonline.ag/sportsbook/baseball/exhibition"
   end
 
   def self.sport

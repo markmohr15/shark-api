@@ -8,6 +8,11 @@ class MyBookieLines::Mlb < MyBookieLines::Base
     @sport ||= Sport.mlb
   end
 
+  def self.team name
+    name = name.split(" ")
+    sport.tags.find_by_name(name[0..1])&.team || sport.tags.find_by_name(name[0..2])&.team
+  end
+
   def self.get_lines
     @url = @fetch = @games = nil
     @nf = []
