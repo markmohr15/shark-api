@@ -10,7 +10,7 @@ class BetOnlineLines::Mlb < BetOnlineLines::Base
   end
 
   def self.home home_name
-    tag = sport.tags.find_by_name(home_name.last) || sport.tags.find_by_name(home_name[-2..-1].join(" "))
+    tag = sport.tags.find_by_name(home_name[0..2].join(" ")) || sport.tags.find_by_name(home_name[0..1].join(" "))
     tag&.team
   end
   
