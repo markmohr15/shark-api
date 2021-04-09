@@ -70,7 +70,6 @@ class BetOnlineLines::Base
 
   def self.parse_vis_line vl
     if vl.include? "Ov"
-      byebug
       total = vl.gsub("Ov", "").split(/[-,+]/)[0]
       juice = vl.split(total)[1]
       half = total.include?("½") ? 0.5 : 0
