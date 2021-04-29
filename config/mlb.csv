@@ -1,146 +1,106 @@
 visitor,home,time,channel,date
-Yankees,Tampa Bay,2:10 PM,,2021-04-09
-Washington,Dodgers,3:10 PM,,2021-04-09
-Colorado,San Francisco,3:35 PM,,2021-04-09
-Angels,Toronto,6:07 PM,,2021-04-09
-Detroit,Cleveland,6:10 PM,,2021-04-09
-Philadelphia,Atlanta,6:20 PM,,2021-04-09
-San Diego,Texas,7:05 PM,,2021-04-09
-Oakland,Houston,7:10 PM,ESPN+,2021-04-09
-Cincinnati,Arizona,8:40 PM,,2021-04-09
-Miami,Mets,12:10 PM,,2021-04-10
-Yankees,Tampa Bay,12:10 PM,,2021-04-10
-Kansas City,White Sox,1:10 PM,,2021-04-10
-Seattle,Minnesota,1:10 PM,,2021-04-10
-Milwaukee,St. Louis,1:15 PM,,2021-04-10
-Colorado,San Francisco,3:05 PM,,2021-04-10
-Oakland,Houston,3:05 PM,,2021-04-10
-Detroit,Cleveland,5:10 PM,,2021-04-10
-Cubs,Pittsburgh,5:35 PM,,2021-04-10
-Boston,Baltimore,6:05 PM,,2021-04-10
-San Diego,Texas,6:05 PM,ESPN+,2021-04-10
-Angels,Toronto,6:07 PM,,2021-04-10
-Philadelphia,Atlanta,6:20 PM,,2021-04-10
-Cincinnati,Arizona,7:10 PM,,2021-04-10
-Washington,Dodgers,8:10 PM,,2021-04-10
-Boston,Baltimore,12:05 PM,,2021-04-11
-Cubs,Pittsburgh,12:05 PM,,2021-04-11
-Angels,Toronto,12:07 PM,ESPN+,2021-04-11
-Detroit,Cleveland,12:10 PM,,2021-04-11
-Miami,Mets,12:10 PM,,2021-04-11
-Yankees,Tampa Bay,12:10 PM,,2021-04-11
-Kansas City,White Sox,1:10 PM,,2021-04-11
-Seattle,Minnesota,1:10 PM,,2021-04-11
-Milwaukee,St. Louis,1:15 PM,,2021-04-11
-San Diego,Texas,1:35 PM,,2021-04-11
-Colorado,San Francisco,3:05 PM,,2021-04-11
-Cincinnati,Arizona,3:10 PM,,2021-04-11
-Washington,Dodgers,3:10 PM,,2021-04-11
-Philadelphia,Atlanta,6:08 PM,ESPN,2021-04-11
-Boston,Minnesota,1:10 PM,ESPN+,2021-04-12
-San Diego,Pittsburgh,5:35 PM,,2021-04-12
-Seattle,Baltimore,6:05 PM,,2021-04-12
-Yankees,Toronto,6:07 PM,,2021-04-12
-Philadelphia,Mets,6:10 PM,,2021-04-12
-Texas,Tampa Bay,6:10 PM,,2021-04-12
-Miami,Atlanta,6:20 PM,,2021-04-12
-Cubs,Milwaukee,6:40 PM,,2021-04-12
-Washington,St. Louis,6:45 PM,,2021-04-12
-Angels,Kansas City,7:10 PM,,2021-04-12
-Cleveland,White Sox,7:10 PM,,2021-04-12
-Detroit,Houston,7:10 PM,,2021-04-12
-Oakland,Arizona,8:40 PM,,2021-04-12
-Cincinnati,San Francisco,8:45 PM,,2021-04-12
-Boston,Minnesota,1:10 PM,ESPN+,2021-04-13
-Oakland,Arizona,2:40 PM,,2021-04-13
-San Diego,Pittsburgh,5:35 PM,,2021-04-13
-Seattle,Baltimore,6:05 PM,,2021-04-13
-Yankees,Toronto,6:07 PM,,2021-04-13
-Philadelphia,Mets,6:10 PM,ESPN,2021-04-13
-Texas,Tampa Bay,6:10 PM,,2021-04-13
-Miami,Atlanta,6:20 PM,,2021-04-13
-Cubs,Milwaukee,6:40 PM,,2021-04-13
-Washington,St. Louis,6:45 PM,,2021-04-13
-Angels,Kansas City,7:10 PM,,2021-04-13
-Cleveland,White Sox,7:10 PM,,2021-04-13
-Detroit,Houston,7:10 PM,,2021-04-13
-Cincinnati,San Francisco,8:45 PM,ESPN,2021-04-13
-Colorado,Dodgers,9:10 PM,,2021-04-13
-Washington,St. Louis,12:15 PM,,2021-04-14
-Cubs,Milwaukee,12:40 PM,,2021-04-14
-Angels,Kansas City,1:10 PM,,2021-04-14
-Yankees,Toronto,2:07 PM,,2021-04-14
-Cincinnati,San Francisco,2:45 PM,,2021-04-14
-San Diego,Pittsburgh,5:35 PM,,2021-04-14
-Seattle,Baltimore,6:05 PM,,2021-04-14
-Detroit,Houston,6:10 PM,,2021-04-14
-Philadelphia,Mets,6:10 PM,,2021-04-14
-Texas,Tampa Bay,6:10 PM,,2021-04-14
-Miami,Atlanta,6:20 PM,ESPN+,2021-04-14
-Boston,Minnesota,6:40 PM,,2021-04-14
-Cleveland,White Sox,7:10 PM,,2021-04-14
-Colorado,Dodgers,9:10 PM,,2021-04-14
-Philadelphia,Mets,11:10 AM,,2021-04-15
-Miami,Atlanta,11:20 AM,,2021-04-15
-San Diego,Pittsburgh,11:35 AM,,2021-04-15
-Seattle,Baltimore,12:05 PM,,2021-04-15
-Boston,Minnesota,12:10 PM,,2021-04-15
-Arizona,Washington,6:05 PM,,2021-04-15
-Texas,Tampa Bay,6:10 PM,ESPN+,2021-04-15
-Cleveland,White Sox,7:10 PM,,2021-04-15
-Toronto,Kansas City,7:10 PM,,2021-04-15
-Detroit,Oakland,8:40 PM,,2021-04-15
-Colorado,Dodgers,9:10 PM,,2021-04-15
-Atlanta,Cubs,1:20 PM,,2021-04-16
-Arizona,Washington,6:05 PM,,2021-04-16
-St. Louis,Philadelphia,6:05 PM,,2021-04-16
-Tampa Bay,Yankees,6:05 PM,,2021-04-16
-White Sox,Boston,6:10 PM,,2021-04-16
-Cleveland,Cincinnati,6:10 PM,,2021-04-16
-San Francisco,Miami,6:10 PM,,2021-04-16
-Baltimore,Texas,7:05 PM,,2021-04-16
-Pittsburgh,Milwaukee,7:10 PM,,2021-04-16
-Toronto,Kansas City,7:10 PM,,2021-04-16
-Mets,Colorado,7:40 PM,ESPN+,2021-04-16
-Minnesota,Angels,8:38 PM,,2021-04-16
-Detroit,Oakland,8:40 PM,,2021-04-16
-Houston,Seattle,9:10 PM,,2021-04-16
-Dodgers,San Diego,9:10 PM,,2021-04-16
-Arizona,Washington,12:05 PM,ESPN+,2021-04-17
-Tampa Bay,Yankees,12:05 PM,,2021-04-17
-Toronto,Kansas City,1:10 PM,,2021-04-17
-Atlanta,Cubs,1:20 PM,,2021-04-17
-White Sox,Boston,3:05 PM,,2021-04-17
-St. Louis,Philadelphia,3:05 PM,,2021-04-17
-Detroit,Oakland,3:07 PM,,2021-04-17
-Cleveland,Cincinnati,3:10 PM,,2021-04-17
-San Francisco,Miami,5:10 PM,,2021-04-17
-Baltimore,Texas,6:05 PM,,2021-04-17
-Pittsburgh,Milwaukee,6:10 PM,,2021-04-17
-Mets,Colorado,7:10 PM,,2021-04-17
-Dodgers,San Diego,7:40 PM,,2021-04-17
-Minnesota,Angels,8:07 PM,,2021-04-17
-Houston,Seattle,8:10 PM,,2021-04-17
-Arizona,Washington,12:05 PM,,2021-04-18
-St. Louis,Philadelphia,12:05 PM,,2021-04-18
-Tampa Bay,Yankees,12:05 PM,ESPN+,2021-04-18
-White Sox,Boston,12:10 PM,,2021-04-18
-Cleveland,Cincinnati,12:10 PM,,2021-04-18
-San Francisco,Miami,12:10 PM,,2021-04-18
-Pittsburgh,Milwaukee,1:10 PM,,2021-04-18
-Toronto,Kansas City,1:10 PM,,2021-04-18
-Baltimore,Texas,1:35 PM,,2021-04-18
-Mets,Colorado,2:10 PM,,2021-04-18
-Detroit,Oakland,3:07 PM,,2021-04-18
-Minnesota,Angels,3:07 PM,,2021-04-18
-Houston,Seattle,3:10 PM,,2021-04-18
-Dodgers,San Diego,3:10 PM,,2021-04-18
-Atlanta,Cubs,6:08 PM,ESPN,2021-04-18
-White Sox,Boston,10:10 AM,,2021-04-19
-San Francisco,Philadelphia,6:05 PM,,2021-04-19
-St. Louis,Washington,6:05 PM,,2021-04-19
-Tampa Bay,Kansas City,7:10 PM,,2021-04-19
-Texas,Angels,8:38 PM,,2021-04-19
-Minnesota,Oakland,8:40 PM,,2021-04-19
-Dodgers,Seattle,9:10 PM,ESPN+,2021-04-19
-Milwaukee,San Diego,9:10 PM,,2021-04-19
+Yankees,Baltimore,12:05 PM,,2021-04-29
+Oakland,Tampa Bay,12:10 PM,,2021-04-29
+Philadelphia,St. Louis,12:15 PM,,2021-04-29
+Seattle,Houston,1:10 PM,,2021-04-29
+Detroit,White Sox,4:10 PM,,2021-04-29
+Cubs,Atlanta,6:20 PM,MLBN,2021-04-29
+Dodgers,Milwaukee,6:40 PM,ESPN+,2021-04-29
+Boston,Texas,7:05 PM,,2021-04-29
+Detroit,White Sox,7:10 PM,,2021-04-29
+Colorado,Arizona,8:40 PM,,2021-04-29
+St. Louis,Pittsburgh,5:35 PM,,2021-04-30
+Detroit,Yankees,6:05 PM,,2021-04-30
+Miami,Washington,6:05 PM,,2021-04-30
+Mets,Philadelphia,6:05 PM,,2021-04-30
+Atlanta,Toronto,6:07 PM,,2021-04-30
+Cubs,Cincinnati,6:10 PM,,2021-04-30
+Houston,Tampa Bay,6:10 PM,ESPN+,2021-04-30
+Boston,Texas,7:05 PM,,2021-04-30
+Cleveland,White Sox,7:10 PM,,2021-04-30
+Kansas City,Minnesota,7:10 PM,,2021-04-30
+Dodgers,Milwaukee,7:10 PM,,2021-04-30
+Baltimore,Oakland,8:40 PM,,2021-04-30
+Colorado,Arizona,8:40 PM,,2021-04-30
+Angels,Seattle,9:10 PM,,2021-04-30
+San Francisco,San Diego,9:10 PM,,2021-04-30
+Detroit,Yankees,12:05 PM,,2021-05-01
+Miami,Washington,12:05 PM,,2021-05-01
+Kansas City,Minnesota,1:10 PM,,2021-05-01
+Cleveland,White Sox,3:05 PM,FS1,2021-05-01
+Baltimore,Oakland,3:07 PM,,2021-05-01
+Cubs,Cincinnati,3:10 PM,,2021-05-01
+Houston,Tampa Bay,3:10 PM,,2021-05-01
+Mets,Philadelphia,5:05 PM,,2021-05-01
+St. Louis,Pittsburgh,5:35 PM,,2021-05-01
+Boston,Texas,6:05 PM,,2021-05-01
+Atlanta,Toronto,6:07 PM,,2021-05-01
+Dodgers,Milwaukee,6:10 PM,,2021-05-01
+Colorado,Arizona,7:10 PM,,2021-05-01
+San Francisco,San Diego,7:40 PM,ESPN+,2021-05-01
+Angels,Seattle,8:10 PM,,2021-05-01
+Detroit,Yankees,12:05 PM,,2021-05-02
+Miami,Washington,12:05 PM,,2021-05-02
+St. Louis,Pittsburgh,12:05 PM,,2021-05-02
+Atlanta,Toronto,12:07 PM,,2021-05-02
+Cubs,Cincinnati,12:10 PM,,2021-05-02
+Houston,Tampa Bay,12:10 PM,,2021-05-02
+Cleveland,White Sox,1:10 PM,,2021-05-02
+Kansas City,Minnesota,1:10 PM,,2021-05-02
+Dodgers,Milwaukee,1:10 PM,,2021-05-02
+Boston,Texas,1:35 PM,,2021-05-02
+Baltimore,Oakland,3:07 PM,ESPN+,2021-05-02
+Angels,Seattle,3:10 PM,,2021-05-02
+Colorado,Arizona,3:10 PM,,2021-05-02
+San Francisco,San Diego,3:10 PM,,2021-05-02
+Mets,Philadelphia,6:00 PM,ESPN,2021-05-02
+Milwaukee,Philadelphia,6:05 PM,,2021-05-03
+Dodgers,Cubs,6:40 PM,,2021-05-03
+Texas,Minnesota,6:40 PM,,2021-05-03
+Mets,St. Louis,6:45 PM,ESPN+,2021-05-03
+Cleveland,Kansas City,7:10 PM,,2021-05-03
+San Francisco,Colorado,7:40 PM,,2021-05-03
+Tampa Bay,Angels,8:38 PM,,2021-05-03
+Toronto,Oakland,8:40 PM,,2021-05-03
+Baltimore,Seattle,9:10 PM,,2021-05-03
+Pittsburgh,San Diego,9:10 PM,,2021-05-03
+Arizona,Miami,5:40 PM,,2021-05-04
+White Sox,Cincinnati,5:40 PM,,2021-05-04
+Houston,Yankees,6:00 PM,ESPN+,2021-05-04
+Atlanta,Washington,6:05 PM,,2021-05-04
+Milwaukee,Philadelphia,6:05 PM,,2021-05-04
+Detroit,Boston,6:10 PM,,2021-05-04
+Dodgers,Cubs,6:40 PM,ESPN+,2021-05-04
+Texas,Minnesota,6:40 PM,,2021-05-04
+Mets,St. Louis,6:45 PM,,2021-05-04
+Cleveland,Kansas City,7:10 PM,,2021-05-04
+San Francisco,Colorado,7:40 PM,,2021-05-04
+Tampa Bay,Angels,8:38 PM,,2021-05-04
+Toronto,Oakland,8:40 PM,,2021-05-04
+Baltimore,Seattle,9:10 PM,,2021-05-04
+Pittsburgh,San Diego,9:10 PM,,2021-05-04
+San Francisco,Colorado,2:10 PM,,2021-05-05
+Baltimore,Seattle,2:40 PM,,2021-05-05
+Arizona,Miami,5:40 PM,,2021-05-05
+White Sox,Cincinnati,5:40 PM,,2021-05-05
+Atlanta,Washington,6:05 PM,,2021-05-05
+Houston,Yankees,6:05 PM,ESPN+,2021-05-05
+Milwaukee,Philadelphia,6:05 PM,,2021-05-05
+Detroit,Boston,6:10 PM,,2021-05-05
+Dodgers,Cubs,6:30 PM,ESPN,2021-05-05
+Texas,Minnesota,6:40 PM,,2021-05-05
+Mets,St. Louis,6:45 PM,,2021-05-05
+Cleveland,Kansas City,7:10 PM,,2021-05-05
+Pittsburgh,San Diego,7:10 PM,,2021-05-05
+Tampa Bay,Angels,8:38 PM,,2021-05-05
+Toronto,Oakland,8:40 PM,,2021-05-05
+Houston,Yankees,12:05 PM,,2021-05-06
+Milwaukee,Philadelphia,12:05 PM,ESPN+,2021-05-06
+Detroit,Boston,12:10 PM,,2021-05-06
+Texas,Minnesota,12:10 PM,,2021-05-06
+Mets,St. Louis,12:15 PM,,2021-05-06
+Cleveland,Kansas City,1:10 PM,,2021-05-06
+Toronto,Oakland,2:37 PM,,2021-05-06
+Atlanta,Washington,3:05 PM,,2021-05-06
+Arizona,Miami,5:40 PM,,2021-05-06
+Tampa Bay,Angels,8:38 PM,,2021-05-06
