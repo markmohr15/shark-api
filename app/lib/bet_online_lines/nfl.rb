@@ -1,7 +1,7 @@
 class BetOnlineLines::Nfl < BetOnlineLines::Base
 
   def self.url
-    @url ||= "https://www.betonline.ag/sportsbook/football/nfl"
+    @url ||= "https://classic.betonline.ag/sportsbook/football/nfl"
   end
 
   def self.sport

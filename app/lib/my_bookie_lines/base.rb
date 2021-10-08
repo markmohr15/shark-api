@@ -34,11 +34,12 @@ class MyBookieLines::Base
     games.each do |g|
       game_info = game_info g
       next if game_info[:next]
-      game = sport.games.Scheduled.where.not(id: @found)
-                                  .where('home_id = ? and visitor_id = ?', 
-                                            team(game_info[:home_name])&.id, 
-                                            team(game_info[:vis_name])&.id, 
-                game_info[:gametime] + 90.minutes).first
+      game = sport.games.Scheduled
+                        .where.not(id: @found)
+                        .where('gametime > ? and gametime < ? and home_id = ? and visitor_id = ?', 
+                          game_info[:time] - 90.minutes, game_info[:time] + 90.minutes,
+                          team(game_info[:home_name])&.id, 
+                          team(game_info[:vis_name])&.id).first
       if game.nil?
         @nf << [game_info[:vis_name], game_info[:home_name]]
       else
@@ -66,7 +67,7 @@ class MyBookieLines::Base
     home_ml = game.search(".game-line__home-line")&.children[9]&.children[0]&.text&.squish
     under_juice = game.search(".game-line__home-line")&.children[15]&.children[2]&.text
     
-    {gametime: Time.zone.parse("#{DateTime.now.year}/#{date} #{time}"), vis_name: vis_name, 
+    {time: Time.zone.parse("#{DateTime.now.year}/#{date} #{time}"), vis_name: vis_name, 
      home_name: home_name, vis_spread: parse_spread(vis_spread), vis_rl: parse_juice(vis_rl), vis_ml: parse_juice(vis_ml), 
      total: parse_spread(total), over_juice: parse_juice(over_juice), under_juice: parse_juice(under_juice), 
      home_rl: parse_juice(home_rl), home_ml: parse_juice(home_ml)}
