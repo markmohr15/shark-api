@@ -23,7 +23,7 @@ class BovadaLines::Base
   end
 
   def self.team name
-    sport.tags.find_by_name(name)&.team
+    sport.tags.where("lower(tags.name) = ?", name.downcase)&.first&.team
   end
 
   def self.get_lines
@@ -33,7 +33,8 @@ class BovadaLines::Base
 
     games.each do |g|
       game_info = game_info g
-      game = sport.games.Scheduled.where.not(id: @found).where('gametime > ? and gametime < ? and home_id = ? and visitor_id = ?', 
+      game = sport.games.Scheduled.where.not(id: @found)
+                                  .where('gametime > ? and gametime < ? and home_id = ? and visitor_id = ?', 
                          game_info[:time] - 90.minutes, game_info[:time] + 90.minutes, 
                          team(game_info[:home_name])&.id, team(game_info[:vis_name])&.id).first
       if game.nil?
