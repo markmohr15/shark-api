@@ -1,30 +1,52 @@
 visitor,home,gametime,channel
 
-North Texas,Appalachian State,2020-12-21 14:30:00 EST,ESPN
-Tulane,Nevada,2020-12-22 15:30:00 EST,ESPN
-Central Florida,BYU,2020-12-22 19:00:00 EST,ESPN
-Georgia Southern,Louisiana Tech,2020-12-23 15:00:00 EST,ESPN
-Florida Atlantic,Memphis,2020-12-23 19:00:00 EST,ESPN
-Hawaii,Houston,2020-12-24 15:30:00 EST,ESPN
-Western Kentucky,Georgia State,2020-12-26 15:30:00 EST,ESPN
-Marshall,Buffalo,2020-12-25 14:30:00 EST,ESPN
-South Carolina,UAB,2020-12-26 12:00:00 EST,ABC
-Liberty,Coastal Carolina,2020-12-26 12:00:00 EST,ESPN
-UL Lafayette,UTSA,2020-12-26 15:30:00 EST,ABC
-Oklahoma State,Miami Florida,2020-12-29 17:30:00 EST,ESPN
-Texas,Colorado,2020-12-29 21:00:00 EST,ESPN
-Wake Forest,Wisconsin,2020-12-30 12:00:00 EST,ESPN
-Iowa,Missouri,2020-12-30 16:00:00 EST,ESPN
-Florida,Oklahoma,2020-12-30 20:00:00 EST,ESPN
-Tulsa,Mississippi State,2020-12-31 12:00:00 EST,ESPN
-Ball State,San Jose State,2020-12-31 14:00:00 EST,CBS
-West Virginia,Tennessee,2020-12-31 16:00:00 EST,ESPN
-Arkansas,TCU,2020-12-31 20:00:00 EST,ESPN
-Cincinnati,Georgia,2021-01-01 12:00:00 EST,ESPN
-Auburn,Northwestern,2021-01-01 13:00:00 EST,ABC
-Notre Dame,Alabama,2021-01-01 16:00:00 EST,ESPN
-Ohio State,Clemson,2021-01-01 20:00:00 EST,ESPN
-NC State,Kentucky,2021-01-02 12:00:00 EST,ESPN
-Mississippi,Indiana,2021-01-02 12:30:00 EST,ABC
-Oregon,Iowa State,2021-01-02 16:00:00 EST,ESPN
-North Carolina,Texas A&M,2021-01-02 20:00:00 EST,ESPN
+Charlotte,Florida International,2021-10-08 19:00 EDT,CBSSN
+Temple,Cincinnati,2021-10-08 19:00 EDT,ESPN
+Stanford,Arizona State,2021-10-08 22:30 EDT,ESPN
+Arkansas,Mississippi,2021-10-09 12:00 EDT,ESPN
+Maryland,Ohio State,2021-10-09 12:00 EDT,FOX
+Michigan State,Rutgers,2021-10-09 12:00 EDT,BTN
+Northern Illinois,Toledo,2021-10-09 12:00 EDT,CBSSN
+Oklahoma,Texas,2021-10-09 12:00 EDT,ABC
+South Carolina,Tennessee,2021-10-09 12:00 EDT,ESPN2
+Vanderbilt,Florida,2021-10-09 12:00 EDT,SEC
+West Virginia,Baylor,2021-10-09 12:00 EDT,FS1
+Georgia Tech,Duke,2021-10-09 12:30 EDT,ESPN3
+Virginia,Louisville,2021-10-09 15:00 EDT,ACC
+Ball State,Western Michigan,2021-10-09 15:30 EDT,ESPNU
+Boise State,BYU,2021-10-09 15:30 EDT,ABC
+Florida State,North Carolina,12021-10-09 5:30 EDT,ESPN
+Georgia,Auburn,2021-10-09 15:30 EDT,CBS
+Middle Tennessee State,Liberty,2021-10-09 15:30 EDT,ESPN3
+San Jose State,Colorado State,2021-10-09 15:30 EDT,FS1
+SMU,Navy,2021-10-09 15:30 EDT,CBSSN
+UConn,UMass,2021-10-09 15:30 EDT,NESN
+Wake Forest,Syracuse,2021-10-09 15:30 EDT,ESPN2
+Wisconsin,Illinois,2021-10-09 15:30 EDT,BTN
+North Texas,Missouri,2021-10-09 16:00 EDT,SEC
+Oregon State,Washington State,2021-10-09 16:00 EDT,PAC12
+Penn State,Iowa,2021-10-09 16:00 EDT,FOX
+Buffalo,Kent State,2021-10-09 19:00 EDT,ESPNU
+TCU,Texas Tech,2021-10-09 19:00 EDT,ESPN
+UTEP,Southern Miss,2021-10-09 19:00 EDT,ESPN3
+Wyoming,Air Force,2021-10-09 19:00 EDT,CBSSN
+LSU,Kentucky,2021-10-09 19:30 EDT,SEC
+Michigan,Nebraska,2021-10-09 19:30 EDT,ABC
+Notre Dame,Virginia Tech,2021-10-09 19:30 EDT,ACC
+Alabama,Texas A&M,2021-10-09 20:00 EDT,CBS
+Georgia State,UL Monroe,2021-10-09 20:00 EDT,ESPN3
+Utah,USC,2021-10-09 20:00 EDT,FOX
+Memphis,Tulsa,2021-10-09 21:00 EDT,ESPN2
+New Mexico,San Diego State,2021-10-09 21:00 EDT,FS1
+New Mexico State,Nevada,2021-10-09 22:30 EDT,CBSSN
+UCLA,Arizona,2021-10-09 22:30 EDT,ESPN
+Akron,Bowling Green,2021-10-09 12:00 EDT,ESPN+
+Central Michigan,Ohio,2021-10-09 15:30 EDT,ESPN+
+East Carolina,Central Florida,2021-10-09 18:00 EDT,ESPN+
+Florida Atlantic,UAB,2021-10-09 15:30 EDT,
+Georgia Southern,Troy,2021-10-09 19:00 EDT,ESPN+
+Miami Ohio,Eastern Michigan,2021-10-09 15:30 EDT,ESPN+
+Old Dominion,Marshall,2021-10-09 14:00 EDT,FACEB
+Portland State,Idaho,2021-10-09 17:00 EDT,ESPN+
+South Alabama,Texas State,2021-10-09 19:00 EDT,ESPN+
+UTSA,Western Kentucky,2021-10-09 19:00 EDT,
