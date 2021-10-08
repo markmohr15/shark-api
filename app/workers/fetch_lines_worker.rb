@@ -9,12 +9,12 @@ class FetchLinesWorker
       Sidekiq.logger.info err
       Bugsnag.notify(err)
     end
-    begin
-      BookmakerLines::Cfb.get_lines
-    rescue => err
-      Sidekiq.logger.info err
-      Bugsnag.notify(err)
-    end
+    #begin
+     # BookmakerLines::Cfb.get_lines
+    #rescue => err
+     # Sidekiq.logger.info err
+      #Bugsnag.notify(err)
+    #end
     begin
       BovadaLines::Cfb.get_lines
     rescue => err
@@ -33,12 +33,12 @@ class FetchLinesWorker
       Sidekiq.logger.info err
       Bugsnag.notify(err)
     end
-    begin
-      BookmakerLines::Nfl.get_lines
-    rescue => err
-      Sidekiq.logger.info err
-      Bugsnag.notify(err)
-    end
+   # begin
+    #  BookmakerLines::Nfl.get_lines
+    #rescue => err
+     # Sidekiq.logger.info err
+      #Bugsnag.notify(err)
+    #end
     begin
       BovadaLines::Nfl.get_lines
     rescue => err
@@ -138,12 +138,12 @@ class FetchLinesWorker
       Sidekiq.logger.info err
       Bugsnag.notify(err)
     end
-    begin
-      BookmakerLines::Mlb.get_lines
-    rescue => err
-      Sidekiq.logger.info err
-      Bugsnag.notify(err)
-    end
+   # begin
+    #  BookmakerLines::Mlb.get_lines
+    #rescue => err
+     # Sidekiq.logger.info err
+      #Bugsnag.notify(err)
+    #end
     begin
       BovadaLines::Mlb.get_lines
     rescue => err
