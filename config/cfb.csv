@@ -1,63 +1,66 @@
 visitor,home,gametime,channel
 
-Ball State,Akron,2021-11-02 6:00 PM CDT,CBSSN
-Eastern Michigan,Toledo,2021-11-02 6:30 PM CDT,ESPN2
-Miami Ohio,Ohio,2021-11-02 6:30 PM CDT,ESPNU
-Central Michigan,Western Michigan,2021-11-03 6:00 PM CDT,ESPNU
-Northern Illinois,Kent State,2021-11-03 6:00 PM CDT,ESPN2
-Georgia State,UL Lafayette,2021-11-04 6:30 PM CDT,ESPN
-Virginia Tech,Boston College,2021-11-05 6:30 PM CDT,ESPN2
-Utah,Stanford,2021-11-05 9:30 PM CDT,FS1
-Air Force,Army,2021-11-06 10:30 AM,CBS
-Illinois,Minnesota,2021-11-06 11:00 AM,ESPN2
-Liberty,Mississippi,2021-11-06 11:00 AM,SEC
-Louisiana Tech,UAB,2021-11-06 11:00 AM,CBSSN
-Pittsburgh,Duke,2021-11-06 11:00 AM,ACC
-SMU,Memphis,2021-11-06 11:00 AM,ESPNU
-Georgia Tech,Miami Florida,2021-11-06 11:30 AM,ESPN3
-California,Arizona,2021-11-06 2:00 PM CDT,PAC12
-Colorado State,Wyoming,2021-11-06 2:30 PM CDT,CBSSN
-Idaho State,BYU,2021-11-06 2:30 PM CDT,ESPN3
-Middle Tennessee State,Western Kentucky,2021-11-06 2:30 PM CDT,
-Navy,Notre Dame,2021-11-06 2:30 PM CDT,NBC
-Rhode Island,UMass,2021-11-06 2:30 PM CDT,NESN
-Tulsa,Cincinnati,2021-11-06 2:30 PM CDT,ESPN2
-Wisconsin,Rutgers,2021-11-06 2:30 PM CDT,BTN
-Mississippi State,Arkansas,2021-11-06 3:00 PM CDT,SEC
-Tulane,Central Florida,2021-11-06 3:00 PM CDT,ESPNU
-Boise State,Fresno State,2021-11-06 6:00 PM CDT,CBSSN
-Oregon State,Colorado,2021-11-06 6:00 PM CDT,PAC12
-Tennessee,Kentucky,2021-11-06 6:00 PM CDT,ESPN2
-UNLV,New Mexico,2021-11-06 6:00 PM CDT,
-Florida,South Carolina,2021-11-06 6:30 PM CDT,SEC
-Houston,South Florida,2021-11-06 6:30 PM CDT,ESPNU
-San Jose State,Nevada,2021-11-06 9:00 PM CDT,FS2
-UTSA,UTEP,2021-11-06 9:15 PM CDT,ESPN2
-San Diego State,Hawaii,2021-11-06 10:00 PM CDT,FS1
-Appalachian State,Arkansas State,2021-11-06 1:00 PM CDT,ESPN+
-Auburn,Texas A&M,2021-11-06 10:58 PM CDT,
-Baylor,TCU,2021-11-06 10:58 PM CDT,
-Clemson,Louisville,2021-11-06 10:58 PM CDT,
-Coastal Carolina,Georgia Southern,2021-11-06 5:00 PM CDT,ESPN+
-Indiana,Michigan,2021-11-06 10:58 PM CDT,
-Iowa,Northwestern,2021-11-06 10:58 PM CDT,
-Kansas State,Kansas,2021-11-06 10:58 PM CDT,
-UL Monroe,Texas State,2021-11-06 2:00 PM CDT,ESPN+
-LSU,Alabama,2021-11-06 10:58 PM CDT,
-Marshall,Florida Atlantic,2021-11-06 5:00 PM CDT,FACEB
-Michigan State,Purdue,2021-11-06 10:58 PM CDT
-Missouri,Georgia,2021-11-06 10:58 PM CDT,
-NC State,Florida State,2021-11-06 10:58 PM CDT,
-North Texas,Southern Miss,2021-11-06 2:00 PM CDT,ESPN+
-Ohio State,Nebraska,2021-11-06 10:58 PM CDT,
-Oklahoma State,West Virginia,2021-11-06 10:58 PM CDT,
-Old Dominion,Florida International,2021-11-06 6:00 PM CDT,ESPN3
-Oregon,Washington,2021-11-06 10:58 PM CDT,
-Penn State,Maryland,2021-11-06 10:58 PM CDT,
-Rice,Charlotte,2021-11-06 2:30 PM CDT,ESPN+
-South Alabama,Troy,2021-11-06 2:30 PM CDT,ESPN+
-Temple,East Carolina,2021-11-06 2:00 PM CDT,ESPN+
-Texas,Iowa State,2021-11-06 10:58 PM CDT,
-USC,Arizona State,2021-11-06 10:58 PM CDT,
-Utah State,New Mexico State,2021-11-06 10:58 PM CDT,
-Wake Forest,North Carolina,2021-11-06 10:58 PM CDT,
+Akron,Western Michigan,2021-11-09 6:00 PM CST,CBSSN
+Buffalo,Miami Ohio,2021-11-09 6:00 PM CST,ESPNU
+Ohio,Eastern Michigan,2021-11-09 7:00 PM CST,ESPN2
+Ball State,Northern Illinois,2021-11-10 6:00 PM CST,ESPN2
+Toledo,Bowling Green,2021-11-10 6:00 PM CST,CBSSN
+Kent State,Central Michigan,2021-11-10 7:00 PM CST,ESPNU
+North Carolina,Pittsburgh,2021-11-11 6:30 PM CST,ESPN
+Cincinnati,South Florida,2021-11-12 5:00 PM CST,ESPN2
+Wyoming,Boise State,2021-11-12 8:00 PM CST,FS1
+Bucknell,Army,2021-11-13 11:00 AM CST,CBSSN
+Maine,UMass,2021-11-13 11:00 AM CST,NESN
+Mississippi State,Auburn,2021-11-13 11:00 AM CST,ESPN
+New Mexico State,Alabama,2021-11-13 11:00 AM CST,SEC
+Syracuse,Louisville,2021-11-13 11:00 AM CST,ESPN3
+Central Florida,SMU,2021-11-13 11:00 AM CST,ESPNU
+UConn,Clemson,2021-11-13 11:00 AM CST,ACC
+West Virginia,Kansas State,2021-11-13 11:00 AM CST,FS1
+Utah,Arizona,2021-11-13 1:00 PM CST,P12
+Boston College,Georgia Tech,2021-11-13 2:30 PM CST,ESPN3
+Duke,Virginia Tech,2021-11-13 2:30 PM CST,ACC
+Georgia,Tennessee,2021-11-13 2:30 PM CST,CBS
+UAB,Marshall,2021-11-13 2:30 PM CST,CBSSN
+USC,California,2021-11-13 2:30 PM CST,FS1
+South Carolina,Missouri,2021-11-13 3:00 PM CST,SEC
+Tulsa,Tulane,2021-11-13 3:00 PM CST,ESPNU
+Stanford,Oregon State,2021-11-13 4:30 PM CST,P12
+Air Force,Colorado State,2021-11-13 6:00 PM CST,CBSSN
+Arizona State,Washington,2021-11-13 6:00 PM CST,FS1
+Kentucky,Vanderbilt,2021-11-13 6:00 PM CST,ESPN2
+Texas A&M,Mississippi,2021-11-13 6:00 PM CST,ESPN
+Arkansas,LSU,2021-11-13 6:30 PM CST,SEC
+Colorado,UCLA,2021-11-13 8:00 PM CST,P12
+Nevada,San Diego State,2021-11-13 9:30 PM CST,CBSSN
+Utah State,San Jose State,2021-11-13 9:30 PM CST,FS1
+Washington State,Oregon,2021-11-13 9:30 PM CST,ESPN
+Oklahoma,Baylor,2021-11-13 22:58 CST,FOX
+Minnesota,Iowa,2021-11-13 22:58 CST,BTN
+Northwestern,Wisconsin,2021-11-13 22:58 CST,ESPN2
+Rutgers,Indiana,2021-11-13 22:58 CST,BTN
+Arkansas State,UL Monroe,2021-11-13 4:00 PM CST,ESPN+
+Charlotte,Louisiana Tech,2021-11-13 2:30 PM CST,
+East Carolina,Memphis,2021-11-13 11:00 AM CST,ESPN+
+Florida Atlantic,Old Dominion,2021-11-13 2:30 PM CST,ESPN+
+Florida International,Middle Tennessee State,2021-11-13 2:30 PM CST,ESPN3
+Georgia Southern,Texas State,2021-11-13 2:00 PM CST,ESPN+
+Georgia State,Coastal Carolina,2021-11-13 1:00 PM CST,ESPN+
+Hawaii,UNLV,2021-11-13 3:00 PM CST,
+Houston,Temple,2021-11-13 11:00 AM CST,ESPN+
+Iowa State,Texas Tech,2021-11-13 22:58 CST,
+Kansas,Texas,TBA,2021-11-13 22:58 CST 
+UL Lafayette,Troy,2021-11-13 2:30 PM CST,ESPN+
+Maryland,Michigan State,2021-11-13 22:58 CST,
+Miami Florida,Florida State,2021-11-13 22:58 CST,
+Michigan,Penn State,2021-11-13 22:58 CST,
+NC State,Wake Forest,TBA,2021-11-13 22:58 CST,
+New Mexico,Fresno State,2021-11-13 6:00 PM CST,
+Notre Dame,Virginia,TBA,2021-11-13 22:58 CST,
+Purdue,Ohio State,2021-11-13 22:58 CST,
+Samford,Florida,2021-11-13 11:00 AM CST,ESPN+
+South Alabama,Appalachian State,2021-11-13 1:30 PM CST,ESPN+
+Southern Miss,UTSA,2021-11-13 2:30 PM CST,ESPN+
+TCU,Oklahoma State,2021-11-13 22:58 CST,
+UTEP,North Texas,2021-11-13 3:00 PM CST,ESPN+
+Western Kentucky,Rice,2021-11-13 1:00 PM CST,ESPN+
