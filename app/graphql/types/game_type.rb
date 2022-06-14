@@ -10,7 +10,6 @@ module Types
     field :status, String, null: true
     field :time_left_min, Integer, null: true
     field :time_left_sec, Integer, null: true
-    field :time_left_min, Integer, null: true
     field :visitor_rot, Integer, null: true
     field :visitor_score, Integer, null: true
     field :week, Integer, null: true

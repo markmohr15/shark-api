@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
+gem 'rails', '~> 6.1.6'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'devise'                      # Use devise as authentication module
 gem 'devise-jwt', '~> 0.5.8'      # Use JWT token authentication with devise
