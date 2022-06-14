@@ -1,15 +1,14 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.2'
+ruby '3.1.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1.6'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'devise'                      # Use devise as authentication module
-gem 'devise-jwt', '~> 0.5.8'      # Use JWT token authentication with devise
+gem 'devise-jwt'     # Use JWT token authentication with devise
 gem 'bcrypt', '~> 3.1.7'          # Use ActiveModel has_secure_password
-gem 'dry-configurable', '0.9.0'   # lock this in.  upgrade breaks authentication
 gem 'graphql'
 gem 'graphql-errors'
 gem 'rack-cors'
@@ -24,6 +23,7 @@ gem 'mechanize'
 gem 'smarter_csv'
 gem 'bugsnag'
 gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
+gem 'net-smtp'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
