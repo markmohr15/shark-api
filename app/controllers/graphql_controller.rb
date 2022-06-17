@@ -8,6 +8,7 @@ class GraphqlController < ApplicationController
     variables = ensure_hash(params[:variables])
     query = params[:query]
     operation_name = params[:operationName]
+    puts request.headers['HTTP_AUTHORIZATION']
     context = {
       current_user: current_user,
       login: method(:sign_in)
