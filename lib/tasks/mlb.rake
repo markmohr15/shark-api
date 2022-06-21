@@ -1,8 +1,10 @@
 namespace :importer do
 
-  task :mlb, [:csv] => [:environment] do |t, args|
-
-    file_path = Rails.root.join('config', 'mlb.csv')
+  task :mlb, [:filename] => [:environment] do |t, args|
+    ee = File.open(args[:filename])
+    text = ee.read
+    file_path = "#{Rails.root.join("tmp")}/importing.csv"
+    File.open(file_path, "w") do |f| f.write(text) end
     csv = SmarterCSV.process(file_path, force_utf8: true)
     sport = Sport.find_by_abbreviation 'MLB'
     nf = []
