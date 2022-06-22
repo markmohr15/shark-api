@@ -26,7 +26,7 @@ module Types
 
     def sportsbooks
       if context[:current_user]
-        context[:current_user].sportsbooks
+        context[:current_user].sportsbooks.active
       else
         raise GraphQL::ExecutionError, "Authentication Error"
       end

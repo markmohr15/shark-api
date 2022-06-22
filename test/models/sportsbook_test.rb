@@ -4,6 +4,7 @@
 #
 #  id           :bigint           not null, primary key
 #  abbreviation :string
+#  active       :boolean          default(TRUE)
 #  name         :string
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null

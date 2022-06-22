@@ -1,7 +1,7 @@
 class BetOnlineLines::Nhl < BetOnlineLines::Base
   
   def self.url
-    @url ||= "https://www.betonline.ag/sportsbook/hockey/nhl"
+    @url ||= "https://classic.betonline.ag/sportsbook/hockey/nhl"
   end
 
   def self.sport
@@ -25,9 +25,9 @@ class BetOnlineLines::Nhl < BetOnlineLines::Base
       next if g[0][0].blank?
       game_info = game_info g
       next if game_info[:vis_lines].empty? || game_info[:home_lines].empty?
-      game = Game.where.not(id: @found).Scheduled.where('sport_id = ? and gametime > ? and gametime < ? and visitor_id = ? and home_id = ?', 
-                         sport.id, date.to_datetime, date2.to_datetime.end_of_day + 6.hours, 
-                         team(game_info[:vis_name])&.id, team(game_info[:home_name])&.id).first
+      game = Game.where.not(id: @found).Scheduled.where('sport_id = ? and gametime > ? and gametime < ? and home_id = ?', 
+                         sport.id, date.to_datetime, date2.to_datetime.end_of_day + 6.hours,
+                         team(game_info[:home_name])&.id).first
       if game.nil?
         @nf << game_info[:home_name]
       else

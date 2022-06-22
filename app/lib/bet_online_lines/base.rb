@@ -71,7 +71,7 @@ class BetOnlineLines::Base
   def self.parse_vis_line vl
     if vl.include? "Ov"
       total = vl.gsub("Ov", "").split(/[-,+]/)[0]
-      juice = vl.split(total)[1]
+      juice = vl.split(total, 2)[1]
       half = total.include?("½") ? 0.5 : 0
       {total: total.to_f + half, over_juice: juice}
     elsif vl.include? "pk"
@@ -96,7 +96,7 @@ class BetOnlineLines::Base
   def self.parse_home_line hl
     if hl.include? "Un"
       total = hl.gsub("Un", "").split(/[-,+]/)[0]
-      juice = hl.split(total)[1]
+      juice = hl.split(total, 2)[1]
       {under_juice: juice}
     elsif hl.include? "pk"
       {home_rl: hl.gsub("pk", "").gsub("o", "").to_i}
