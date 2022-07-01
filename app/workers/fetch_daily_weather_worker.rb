@@ -14,10 +14,10 @@ class FetchDailyWeatherWorker
         weather = g.weathers.where(dt: Time.at(d["dt"]).to_datetime, 
                                    report_type: "daily").first_or_initialize
         temp = d["temp"]
-        weather.update(day: temp["day"].to_i, low: temp["min"].to_i, high: temp["max"].to_i, 
+        weather.update day: temp["day"].to_i, low: temp["min"].to_i, high: temp["max"].to_i, 
                        eve: temp["eve"].to_i, night: temp["night"].to_i, morn: temp["morn"].to_i,
                        wind_speed: d["wind_speed"].to_i, wind_deg: d["wind_deg"],
-                       weather: d["weather"][0]["description"])
+                       weather: d["weather"][0]["description"].titleize
       end
     end
   end

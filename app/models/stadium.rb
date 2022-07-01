@@ -44,4 +44,9 @@ class Stadium < ApplicationRecord
                   Artificial: 3, Hybrid: 4 }
 
   validates_presence_of :name
+
+  def capacity_to_s
+    return "" if capacity.blank?
+    ActiveSupport::NumberHelper.number_to_delimited(capacity)
+  end
 end

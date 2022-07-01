@@ -15,7 +15,7 @@ class FetchCurrentWeatherWorker
                         temp: current["temp"].to_i, 
                         wind_speed: current["wind_speed"].to_i, 
                         wind_deg: current["wind_deg"], 
-                        weather: current["weather"][0]["description"]
+                        weather: current["weather"][0]["description"].titleize
     end
   end
 

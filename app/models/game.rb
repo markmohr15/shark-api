@@ -97,6 +97,11 @@ class Game < ApplicationRecord
     gametime.strftime('%m/%d')
   end
 
+  def datetime_to_s
+    return "" if gametime.blank?
+    gametime.strftime('%B %d, %Y, %-l:%M %p (Eastern)')
+  end
+
   def user_home_spread user
     Line.from(Line.user_last_lines(user, self)).pluck(:home_spread).reject{|x| x.blank?}.max
   end
@@ -193,13 +198,21 @@ class Game < ApplicationRecord
     LineHelper.display_ml user_under_odds(user)
   end
 
-  def weather_report
+  def current_weather
     if self.weathers.current.any?
-      self.weathers.current.where('dt <= ?', self.gametime + 15.minutes).order(:dt).last
-    elsif self.weathers.hourly.any?
-      self.weathers.hourly.where('dt <= ?', self.gametime + 15.minutes).order(:dt).last
+      self.weathers.current.order('dt desc').first
+    else
+      nil
+    end
+  end
+
+  def weather_reports
+    if self.weathers.hourly.any?
+      self.weathers.hourly
+                   .where('dt >= ? and dt <= ?', gametime - 30.minutes, gametime + 210.minutes)
+                   .order(:dt)
     elsif self.weathers.daily.any?
-      self.weathers.daily.where('dt <= ?', self.gametime.end_of_day).order(:dt).last
+      self.weathers.daily.where('dt <= ? and dt >=', gametime.end_of_day, gametime.beginning_of_day).first
     else
       nil
     end

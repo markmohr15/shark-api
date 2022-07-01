@@ -1,32 +1,48 @@
 visitor,home,time,channel,date
-Minnesota,Cleveland,2:10 PM,ESPN+,2022-06-28	
-Atlanta,Philadelphia,6:05 PM,,2022-06-28
-Oakland,Yankees,6:05 PM,,2022-06-28
-Pittsburgh,Washington,6:05 PM,,2022-06-28
-Boston,Toronto,6:07 PM,,2022-06-28
-Houston,Mets,6:10 PM,TBS,2022-06-28
-Milwaukee,Tampa Bay,6:10 PM,,2022-06-28
-Minnesota,Cleveland,6:10 PM,,2022-06-28
-Miami,St. Louis,6:45 PM,,2022-06-28
-Cincinnati,Cubs,7:05 PM,,2022-06-28
-Texas,Kansas City,7:10 PM,,2022-06-28
-Dodgers,Colorado,7:40 PM,,2022-06-28
-White Sox,Angels,8:38 PM,,2022-06-28
-San Diego,Arizona,8:40 PM,,2022-06-28
-Detroit,San Francisco,8:45 PM,,2022-06-28
-Baltimore,Seattle,9:10 PM,,2022-06-28
-Milwaukee,Tampa Bay,11:10 AM,,2022-06-29	
-Oakland,Yankees,12:05 PM,,2022-06-29
-Pittsburgh,Washington,12:05 PM,,2022-06-29
-Houston,Mets,12:10 PM,,2022-06-29
-Texas,Kansas City,1:10 PM,,2022-06-29
-San Diego,Arizona,2:40 PM,,2022-06-29
-Detroit,San Francisco,2:45 PM,,2022-06-29
-Baltimore,Seattle,3:10 PM,,2022-06-29
-Atlanta,Philadelphia,6:05 PM,,2022-06-29
-Boston,Toronto,6:07 PM,,2022-06-29
-Minnesota,Cleveland,6:10 PM,,2022-06-29	
-Miami,St. Louis,6:45 PM,,2022-06-29
-Cincinnati,Cubs,7:05 PM,ESPN+,2022-06-29
-Dodgers,Colorado,7:40 PM,,2022-06-29
-White Sox,Angels,8:38 PM,,2022-06-29
+
+Boston,Cubs,1:20 PM,,2022-07-01
+Tampa Bay,Toronto,2:07 PM,,2022-07-01
+Miami,Washington,5:05 PM,ESPN+,2022-07-01
+St. Louis,Philadelphia,5:05 PM,,2022-07-01
+Atlanta,Cincinnati,5:40 PM,,2022-07-01
+Milwaukee,Pittsburgh,6:05 PM,,2022-07-01
+Kansas City,Detroit,6:10 PM,,2022-07-01
+Yankees,Cleveland,6:10 PM,,2022-07-01
+Texas,Mets,6:10 PM,Apple,2022-07-01
+Angels,Houston,7:10 PM,Apple,2022-07-01
+Arizona,Colorado,7:10 PM,,2022-07-01
+Baltimore,Minnesota,7:10 PM,,2022-07-01
+Oakland,Seattle,9:10 PM,,2022-07-01
+San Diego,Dodgers,9:10 PM,,2022-07-01
+White Sox,San Francisco,9:15 PM,,2022-07-01
+Tampa Bay,Toronto,11:07 AM,,2022-07-02
+Baltimore,Minnesota,1:10 PM,,2022-07-02
+White Sox,San Francisco,3:05 PM,,2022-07-02
+Miami,Washington,3:05 PM,,2022-07-02
+Milwaukee,Pittsburgh,3:05 PM,,2022-07-02
+St. Louis,Philadelphia,3:05 PM,,2022-07-02
+Angels,Houston,3:10 PM,,2022-07-02
+Atlanta,Cincinnati,3:10 PM,,2022-07-02
+Kansas City,Detroit,3:10 PM,,2022-07-02
+Oakland,Seattle,3:10 PM,FS1,2022-07-02
+Texas,Mets,3:10 PM,,2022-07-02
+Tampa Bay,Toronto,5:07 PM,,2022-07-02			
+Yankees,Cleveland,5:10 PM,,2022-07-02
+Boston,Cubs,6:15 PM,FOX,2022-07-02
+San Diego,Dodgers,6:15 PM,FOX,2022-07-02
+Arizona,Colorado,8:10 PM,,2022-07-02
+Kansas City,Detroit,11:05 AM,PCOK,2022-07-03
+Miami,Washington,12:35 PM,,2022-07-03	
+Milwaukee,Pittsburgh,12:35 PM,,2022-07-03
+Tampa Bay,Toronto,12:37 PM,,2022-07-03
+Atlanta,Cincinnati,12:40 PM,,2022-07-03		
+New York,Cleveland,12:40 PM,,2022-07-03		
+Texas,New York,12:40 PM,,2022-07-03		
+Los Angeles,Houston,1:10 PM,,2022-07-03		
+Baltimore,Minnesota,1:10 PM,,2022-07-03		
+Boston,Cubs,1:20 PM,ESPN+,2022-07-03
+Arizona,Colorado,2:10 PM,,2022-07-03	
+White Sox,San Francisco,3:05 PM,,2022-07-03
+Oakland,Seattle,3:10 PM,,2022-07-03
+San Diego,Los Angeles,3:10 PM,,2022-07-03
+St. Louis,Philadelphia,6:00 PM,ESPN,2022-07-03

@@ -33,4 +33,8 @@ class Weather < ApplicationRecord
   enum report_type: { daily: 0, hourly: 1, current: 2 }
 
   validates_presence_of :dt
+
+  def display_hourly_time
+    dt.strftime('%-l %p')
+  end
 end

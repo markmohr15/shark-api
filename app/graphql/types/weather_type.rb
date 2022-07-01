@@ -14,6 +14,6 @@ module Types
     field :wind_deg, Integer, null: true
     field :wind_speed, Integer, null: true
     field :game, Types::GameType, null: false
-
+    field :display_hourly_time, String, null: false
   end
 end

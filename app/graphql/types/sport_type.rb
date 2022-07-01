@@ -11,6 +11,7 @@ module Types
     field :seasons, [Types::SeasonType], null: false
     field :games, [Types::GameType], null: false
     field :stadiums, [Types::StadiumType], null: false
-
+    field :baseball, Boolean, null: false
+    field :weather, Boolean, null: false
   end
 end

@@ -32,8 +32,10 @@ module Types
     field :display_under, String, null: false
     field :display_over_odds, String, null: false
     field :display_under_odds, String, null: false
-    field :weather_report, Types::WeatherType, null: true
+    field :current_weather, Types::WeatherType, null: true
+    field :weather_reports, [Types::WeatherType], null: true
     field :last_lines, [Types::LineType], null: false
+    field :datetime_to_s, String, null: false
     
     def display_home_spread
       object.display_home_spread context[:current_user]
@@ -75,8 +77,5 @@ module Types
       object.display_under_odds context[:current_user]
     end
 
-    def weather_report
-      object.weather_report
-    end
   end
 end

@@ -5,7 +5,9 @@
 #  id           :bigint           not null, primary key
 #  abbreviation :string
 #  active       :boolean          default(TRUE)
+#  baseball     :boolean          default(FALSE)
 #  name         :string
+#  weather      :boolean          default(FALSE)
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #
@@ -28,7 +30,7 @@ class Sport < ApplicationRecord
   scope :nhl, -> {find_by_abbreviation "NHL"}
   scope :kbo, -> {find_by_abbreviation "KBO"}
   scope :npb, -> {find_by_abbreviation "NPB"}
-  scope :weather, -> { where 'sports.abbreviation IN (?)', ['MLB', 'CFB', 'NFL']}
+  scope :weather, -> {where weather: true}
 
   before_destroy :check_games
 

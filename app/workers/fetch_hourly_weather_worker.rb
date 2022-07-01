@@ -13,8 +13,8 @@ class FetchHourlyWeatherWorker
       hourlies.each do |h|
         weather = g.weathers.where(dt: Time.at(h["dt"]).to_datetime,
                                    report_type: "hourly").first_or_initialize
-        weather.update(temp: h["temp"].to_i, wind_speed: h["wind_speed"].to_i, 
-                       wind_deg: h["wind_deg"], weather: h["weather"][0]["description"])
+        weather.update temp: h["temp"].to_i, wind_speed: h["wind_speed"].to_i, 
+                       wind_deg: h["wind_deg"], weather: h["weather"][0]["description"].titleize
       end
     end
   end

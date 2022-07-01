@@ -23,5 +23,6 @@ module Types
     field :state, String, null: true
     field :surface, String, null: true
     field :sport, Types::SportType, null: false
+    field :capacity_to_s, String, null: false
   end
 end
