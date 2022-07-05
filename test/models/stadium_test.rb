@@ -21,6 +21,7 @@
 #  name                   :string
 #  right_center_field     :integer
 #  right_field            :integer
+#  roof_status_link       :string
 #  stadium_type           :string
 #  state                  :string
 #  surface                :integer
