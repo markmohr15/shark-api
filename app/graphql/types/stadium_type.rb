@@ -24,5 +24,6 @@ module Types
     field :surface, String, null: true
     field :sport, Types::SportType, null: false
     field :capacity_to_s, String, null: false
+    field :roof_status_link, String, null: true
   end
 end
