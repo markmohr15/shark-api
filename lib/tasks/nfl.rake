@@ -7,14 +7,17 @@ namespace :importer do
     sport = Sport.find_by_abbreviation 'NFL'
     nf = []
     csv.each_entry do |line|
-      visitor = sport.teams.where('(nickname || name) ilike ?', "%#{line.first[1]}%").first
-      home = sport.teams.where('(nickname || name) ilike ?', "%#{line[:home]}%").first
-      game_day = Date.strptime(line[:day], "%m/%d/%y")
-
-      game = Game.where(sport: sport, gametime: "#{game_day} #{line[:time]}",
-                        visitor: visitor, channel: line[:channel],
-                        home: home).first_or_create
-      nf << line unless game.valid?
+      visitor = sport.teams.find_by_nickname(line[:visitor]) || sport.teams.find_by_name(line[:visitor])
+      home = sport.teams.find_by_nickname(line[:home]) || sport.teams.find_by_name(line[:home])
+      game_day = Date.strptime(line[:date], "%m/%d/%y")
+      game = Game.Scheduled.where(sport: sport, gametime: "#{game_day} #{line[:time]}",
+                                  visitor: visitor, home: home).first_or_initialize
+      game.channel = line[:channel]
+      if game.valid?
+        game.save!
+      else
+        nf << line
+      end
     end
     
     puts nf
