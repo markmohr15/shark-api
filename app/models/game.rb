@@ -74,9 +74,14 @@ class Game < ApplicationRecord
     return unless previous_changes.keys.include? "gametime"
     r = Sidekiq::ScheduledSet.new
     r.select do |scheduled|
+      scheduled.klass == 'FetchGameTimeWeatherWorker' &&
+      scheduled.args[0] == self.id
+    end.map(&:delete)
+    r.select do |scheduled|
       scheduled.klass == 'SetInProgressWorker' &&
       scheduled.args[0] == self.id
     end.map(&:delete)
+    FetchGameTimeWeatherWorker.perform_at(self.gametime, self.id)
     SetInProgressWorker.perform_at(self.gametime + 1.minutes, self.id)
     DeleteLinesWorker.perform_at(self.gametime + 30.hours, self.id)
   end
@@ -212,9 +217,9 @@ class Game < ApplicationRecord
                    .where('dt >= ? and dt <= ?', gametime - 30.minutes, gametime + 210.minutes)
                    .order(:dt)
     elsif self.weathers.daily.any?
-      self.weathers.daily.where('dt <= ? and dt >=', gametime.end_of_day, gametime.beginning_of_day).first
+      self.weathers.daily.where('dt >= ? and dt <= ?', gametime.beginning_of_day, gametime.end_of_day)
     else
-      nil
+      []
     end
   end
 
