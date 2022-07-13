@@ -4,13 +4,13 @@ module Types
     field :all_sports, [Types::SportType], null: false
     field :sportsbooks, [Types::SportsbookType], null: true
     field :game, Types::GameType, null: true do
-      argument :id, ID, required: true
+      argument :id, Integer, required: true
     end
     field :team, Types::TeamType, null: true do
-      argument :id, ID, required: true
+      argument :id, Integer, required: true
     end
     field :trigger, Types::TriggerType, null: true do
-      argument :id, ID, required: true
+      argument :id, Integer, required: true
     end
     field :triggers, [Types::TriggerType], null: true do
       argument :sport_id, Integer, required: false 

@@ -5,11 +5,11 @@ module Mutations
       null true
       description "Update a trigger"
       payload_type Types::TriggerType
-      argument :id, ID, required: true
+      argument :id, Integer, required: true
       argument :operator, String, required: true
       argument :target, Float, required: true
       argument :wager_type, String, required: true
-      argument :team_id, ID, required: false
+      argument :team_id, Integer, required: false
 
       def resolve(id: nil, team_id: nil, operator: nil, wager_type: nil, target: nil)
         if context[:current_user]

@@ -1,6 +1,6 @@
 module Types
   class TeamType < Types::BaseObject
-    field :id, ID, null: false
+    field :id, Integer, null: false
     field :active, Boolean, null: false
     field :name, String, null: false
     field :nickname, String, null: true

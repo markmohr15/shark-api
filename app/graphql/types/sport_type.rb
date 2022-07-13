@@ -1,6 +1,6 @@
 module Types
   class SportType < Types::BaseObject
-    field :id, ID, null: false
+    field :id, Integer, null: false
     field :abbreviation, String, null: false
     field :active, Boolean, null: false
     field :name, String, null: false

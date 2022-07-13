@@ -1,6 +1,6 @@
 module Types
   class LeagueType < Types::BaseObject
-    field :id, ID, null: false
+    field :id, Integer, null: false
     field :abbreviation, String, null: true
     field :active, Boolean, null: false
     field :name, String, null: false

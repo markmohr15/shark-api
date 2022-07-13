@@ -1,6 +1,6 @@
 module Types
   class StadiumType < Types::BaseObject
-    field :id, ID, null: false
+    field :id, Integer, null: false
     field :active, Boolean, null: false
     field :altitude, Integer, null: true
     field :capacity, Integer, null: true

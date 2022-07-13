@@ -1,6 +1,6 @@
 module Types
   class TriggerType < Types::BaseObject
-    field :id, ID, null: false
+    field :id, Integer, null: false
     field :operator, String, null: false
     field :status, String, null: false
     field :target, Float, null: false

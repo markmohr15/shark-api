@@ -1,6 +1,6 @@
 module Types
   class WeatherType < Types::BaseObject
-    field :id, ID, null: false
+    field :id, Integer, null: false
     field :day, Integer, null: true
     field :dt, GraphQL::Types::ISO8601DateTime, null: false
     field :eve, Integer, null: true

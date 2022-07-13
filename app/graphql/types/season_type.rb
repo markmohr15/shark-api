@@ -1,6 +1,6 @@
 module Types
   class SeasonType < Types::BaseObject
-    field :id, ID, null: false
+    field :id, Integer, null: false
     field :active, Boolean, null: false
     field :end_date, GraphQL::Types::ISO8601Date, null: false
     field :name, String, null: false

@@ -1,6 +1,6 @@
 module Types
   class LineType < Types::BaseObject
-    field :id, ID, null: false
+    field :id, Integer, null: false
     field :home_ml, Integer, null: true
     field :home_rl, Integer, null: true
     field :home_spread, Float, null: true

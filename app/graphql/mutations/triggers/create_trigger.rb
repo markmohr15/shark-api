@@ -8,10 +8,11 @@ module Mutations
       argument :operator, String, required: true
       argument :target, Float, required: true
       argument :wager_type, String, required: true
-      argument :game_id, ID, required: true
-      argument :team_id, ID, required: false
+      argument :game_id, Integer, required: true
+      argument :team_id, Integer, required: false
 
       def resolve(game_id: nil, team_id: nil, operator: nil, wager_type: nil, target: nil)
+        debugger
         if context[:current_user]
           trigger = Trigger.new operator: operator,
                                 target: target,

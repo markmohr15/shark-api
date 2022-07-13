@@ -1,6 +1,6 @@
 module Types
   class GameType < Types::BaseObject
-    field :id, ID, null: false
+    field :id, Integer, null: false
     field :channel, String, null: true
     field :conference_game, Boolean, null: false
     field :home_rot, Integer, null: true
