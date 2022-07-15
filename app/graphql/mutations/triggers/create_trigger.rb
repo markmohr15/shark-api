@@ -12,7 +12,6 @@ module Mutations
       argument :team_id, Integer, required: false
 
       def resolve(game_id: nil, team_id: nil, operator: nil, wager_type: nil, target: nil)
-        debugger
         if context[:current_user]
           trigger = Trigger.new operator: operator,
                                 target: target,
