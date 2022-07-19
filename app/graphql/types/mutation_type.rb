@@ -10,7 +10,8 @@ module Types
     field :send_reset_password_instructions, mutation: Mutations::Users::SendResetPasswordInstructions
     field :unlock, mutation: Mutations::Users::Unlock
     field :resend_unlock_instructions, mutation: Mutations::Users::ResendUnlockInstructions
-
+    field :destroy_user, mutation: Mutations::Users::DestroyUser
+    
     #Triggers
     field :create_trigger, mutation: Mutations::Triggers::CreateTrigger
     field :update_trigger, mutation: Mutations::Triggers::UpdateTrigger
