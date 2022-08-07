@@ -1,3 +1,5 @@
+require 'open-uri'
+
 class BetOnlineLines::Base
 
   def self.raise_api_error err
@@ -6,16 +8,12 @@ class BetOnlineLines::Base
     nil
   end
 
-  def self.agent
-    @agent ||= Mechanize.new
-  end
-
   def self.sportsbook
     @sportsbook ||= Sportsbook.find_by_name "BetOnline"
   end
 
   def self.fetch
-    @fetch ||= agent.get(url)
+    @fetch ||= Nokogiri::HTML(URI.open(url))
   end
 
   def self.base_dates

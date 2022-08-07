@@ -21,7 +21,7 @@ class BetOnlineLines::Mlb < BetOnlineLines::Base
     date = dates[0][0][0].split(" -")[0].to_date
     if dates.size > 1
       date2 = dates[1][0][0].split(" -")[0].to_date
-      t = agent.get(url).search('#contestDetailTable').to_html.encode("UTF-8", invalid: :replace).split('date')
+      t = fetch.search('#contestDetailTable').to_html.encode("UTF-8", invalid: :replace).split('date')
       date1_games_count = t[1].scan(/event/).length - t[1].scan(/eventinfo/).length
     end
     counter = 0
