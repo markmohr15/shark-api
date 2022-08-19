@@ -4,6 +4,10 @@ class PinnacleLines::Nfl < PinnacleLines::Base
     889
   end
 
+  def self.preseason_league_id
+    4347
+  end
+
   def self.sport
     @sport ||= Sport.nfl
   end

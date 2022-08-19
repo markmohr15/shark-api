@@ -8,28 +8,41 @@ class PinnacleLines::Base
     nil
   end
 
-  def self.agent
-    @agent ||= Mechanize.new
+  def self.found
+    @found ||= []
+  end
+
+  def self.nf
+    @nf ||= []
   end
 
   def self.sportsbook
     @sportsbook ||= Sportsbook.find_by_name "Pinnacle"
   end
 
-  def self.fetch_games
-    @fetch_games ||= Nokogiri::HTML(URI.open("https://guest.api.arcadia.pinnacle.com/0.1/leagues/#{league_id}/matchups"))
+  def self.fetch_games league_id
+    Nokogiri::HTML(URI.open("https://guest.api.arcadia.pinnacle.com/0.1/leagues/#{league_id}/matchups"))
   end
 
-  def self.fetch_lines
-    @fetch_lines ||= Nokogiri::HTML(URI.open("https://guest.api.arcadia.pinnacle.com/0.1/leagues/#{league_id}/markets/straight"))
+  def self.fetch_lines league_id
+    Nokogiri::HTML(URI.open("https://guest.api.arcadia.pinnacle.com/0.1/leagues/#{league_id}/markets/straight"))
   end
 
   def self.games
-    @games ||= JSON.parse(fetch_games)
+    @games ||= JSON.parse(fetch_games(league_id))
   end
 
   def self.lines
-    @lines ||= JSON.parse(fetch_lines)
+    @lines ||= JSON.parse(fetch_lines(league_id))
+  end
+
+  def self.preseason_games
+    return [] unless defined?(preseason_league_id)
+    @preseason_games ||= JSON.parse(fetch_games(preseason_league_id))
+  end
+
+  def self.preseason_lines
+    @preseason_lines ||= JSON.parse(fetch_lines(preseason_league_id))
   end
 
   def self.team name
@@ -37,27 +50,33 @@ class PinnacleLines::Base
   end
 
   def self.get_lines
-    @fetch_games = @games = @fetch_lines = @lines = nil
-    @nf = []
-    @found = []
+    @games = @lines = @nf = @found = nil
 
     games.each do |g|
-      next if g["participants"].size != 2 || g["units"] != "Regular" || g["parentId"].present? || g["special"].present?
-      game_info = game_info g
-      game = sport.games.Scheduled.where.not(id: @found)  
-                                  .where('gametime > ? and gametime < ? and home_id = ? and visitor_id = ?', 
-                         game_info[:time] - 90.minutes, game_info[:time] + 90.minutes, 
-                         team(game_info[:home_name])&.id, team(game_info[:vis_name])&.id).first
-      if game.nil?
-        @nf << [game_info[:vis_name], game_info[:home_name]]
-      else
-        create_line game_info, game
-        @found << game.id
-      end
+      process_game g
     end
-    @nf
+
+    preseason_games.each do |g|
+      process_game g
+    end
+    nf
   rescue StandardError => exception
     raise_api_error exception.message
+  end
+
+  def self.process_game game
+    return if game["participants"].size != 2 || game["units"] != "Regular" || game["parentId"].present? || game["special"].present?
+    game_info = game_info game
+    game = sport.games.Scheduled.where.not(id: @found)  
+                                .where('gametime > ? and gametime < ? and home_id = ? and visitor_id = ?', 
+                                       game_info[:time] - 90.minutes, game_info[:time] + 90.minutes, 
+                                       team(game_info[:home_name])&.id, team(game_info[:vis_name])&.id).first
+    if game.nil?
+      nf << [game_info[:vis_name], game_info[:home_name]]
+    else
+      create_line game_info, game
+      found << game.id
+    end
   end
 
   def self.game_info game
