@@ -57,16 +57,16 @@ class PinnacleLines::Base
     end
 
     preseason_games.each do |g|
-      process_game g
+      process_game g, true
     end
     nf
   rescue StandardError => exception
     raise_api_error exception.message
   end
 
-  def self.process_game game
+  def self.process_game game, preseason = false
     return if game["participants"].size != 2 || game["units"] != "Regular" || game["parentId"].present? || game["special"].present?
-    game_info = game_info game
+    game_info = game_info game, preseason
     game = sport.games.Scheduled.where.not(id: @found)  
                                 .where('gametime > ? and gametime < ? and home_id = ? and visitor_id = ?', 
                                        game_info[:time] - 90.minutes, game_info[:time] + 90.minutes, 
@@ -79,14 +79,19 @@ class PinnacleLines::Base
     end
   end
 
-  def self.game_info game
+  def self.linepicker preseason = false
+    preseason ? preseason_lines : lines
+  end
+
+  def self.game_info game, preseason = false
     pin_game_id = game["id"]
     vis_name = game["participants"].find {|x| x["alignment"] == "away"}["name"].split("(")[0].squish
     home_name = game["participants"].find {|x| x["alignment"] == "home"}["name"].split("(")[0].squish
-    time = "#{game["startTime"]} GMT".to_datetime  
-    spread_line = lines.find {|l| l["matchupId"] == pin_game_id && l["isAlternate"] == false && l["type"] == "spread"}
-    ml_line = lines.find {|l| l["matchupId"] == pin_game_id && l["isAlternate"] == false && l["type"] == "moneyline"}
-    total_line = lines.find {|l| l["matchupId"] == pin_game_id && l["isAlternate"] == false && l["type"] == "total"}
+    time = "#{game["startTime"]} GMT".to_datetime
+    correct_lines = linepicker(preseason)
+    spread_line = correct_lines.find {|l| l["matchupId"] == pin_game_id && l["isAlternate"] == false && l["type"] == "spread"}
+    ml_line = correct_lines.find {|l| l["matchupId"] == pin_game_id && l["isAlternate"] == false && l["type"] == "moneyline"}
+    total_line = correct_lines.find {|l| l["matchupId"] == pin_game_id && l["isAlternate"] == false && l["type"] == "total"}
     vis_spread = vis_rl = home_rl = total = vis_ml = home_ml = over_juice = under_juice = nil
     if spread_line
       vis = spread_line["prices"].find{|sl| sl["designation"] == "away"}
