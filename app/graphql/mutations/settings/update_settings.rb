@@ -6,18 +6,18 @@ module Mutations
       description "Update settings for a user"
       payload_type Types::UserType 
       argument :bet_online, Boolean, required: true
-      argument :bookmaker, Boolean, required: true
+      argument :pinnacle, Boolean, required: true
       argument :bovada, Boolean, required: true
       argument :my_bookie, Boolean, required: false
 
-      def resolve(bet_online: nil, bookmaker: nil, bovada: nil, my_bookie: nil)
+      def resolve(bet_online: nil, pinnacle: nil, bovada: nil, my_bookie: nil)
         if context[:current_user]
           context[:current_user].sportsbooks = []
           if bet_online
             context[:current_user].sportsbooks << Sportsbook.find_by_name('BetOnline')
           end
-          if bookmaker
-            context[:current_user].sportsbooks << Sportsbook.find_by_name('Bookmaker')
+          if pinnacle
+            context[:current_user].sportsbooks << Sportsbook.find_by_name('Pinnacle')
           end
           if bovada
             context[:current_user].sportsbooks << Sportsbook.find_by_name('Bovada')
