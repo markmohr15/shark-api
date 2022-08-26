@@ -102,9 +102,9 @@ class PinnacleLines::Base
     home_name = game["participants"].find {|x| x["alignment"] == "home"}["name"].split("(")[0].squish
     time = "#{game["startTime"]} GMT".to_datetime
     correct_lines = linepicker(preseason)
-    spread_line = correct_lines.find {|l| l["matchupId"] == pin_game_id && l["isAlternate"] == false && l["type"] == "spread"}
-    ml_line = correct_lines.find {|l| l["matchupId"] == pin_game_id && l["isAlternate"] == false && l["type"] == "moneyline"}
-    total_line = correct_lines.find {|l| l["matchupId"] == pin_game_id && l["isAlternate"] == false && l["type"] == "total"}
+    spread_line = correct_lines.find {|l| l["matchupId"] == pin_game_id && l["key"][0..2] == "s;0" && l["isAlternate"] == false && l["type"] == "spread" }
+    ml_line = correct_lines.find {|l| l["matchupId"] == pin_game_id && l["key"][0..2] == "s;0" && l["isAlternate"] == false && l["type"] == "moneyline"}
+    total_line = correct_lines.find {|l| l["matchupId"] == pin_game_id && l["key"][0..2] == "s;0" && l["isAlternate"] == false && l["type"] == "total"}
     vis_spread = vis_rl = home_rl = total = vis_ml = home_ml = over_juice = under_juice = nil
     if spread_line
       vis = spread_line["prices"].find{|sl| sl["designation"] == "away"}
@@ -122,6 +122,7 @@ class PinnacleLines::Base
       vis_ml = ml_line["prices"].find {|x| x["designation"] == "away"}["price"]
       home_ml = ml_line["prices"].find {|x| x["designation"] == "home"}["price"]
     end
+        debugger
     {vis_name: vis_name, home_name: home_name, time: time, vis_spread: vis_spread,
      vis_rl: vis_rl, home_rl: home_rl, total: total, vis_ml: vis_ml, home_ml: home_ml,
      over_juice: over_juice, under_juice: under_juice }
