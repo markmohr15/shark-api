@@ -5,6 +5,7 @@ class FetchGameTimeWeatherWorker
     g = Game.find game_id
     return if g.stadium.nil?
     weather = OpenWeatherApi::Current.fetch g.stadium.geo_lat, g.stadium.geo_lng
+    return if weather.nil?
     g.weathers.create dt: Time.at(weather["dt"]).to_datetime,
                       report_type: "current", 
                       temp: weather["temp"].to_i, 

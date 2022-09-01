@@ -10,6 +10,7 @@ class FetchHourlyWeatherWorker
     games.each do |g|
       next if g.stadium.nil?
       hourlies = OpenWeatherApi::Hourly.fetch g.stadium.geo_lat, g.stadium.geo_lng
+      next if hourlies.nil?
       hourlies.each do |h|
         weather = g.weathers.where(dt: Time.at(h["dt"]).to_datetime,
                                    report_type: "hourly").first_or_initialize

@@ -1,6 +1,7 @@
 class OpenWeatherApi::Hourly < OpenWeatherApi::Base
 
   def self.fetch lat, lng
+    Counter.first.increment
     response = get("/onecall?lat=#{lat}&lon=#{lng}&units=imperial&exclude=current,minutely,daily,alerts")
     if response.success?
       response["hourly"]

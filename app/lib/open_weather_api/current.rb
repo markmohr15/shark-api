@@ -1,6 +1,7 @@
 class OpenWeatherApi::Current < OpenWeatherApi::Base
 
   def self.fetch lat, lng
+    Counter.first.increment
     response = get("/onecall?lat=#{lat}&lon=#{lng}&units=imperial&exclude=daily,minutely,hourly,alerts")
     if response.success?
       response["current"]

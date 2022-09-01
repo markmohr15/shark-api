@@ -1,0 +1,15 @@
+# == Schema Information
+#
+# Table name: counters
+#
+#  id         :bigint           not null, primary key
+#  count      :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+one:
+  count: 1
+
+two:
+  count: 1

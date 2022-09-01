@@ -10,6 +10,7 @@ class FetchCurrentWeatherWorker
     games.each do |g|
       next if g.stadium.nil?
       current = OpenWeatherApi::Current.fetch g.stadium.geo_lat, g.stadium.geo_lng
+      next if current.nil?
       g.weathers.create dt: Time.at(current["dt"]).to_datetime,
                         report_type: "current", 
                         temp: current["temp"].to_i, 

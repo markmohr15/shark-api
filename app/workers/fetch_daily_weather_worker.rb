@@ -10,6 +10,7 @@ class FetchDailyWeatherWorker
     games.each do |g|
       next if g.stadium.nil?
       dailys = OpenWeatherApi::Daily.fetch g.stadium.geo_lat, g.stadium.geo_lng
+      next if dailys.nil?
       dailys.each do |d|
         weather = g.weathers.where(dt: Time.at(d["dt"]).to_datetime, 
                                    report_type: "daily").first_or_initialize
