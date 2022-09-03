@@ -5,9 +5,6 @@ class DeleteLinesWorker
     game = Game.find game_id
     first_lines = Line.from(Line.first_or_last_lines(game, "ASC")).pluck :id
     last_lines = Line.from(Line.first_or_last_lines(game, "DESC")).pluck :id
-    game.lines.where.not(id: first_lines + last_lines).find_in_batches do |group|
-      sleep(50) # Make sure it doesn't get too crowded in there!
-      group.map &:destroy
-    end
+    game.lines.where.not(id: first_lines + last_lines).delete_all
   end
 end
