@@ -1,50 +1,42 @@
-visitor,home,date,time,channel
+visitor,home,gametime,channel
 
-Philadelphia,Cleveland,2022-11-30,6:00 PM CST		
-Atlanta,Orlando,2022-11-30,6:00 PM CST		
-Miami,Boston,2022-11-30,6:30 PM CST,NBATV
-Washington,Brooklyn,2022-11-30,6:30 PM CST			
-Milwaukee,New York,2022-11-30,6:30 PM CST			
-Memphis,Minnesota,2022-11-30,7:00 PM CST			
-Toronto,New Orleans,2022-11-30,7:00 PM CST		
-San Antonio,Oklahoma City,2022-11-30,7:00 PM CST		
-Houston,Denver,2022-11-30,8:00 PM CST		
-Chicago,Phoenix,2022-11-30,8:00 PM CST			
-Clippers,Utah,2022-11-30,8:00 PM CST		
-Indiana,Sacramento,2022-11-30,9:00 PM CST			
-Portland,Lakers,2022-11-30,9:30 PM CST,NBATV
-Dallas,Detroit,2022-12-01,6:00 PM CST,NBATV
-Washington,Charlotte,2022-12-02,6:00 PM CST			
-Denver,Atlanta,2022-12-02,6:30 PM CST			
-Miami,Boston,2022-12-02,6:30 PM CST			
-Toronto,Brooklyn,2022-12-02,6:30 PM CST			
-Orlando,Cleveland,2022-12-02,6:30 PM CST			
-Lakers,Milwaukee,2022-12-02,6:30 PM CST,ESPN
-Philadelphia,Memphis,2022-12-02,7:00 PM CST			
-New Orleans,San Antonio,2022-12-02,7:00 PM CST			
-Houston,Phoenix,2022-12-02,8:00 PM CST			
-Indiana,Utah,2022-12-02,8:00 PM CST			
-Chicago,Golden State,2022-12-02,9:00 PM CST,ESPN
-Dallas,New York,2022-12-03,11:30 AM	CST		
-Sacramento,Clippers,2022-12-03,3:00 PM CST			
-Milwaukee,Charlotte,2022-12-03,5:00 PM CST			
-Orlando,Toronto,2022-12-03,7:00 PM CST			
-Oklahoma City,Minnesota,2022-12-03,7:00 PM CST			
-Houston,Golden State,2022-12-03,7:30 PM CST			
-Portland,Utah,2022-12-03,8:00 PM CST			
-Denver,New Orleans,2022-12-04,2:30 PM CST	
-Phoenix,San Antonio,2022-12-04,3:00 PM CST	
-Boston,Brooklyn,2022-12-04,5:00 PM CST	
-Memphis,Detroit,2022-12-04,5:00 PM CST	
-Cleveland,New York,2022-12-04,5:00 PM CST	
-Lakers,Washington,2022-12-04,5:00 PM CST	
-Chicago,Sacramento,2022-12-04,5:00 PM CST	
-Indiana,Portland,2022-12-04,8:00 PM CST,NBATV
-Clippers,Charlotte,2022-12-05,6:00 PM CST
-Milwaukee,Orlando,2022-12-05,6:00 PM CST	
-Oklahoma City,Atlanta,2022-12-05,6:30 PM CST	
-Boston,Toronto,2022-12-05,6:30 PM CST	
-Philadelphia,Houston,2022-12-05,7:00 PM CST
-Miami,Memphis,2022-12-05,7:00 PM CST
-Phoenix,Dallas,2022-12-05,7:30 PM CST,NBATV
-Indiana,Golden State,2022-12-05,9:00 PM CST
+Clippers,Miami,2022-12-08 6:30 PM,NBATV
+Houston,San Antonio,2022-12-08 7:30 PM	
+Denver,Portland,2022-12-08 9:00 PM,NBATV
+New York,Charlotte,2022-12-09 6:00 PM		 	
+Washington,Indiana,2022-12-09 6:00 PM		 
+Toronto,Orlando,2022-12-09 6:00 PM		 
+Atlanta,Brooklyn,2022-12-09 6:30 PM		 	
+Sacramento,Cleveland,2022-12-09 6:30 PM		 
+Lakers,Philadelphia,2022-12-09 6:30 PM,ESPN
+Detroit,Memphis,2022-12-09 7:00 PM
+Phoenix,New Orleans,2022-12-09 7:30 PM	
+Minnesota,Utah,2022-12-09 8:00 PM	
+Milwaukee,Dallas,2022-12-09 9:00 PM,ESPN
+San Antonio,Miami,2022-12-10 4:00 PM			
+Brooklyn,Indiana,2022-12-10 6:00 PM			
+Clippers,Washington,2022-12-10 6:00 PM			
+Oklahoma City,Cleveland,2022-12-10 6:30 PM			
+Dallas,Chicago,2022-12-10 7:00 PM			
+Boston,Golden State,2022-12-10 7:30 PM,ABC
+Utah,Denver,2022-12-10 8:00 PM		
+Minnesota,Portland,2022-12-10 9:00 PM		
+Phoenix,New Orleans,2022-12-11 2:30 PM			
+Lakers,Detroit,2022-12-11 5:00 PM			
+Sacramento,New York,2022-12-11 5:00 PM			
+Toronto,Orlando,2022-12-11 5:00 PM			
+Charlotte,Philadelphia,2022-12-11 5:00 PM			
+Chicago,Atlanta,2022-12-11 5:30 PM			
+Milwaukee,Houston,2022-12-11 6:00 PM			
+Miami,Indiana,2022-12-12 6:00 PM		
+Brooklyn,Washington,2022-12-12 6:00 PM			
+Atlanta,Memphis,2022-12-12 7:00 PM,NBATV
+Oklahoma City,Dallas,2022-12-12 7:30 PM			
+Cleveland,San Antonio,2022-12-12 7:30 PM			
+Minnesota,Portland,2022-12-12 9:00 PM		
+Boston,Clippers,2022-12-12 9:30 PM,NBATV
+Sacramento,Philadelphia,2022-12-13 6:00 PM	
+Golden State,Milwaukee,2022-12-13 6:30 PM,TNT
+Phoenix,Houston,2022-12-13 7:00 PM			
+New Orleans,Utah,2022-12-13 8:00 PM			
+Boston,Lakers,2022-12-13 9:00 PM,TNT
