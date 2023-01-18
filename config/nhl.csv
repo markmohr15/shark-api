@@ -1,49 +1,45 @@
 visitor,home,gametime,channel
 
-Nashville,Tampa Bay,2022-12-08 6:00 PM,ESPN+
-Los Angeles,Toronto,2022-12-08 6:00 PM,ESPN+
-Detroit,Florida,2022-12-08 6:30 PM,ESPN+
-Winnipeg,St. Louis,2022-12-08 7:00 PM,ESPN+
-Ottawa,Dallas,2022-12-08 7:30 PM,ESPN+
-Pittsburgh,Buffalo,2022-12-09 6:00 PM,ESPN+
-Calgary,Columbus,2022-12-09 6:00 PM,ESPN+
-Islanders,New Jersey,2022-12-09 6:00 PM,ESPN+
-Seattle,Washington,2022-12-09 6:00 PM,ESPN+
-Winnipeg,Chicago,2022-12-09 7:30 PM,ESPN+
-Rangers,Colorado,2022-12-09 8:00 PM,ESPN+
-Minnesota,Edmonton,2022-12-09 8:00 PM,ESPN+
-Boston,Arizona,2022-12-09 8:30 PM,ESPN+
-San Jose,Anaheim,2022-12-09 9:00 PM,ESPN+
-Philadelphia,Vegas,2022-12-09 9:00 PM,ESPN+
-Ottawa,Nashville,2022-12-10 12:30 PM,ESPN+
-Detroit,Dallas,2022-12-10 1:00 PM,NHL
-Florida,Tampa Bay,2022-12-10 3:30 PM,ESPN+
-Los Angeles,Montreal,2022-12-10 6:00 PM,NHL
-Buffalo,Pittsburgh,2022-12-10 6:00 PM,ESPN+
-Calgary,Toronto,2022-12-10 6:00 PM,ESPN+
-Carolina,Islanders,2022-12-10 6:30 PM,ESPN+
-Minnesota,Vancouver,2022-12-10 9:00 PM,ESPN+
-Colorado,St. Louis,2022-12-11 2:00 PM,ESPN
-Los Angeles,Columbus,2022-12-11 5:00 PM,ESPN+
-Seattle,Florida,2022-12-11 5:00 PM,ESPN+
-Philadelphia,Arizona,2022-12-11 6:00 PM,ESPN+
-Washington,Winnipeg,2022-12-11 6:00 PM,ESPN+
-Boston,Vegas,2022-12-11 7:00 PM,NHL
-Calgary,Montreal,2022-12-12 6:00 PM,ESPN+
-New Jersey,Rangers,2022-12-12 6:00 PM,NHL
-Dallas,Pittsburgh,2022-12-12 6:00 PM,ESPN+
-Anaheim,Ottawa,2022-12-12 6:30 PM,ESPN+
-Edmonton,Minnesota,2022-12-12 7:00 PM,ESPN+
-Nashville,St. Louis,2022-12-12 7:00 PM,ESPN+
-Islanders,Boston,2022-12-13 6:00 PM,ESPN+
-Los Angeles,Buffalo,2022-12-13 6:00 PM,ESPN+
-Carolina,Detroit,2022-12-13 6:00 PM,ESPN+
-Columbus,Florida,2022-12-13 6:00 PM,ESPN+
-Dallas,New Jersey,2022-12-13 6:00 PM,ESPN+
-Seattle,Tampa Bay,2022-12-13 6:00 PM,ESPN+
-Anaheim,Toronto,2022-12-13 6:00 PM,ESPN+
-Edmonton,Nashville,2022-12-13 7:00 PM,ESPN+
-Vegas,Winnipeg,2022-12-13 7:00 PM,ESPN+
-Washington,Chicago,2022-12-13 8:00 PM,ESPN
-Philadelphia,Colorado,2022-12-13 8:30 PM,ESPN+
-Arizona,San Jose,2022-12-13 9:30 PM,ESPN+
+Pittsburgh,Ottawa,2023-01-18 6:00 PM CST,ESPN+
+Boston,Islanders,2023-01-18 6:30 PM CST,TNT
+Colorado,Calgary,2023-01-18 8:30 PM CST	CST,ESPN+
+Dallas,San Jose,2023-01-18 9:00 PM CST,TNT
+Tampa Bay,Vancouver,2023-01-18 9:00 PM CST,ESPN+
+Minnesota,Carolina,2023-01-19 6:00 PM CST,ESPN+
+Anaheim,Columbus,2023-01-19 6:00 PM	CST,ESPN+
+Florida,Montreal,2023-01-19 6:00 PM	CST,ESPN+
+Boston,Islanders,2023-01-19 6:00 PM	CST,ESPN+
+Chicago,Philadelphia,2023-01-19 6:00 PM	CST,ESPN+
+Winnipeg,Toronto,2023-01-19 6:00 PM	CST,ESPN+
+Rangers,Buffalo,2023-01-19 6:30 PM CST,ESPN+
+Nashville,St. Louis,2023-01-19 7:00 PM CST,ESPN+
+Washington,Arizona,2023-01-19 8:00 PM CST,ESPN+
+Tampa Bay,Edmonton,2023-01-19 8:00 PM CST,ESPN
+New Jersey,Seattle,2023-01-19 9:00 PM CST,ESPN+
+Detroit,Vegas,2023-01-19 9:00 PM CST,ESPN+
+Dallas,Los Angeles,2023-01-19 9:30 PM CST,ESPN+
+Ottawa,Pittsburgh,2023-01-20 6:00 PM CST,NHL
+Colorado,Vancouver,2023-01-20 9:00 PM CST,ESPN+
+Anaheim,Buffalo,2023-01-21 11:30 AM CST,NHL
+Tampa Bay,Calgary,2023-01-21 2:00 PM CST,ESPN+
+Minnesota,Florida,2023-01-21 5:00 PM CST,ESPN+
+San Jose,Columbus,2023-01-21 6:00 PM CST,ESPN+
+Philadelphia,Detroit,2023-01-21 6:00 PM	CST,ESPN+
+Toronto,Montreal,2023-01-21 6:00 PM	CST,NHL
+Winnipeg,Ottawa,2023-01-21 6:00 PM CST,ESPN+
+Carolina,Islanders,2023-01-21 6:30 PM CST,ESPN+
+Arizona,Dallas,2023-01-21 7:00 PM CST,ESPN+
+Los Angeles,Nashville,2023-01-21 7:00 PM CST,ESPN+
+Chicago,St. Louis,2023-01-21 7:00 PM CST,ESPN+
+Colorado,Seattle,2023-01-21 9:00 PM	CST,ESPN+
+Edmonton,Vancouver,2023-01-21 9:00 PM CST,ESPN+
+Washington,Vegas,2023-01-21 9:00 PM	CST,ESPN+
+Pittsburgh,New Jersey,2023-01-22 1:00 PM CST,NHL
+San Jose,Boston,2023-01-22 6:00 PM CST,ESPN+
+Los Angeles,Chicago,2023-01-22 6:00 PM CST,NHL
+Winnipeg,Philadelphia,2023-01-22 6:00 PM CST,ESPN+
+Vegas,Arizona,2023-01-22 7:00 PM CST,ESPN+
+Florida,Rangers,2023-01-23 6:00 PM CST,ESPN+
+Islanders,Toronto,2023-01-23 6:00 PM CST,ESPN+
+Buffalo,Dallas,2023-01-23 7:30 PM CST,ESPN+
+Columbus,Calgary,2023-01-23 8:30 PM,ESPN+

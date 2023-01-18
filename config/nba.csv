@@ -1,42 +1,46 @@
 visitor,home,gametime,channel
 
-Clippers,Miami,2022-12-08 6:30 PM,NBATV
-Houston,San Antonio,2022-12-08 7:30 PM	
-Denver,Portland,2022-12-08 9:00 PM,NBATV
-New York,Charlotte,2022-12-09 6:00 PM		 	
-Washington,Indiana,2022-12-09 6:00 PM		 
-Toronto,Orlando,2022-12-09 6:00 PM		 
-Atlanta,Brooklyn,2022-12-09 6:30 PM		 	
-Sacramento,Cleveland,2022-12-09 6:30 PM		 
-Lakers,Philadelphia,2022-12-09 6:30 PM,ESPN
-Detroit,Memphis,2022-12-09 7:00 PM
-Phoenix,New Orleans,2022-12-09 7:30 PM	
-Minnesota,Utah,2022-12-09 8:00 PM	
-Milwaukee,Dallas,2022-12-09 9:00 PM,ESPN
-San Antonio,Miami,2022-12-10 4:00 PM			
-Brooklyn,Indiana,2022-12-10 6:00 PM			
-Clippers,Washington,2022-12-10 6:00 PM			
-Oklahoma City,Cleveland,2022-12-10 6:30 PM			
-Dallas,Chicago,2022-12-10 7:00 PM			
-Boston,Golden State,2022-12-10 7:30 PM,ABC
-Utah,Denver,2022-12-10 8:00 PM		
-Minnesota,Portland,2022-12-10 9:00 PM		
-Phoenix,New Orleans,2022-12-11 2:30 PM			
-Lakers,Detroit,2022-12-11 5:00 PM			
-Sacramento,New York,2022-12-11 5:00 PM			
-Toronto,Orlando,2022-12-11 5:00 PM			
-Charlotte,Philadelphia,2022-12-11 5:00 PM			
-Chicago,Atlanta,2022-12-11 5:30 PM			
-Milwaukee,Houston,2022-12-11 6:00 PM			
-Miami,Indiana,2022-12-12 6:00 PM		
-Brooklyn,Washington,2022-12-12 6:00 PM			
-Atlanta,Memphis,2022-12-12 7:00 PM,NBATV
-Oklahoma City,Dallas,2022-12-12 7:30 PM			
-Cleveland,San Antonio,2022-12-12 7:30 PM			
-Minnesota,Portland,2022-12-12 9:00 PM		
-Boston,Clippers,2022-12-12 9:30 PM,NBATV
-Sacramento,Philadelphia,2022-12-13 6:00 PM	
-Golden State,Milwaukee,2022-12-13 6:30 PM,TNT
-Phoenix,Houston,2022-12-13 7:00 PM			
-New Orleans,Utah,2022-12-13 8:00 PM			
-Boston,Lakers,2022-12-13 9:00 PM,TNT
+Washington,New York,2023-01-18 6:30 PM CST			
+Atlanta,Dallas,2023-01-18 6:30 PM CST,ESPN
+Charlotte,Houston,2023-01-18 7:00 PM CST			
+Cleveland,Memphis,2023-01-18 7:00 PM CST			
+Miami,New Orleans,2023-01-18 7:00 PM CST		
+Indiana,Oklahoma City,2023-01-18 7:00 PM CST			
+Clippers,Utah,2023-01-18 8:00 PM CST
+Minnesota,Denver,2023-01-18 9:00 PM CST,ESPN	
+Sacramento,Lakers,2023-01-18 9:30 PM CST
+Chicago,Detroit,2023-01-19 2:00 PM CST,NBA
+Golden State,Boston,2023-01-19 6:30 PM CST,TNT
+Toronto,Minnesota,2023-01-19 7:00 PM CST	
+Brooklyn,Phoenix,2023-01-19 9:00 PM CST,TNT
+Philadelphia,Portland,2023-01-19 9:00 PM CST	
+New Orleans,Orlando,2023-01-20 6:00 PM CST
+New York,Atlanta,2023-01-20 6:30 PM CST			
+Golden State,Cleveland,2023-01-20 6:30 PM CST			
+Miami,Dallas,2023-01-20 6:30 PM CST,ESPN
+Clippers,San Antonio,2023-01-20 7:00 PM CST			
+Indiana,Denver,2023-01-20 8:00 PM CST			
+Brooklyn,Utah,2023-01-20 8:00 PM CST			
+Memphis,Lakers,2023-01-20 9:00 PM CST,ESPN
+Oklahoma City,Sacramento,2023-01-20 9:00 PM CST	
+Boston,Toronto,2023-01-21 4:00 PM CST		
+Orlando,Washington,2023-01-21 6:00 PM CST		
+Charlotte,Atlanta,2023-01-21 6:30 PM CST		
+Milwaukee,Cleveland,2023-01-21 6:30 PM CST		
+Houston,Minnesota,2023-01-21 7:00 PM CST		
+Indiana,Phoenix,2023-01-21 8:00 PM CST		
+Philadelphia,Sacramento,2023-01-21 9:00 PM CST		
+New Orleans,Miami,2023-01-22 2:30 PM CST		
+New York,Toronto,2023-01-22 5:00 PM CST		
+Clippers,Dallas,2023-01-22 6:30 PM CST		
+Oklahoma City,Denver,2023-01-22 7:00 PM CST		
+Memphis,Phoenix,2023-01-22 7:00 PM CST		
+Brooklyn,Golden State,2023-01-23 7:30 PM CST,NBA
+Lakers,Portland,2023-01-23 8:00 PM CST	
+Milwaukee,Detroit,2023-01-24 6:00 PM CST		
+Boston,Orlando,2023-01-24 6:00 PM CST
+Atlanta,Chicago,2023-01-24 7:00 PM CST,NBA
+Minnesota,Houston,2023-01-24 7:00 PM CST			
+Charlotte,Utah,2023-01-24 8:00 PM CST			
+San Antonio,Portland,2023-01-24 9:00 PM CST			
+Memphis,Sacramento,2023-01-24 9:30 PM CST,NBA
