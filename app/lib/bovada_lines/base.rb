@@ -6,20 +6,16 @@ class BovadaLines::Base
     nil
   end
 
-  def self.agent
-    @agent ||= Mechanize.new
-  end
-
   def self.sportsbook
     @sportsbook ||= Sportsbook.find_by_name "Bovada"
   end
 
   def self.fetch
-    @fetch ||= agent.get(url)
+    @fetch ||= HTTParty.get(url)
   end
 
   def self.games
-    @games ||= JSON.parse(fetch.body)&.first["events"]
+    @games ||= fetch[0]["events"]
   end
 
   def self.team name
