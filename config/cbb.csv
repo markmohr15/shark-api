@@ -1,37 +1,118 @@
 visitor,home,gametime,channel
 
-Mississippi,South Carolina,2024-02-06 5:30 PM CST,SECN
-Rutgers,Maryland,2024-02-06 5:30 PM CST,BTN
-DePaul,St. Johns,2024-02-06 5:30 PM CST,FS1
-Clemson,North Carolina,2024-02-06 6:00 PM CST,ESPN
-Oklahoma State,Houston,2024-02-06 6:00 PM CST,ESPN2
-Wake Forest,Georgia Tech,2024-02-06 6:00 PM CST,ESPNU
-Florida State,Boston College,2024-02-06 6:00 PM CST,ACCN
-Indiana,Ohio State,2024-02-06 6:00 PM CST,Pea
-Rhode Island,George Washington,2024-02-06 6:00 PM CST,ESPN+
-Va Commonwealth,Fordham,2024-02-06 6:00 PM CST,ESPN+
-Canisius,Niagara,2024-02-06 6:00 PM CST,ESPN+
-Northern Illinois,Miami Ohio,2024-02-06 6:00 PM CST,ESPN+
-Ohio,Ball State,2024-02-06 6:00 PM CST,ESPN+
-Central Michigan,Akron,2024-02-06 6:00 PM CST,ESPN+
-Western Michigan,Kent State,2024-02-06 6:00 PM CST,ESPN+
-Buffalo,Bowling Green,2024-02-06 6:00 PM CST,ESPN+
-Toledo,Eastern Michigan,2024-02-06 6:00 PM CST,ESPN+
-Iowa State,Texas,2024-02-06 7:00 PM CST,LHN
-Dayton,St. Josephs,2024-02-06 7:00 PM CST,CBSSN
-BYU,Oklahoma,2024-02-06 7:00 PM CST,ESPN+
-UT Martin,Arkansas Little Rock,2024-02-06 7:00 PM CST,ESPN+
-Butler,UConn,2024-02-06 7:30 PM CST,FS1
-Kentucky,Vanderbilt,2024-02-06 7:30 PM CST,SECN
-New Mexico,Wyoming,2024-02-06 7:30 PM CST,	
-Texas Tech,Baylor,2024-02-06 8:00 PM CST,ESPN
-Nevada,Utah State,2024-02-06 8:00 PM CST,		
-Boise State,Colorado State,2024-02-06 8:00 PM CST,		
-Charlotte,South Florida,2024-02-06 8:00 PM CST,ESPN2
-Michigan State,Minnesota,2024-02-06 8:00 PM CST,Pea
-Fresno State,San Jose State,2024-02-06 9:00 PM CST,		
-San Diego State,Air Force,2024-02-06 9:40 PM CST,FS1
-Saint Mary's,Pacific,2024-02-06 10:00 PM CST,ESPN2
+High Point,UNC Asheville,2024-02-07 5:30 PM CST,ESPN+
+Charleston Southern,Winthrop,2024-02-07 5:30 PM CST,ESPN+
+Georgetown,Seton Hall,2024-02-07 5:30 PM CST,FS2
+Saint Louis,La Salle,2024-02-07 5:30 PM CST,ESPN+
+Stetson,Bellarmine,2024-02-07 5:30 PM CST,ESPN+
+LSU,Tennessee,2024-02-07 6:00 PM CST,SECN
+Wisconsin,Michigan,2024-02-07 6:00 PM CST,BTN
+Alabama,Auburn,2024-02-07 6:00 PM CST,ESPN2
+Louisville,Syracuse,2024-02-07 6:00 PM CST,ACCN
+Pittsburgh,NC State,2024-02-07 6:00 PM CST,ESPNU
+Army,Lehigh,2024-02-07 6:00 PM CST,ESPN+
+Valparaiso,Indiana State,2024-02-07 6:00 PM CST,ESPN+
+South Carolina Upstate,Longwood,2024-02-07 6:00 PM CST,ESPN+
+Gardner-Webb,Presbyterian,2024-02-07 6:00 PM CST,ESPN+
+Holy Cross,Lafayette,2024-02-07 6:00 PM CST,ESPN+
+Villanova,Xavier,2024-02-07 6:00 PM CST,FS1
+Colgate,Boston University,2024-02-07 6:00 PM CST,ESPN+
+Davidson,Duquesne,2024-02-07 6:00 PM CST,ESPN+
+Loyola Chicago,George Mason,2024-02-07 6:00 PM CST,ESPN+
+Massachusetts,St. Bonaventure,2024-02-07 6:00 PM,
+Loyola Maryland,American University,2024-02-07 6:00 PM CST,ESPN+
+Bucknell,Navy,2024-02-07 6:00 PM CST,ESPN+
+Wofford,East Tennessee State,2024-02-07 6:00 PM CST,ESPN+
+Furman,Mercer,2024-02-07 6:00 PM CST,ESPN+
+The Citadel,Western Carolina,2024-02-07 6:00 PM CST,ESPN+
+Cleveland State,Purdue Fort Wayne,2024-02-07 6:00 PM CST,ESPN+
+Marshall,Troy,2024-02-07 6:00 PM CST,ESPN+
+Western Kentucky,Louisiana Tech,2024-02-07 6:00 PM CST,ESPN+
+UTSA,Wichita State,2024-02-07 6:30 PM CST,ESPN+
+Coastal Carolina,UL Monroe,2024-02-07 6:30 PM CST,ESPN+
+North Texas,Tulsa,2024-02-07 7:00 PM CST,ESPN+
+SMU,Rice,2024-02-07 7:00 PM CST,ESPN+
+Missouri State,Northern Iowa,2024-02-07 7:00 PM CST,ESPN+
+UIC,Illinois State,2024-02-07 7:00 PM CST,ESPN+
+Bradley,Evansville,2024-02-07 7:00 PM CST,ESPN+
+Southern Illinois,Drake,2024-02-07 7:00 PM CST,ESPN+
+Murray State,Belmont,2024-02-07 7:00 PM CST,ESPN+
+Portland,Gonzaga,2024-02-07 7:00 PM CST,CBSSN
+Old Dominion,Southern Miss,2024-02-07 7:00 PM CST,ESPN+
+Georgia State,Louisiana,2024-02-07 7:00 PM CST,ESPN+
+Georgia Southern,South Alabama,2024-02-07 7:00 PM CST,ESPN+
+James Madison,Arkansas State,2024-02-07 7:00 PM CST,ESPN+
+Appalachian State,Texas State,2024-02-07 7:00 PM CST,ESPN+
+Creighton,Providence,2024-02-07 7:30 PM CST,FS2
+Notre Dame,Duke,2024-02-07 8:00 PM CST,ACCN
+UCLA,Stanford,2024-02-07 8:00 PM CST,PAC12
+Nebraska,Northwestern,2024-02-07 8:00 PM CST,BTN
+Texas A&M,Missouri,2024-02-07 8:00 PM CST,ESPN2
+Georgia,Mississippi State,2024-02-07 8:00 PM CST,SECN
+Florida Gulf Coast,Eastern Kentucky,2024-02-07 8:00 PM CST,ESPNU
+Loyola Marymount,San Diego,2024-02-07 9:00 PM CST,ESPN+
+USC,California,2024-02-07 10:00 PM,PAC12
 
-
-
+Chattanooga,VMI,2024-02-08 5:00 PM CST,ESPN+
+Albany,Binghamton,2024-02-08 5:07 PM CST,ESPN+
+Milwaukee,Youngstown State,2024-02-08 5:30 PM CST,ESPN+
+Memphis,Temple,2024-02-08 6:00 PM CST,ESPN2
+William & Mary,Monmouth,2024-02-08 6:00 PM CST,	
+Stony Brook,Elon,2024-02-08 6:00 PM CST,	
+Northeastern,Campbell,2024-02-08 6:00 PM CST,
+Hofstra,Hampton,2024-02-08 6:00 PM CST,	
+Drexel,UNC Wilmington,2024-02-08 6:00 PM CST,	
+Delaware,Towson,2024-02-08 6:00 PM CST,
+Iowa,Penn State,2024-02-08 6:00 PM CST,BTN
+Saint Peter's,Quinnipiac,2024-02-08 6:00 PM CST,ESPN+
+Manhattan,Mount St. Mary's,2024-02-08 6:00 PM CST,
+Marist,Siena,2024-02-08 6:00 PM CST,ESPN+
+Iona,Niagara,2024-02-08 6:00 PM CST,ESPN+
+Rider,Fairfield,2024-02-08 6:00 PM CST,ESPN+
+Merrimack,Long Island University,2024-02-08 6:00 PM CST,	
+Sacred Heart,Central Connecticut,2024-02-08 6:00 PM CST,	
+Wagner,Fairleigh Dickinson,2024-02-08 6:00 PM CST,	
+Le Moyne,Stonehill,2024-02-08 6:00 PM CST,
+Samford,UNC Greensboro,2024-02-08 6:00 PM CST,ESPNU
+Green Bay,Robert Morris,2024-02-08 6:00 PM CST,ES,2024-02-08 N+
+Oakland,Northern Kentucky,2024-02-08 6:00 PM CST,ESPN+
+Detroit Mercy,Wright State,2024-02-08 6:00 PM CST,ESPN+
+Vermont,NJIT,2024-02-08 6:00 PM CST,ESPN+
+UMass Lowell,UMBC,2024-02-08 6:00 PM CST,ESPN+
+New Hampshire,Bryant,2024-02-08 6:00 PM CST,ESPN+
+North Alabama,North Florida,2024-02-08 6:00 PM CST,ESPN+
+Central Arkansas,Jacksonville,2024-02-08 6:00 PM CST,ESPN+
+Middle Tennessee,Liberty,2024-02-08 6:00 PM CST,ESPN+
+Sam Houston,Jacksonville State,2024-02-08 6:00 PM CST,ESPN+
+UT Rio Grande Valley,Stephen F. Austin,2024-02-08 6:30 PM CST,ESPN+
+Arizona,Utah,2024-02-08 7:00 PM CST,PAC12
+Arizona State,Colorado,2024-02-08 7:00 PM CST,FS1
+North Carolina A&T,Charleston,2024-02-08 7:00 PM CST,CBSSN
+Denver,South Dakota,2024-02-08 7:00 PM CST,
+Omaha,North Dakota,2024-02-08 7:00 PM CST,	
+Oral Roberts,St. Thomas-Minnesota,2024-02-08 7:00 PM CST,	
+Kansas City,North Dakota State,2024-02-08 7:00 PM CST,	
+Queens University,Lipscomb,2024-02-08 7:00 PM CST,
+Kennesaw State,Austin Peay,2024-02-08 7:00 PM CST,ESPN+
+Tarleton State,Utah Valley,2024-02-08 7:00 PM CST,ESPN+
+Montana State,Northern Colorado,2024-02-08 7:00 PM CST,ESPN+
+Montana,Northern Arizona,2024-02-08 7:00 PM CST,ESPN+
+Tennessee Tech,Southeast Missouri State,2024-02-08 7:30 PM CST,ESPN+
+Little Rock,Western Illinois,2024-02-08 7:30 PM CST,ESPN+
+Tennessee State,Lindenwood,2024-02-08 7:30 PM CST,ESPN+
+Eastern Illinois,Southern Indiana,2024-02-08 7:30 PM CST,ESPN+
+Florida Atlantic,UAB,2024-02-08 8:00 PM CST,ESPN2
+SIU Edwardsville,Morehead State,2024-02-08 8:00 PM CST,ESPNU
+Southern Utah,Utah Tech,2024-02-08 8:00 PM CST,ESPN+
+Cal State Fullerton,UC Davis,2024-02-08 8:00 PM CST,ESPN+
+Portland State,Weber State,2024-02-08 8:00 PM CST,ESPN+
+Sacramento State,Idaho State,2024-02-08 8:00 PM CST,ESPN+
+Washington State,Oregon State,2024-02-08 9:00 PM CST,PAC12
+Washington,Oregon,2024-02-08 9:00 PM CST,FS1
+UT Arlington,California Baptist,2024-02-08 9:00 PM CST,ESPN+
+Abilene Christian,Seattle U,2024-02-08 9:00 PM CST,ESPN+
+Cal Poly,Cal State Northridge,2024-02-08 9:00 PM CST,ESPN+
+Cal State Bakersfield,UC Riverside,2024-02-08 9:00 PM CST,ESPN+
+UC Irvine,UC Santa Barbara,2024-02-08 9:00 PM CST,ESPN+
+San Francisco,Pepperdine,2024-02-08 10:00 PM CST,ESPNU
+UC San Diego,Hawaii,2024-02-08 10:59 PM CST,ESPN+
