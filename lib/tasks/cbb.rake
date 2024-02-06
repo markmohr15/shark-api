@@ -8,9 +8,14 @@ namespace :importer do
     nf = []
     csv.each_entry do |line|
       game = Game.where(sport: sport, gametime: line[:gametime], channel: line[:channel],
-                 visitor: sport.teams.where(name: line[:visitor]).first_or_create,
-                 home: sport.teams.where(name: line[:home]).first_or_create).first_or_create
-      nf << line unless game.valid?
+                        visitor: sport.tags.where(name: line[:visitor])&.first&.team,
+                        home: sport.tags.where(name: line[:home])&.first&.team).first_or_create
+      next if game.valid?
+      game = Game.where(sport: sport, gametime: line[:gametime], channel: line[:channel],
+                        visitor: sport.teams.where(name: line[:visitor]).first_or_create,
+                        home: sport.teams.where(name: line[:home]).first_or_create).first_or_create
+      next if game.valid?
+      nf << line
     end
 
     puts "Finished CBB Import"
