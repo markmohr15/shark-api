@@ -1,10 +1,69 @@
 visitor,home,gametime,channel
 
-Houston,Indiana,2024-02-06 6:00 PM CST
-Dallas,Brooklyn,2024-02-06 6:30 PM CST,TNT
-Orlando,Miami,2024-02-06 6:30 PM CST			
-Memphis,New York,2024-02-06 6:30 PM CST			
-Minnesota,Chicago,2024-02-06 7:00 PM CST
-Oklahoma City,Utah,2024-02-06 8:00 PM CST			
-Milwaukee,Phoenix,2024-02-06 9:00 PM CST,TNT
-
+Toronto,Charlotte,2024-02-07 6:00 PM CST		
+Cleveland,Washington,2024-02-07 6:00 PM CST		
+Golden State,Philadelphia,2024-02-07 6:30 PM CST,ESPN
+Atlanta,Boston,2024-02-07 6:30 PM CST			
+San Antonio,Miami,2024-02-07 6:30 PM CST			
+New Orleans,Clippers,2024-02-07 9:00 PM CST,ESPN
+Detroit,Sacramento,2024-02-07 9:00 PM CST			
+Golden State,Indiana,2024-02-08 6:00 PM CST			
+San Antonio,Orlando,2024-02-08 6:00 PM CST			
+Cleveland,Brooklyn,2024-02-08 6:30 PM CST			
+Dallas,New York,2024-02-08 6:30 PM CST,TNT
+Chicago,Memphis,2024-02-08 7:00 PM CST		
+Minnesota,Milwaukee,2024-02-08 7:00 PM CST			
+Utah,Phoenix,2024-02-08 8:00 PM CST			
+Denver,Lakers,2024-02-08 9:00 PM CST,TNT
+Detroit,Portland,2024-02-08 9:00 PM CST		
+Atlanta,Philadelphia,2024-02-09 6:00 PM CST,NBA
+Washington,Boston,2024-02-09 6:30 PM CST			
+Houston,Toronto,2024-02-09 6:30 PM CST			
+Charlotte,Milwaukee,2024-02-09 7:00 PM CST			
+Denver,Sacramento,2024-02-09 9:00 PM CST			
+New Orleans,Lakers,2024-02-09 9:30 PM CST,NBA
+Oklahoma City,Dallas,2024-02-10 2:00 PM CST,NBA
+Detroit,Clippers,2024-02-10 2:30 PM CST			
+San Antonio,Brooklyn,2024-02-10 5:00 PM CST			
+Memphis,Charlotte,2024-02-10 6:00 PM CST			
+Chicago,Orlando,2024-02-10 6:00 PM CST			
+Philadelphia,Washington,2024-02-10 6:00 PM CST			
+Houston,Atlanta,2024-02-10 6:30 PM CST			
+Indiana,New York,2024-02-10 6:30 PM CST
+Cleveland,Toronto,2024-02-10 6:30 PM CST			
+Phoenix,Golden State,2024-02-10 7:30 PM CST,ABC
+New Orleans,Portland,2024-02-10 9:00 PM CST			
+Boston,Miami,2024-02-11 1:00 PM CST,ABC
+Sacramento,Oklahoma City,2024-02-11 2:00 PM CST			
+Indiana,Charlotte,2024-02-12 6:00 PM CST		
+Philadelphia,Cleveland,2024-02-12 6:00 PM CST		
+Chicago,Atlanta,2024-02-12 6:30 PM CST		
+San Antonio,Toronto,2024-02-12 6:30 PM CST			
+New York,Houston,2024-02-12 7:00 PM CST			
+New Orleans,Memphis,2024-02-12 7:00 PM CST		
+Denver,Milwaukee,2024-02-12 7:00 PM CST,NBA
+Washington,Dallas,2024-02-12 7:30 PM CST			
+Golden State,Utah,2024-02-12 8:00 PM CST			
+Minnesota,Clippers,2024-02-12 9:30 PM CST,NBA
+Boston,Brooklyn,2024-02-13 6:30 PM CST			
+Oklahoma City,Orlando,2024-02-13 6:30 PM CST,TNT
+Miami,Milwaukee,2024-02-13 7:00 PM CST			
+Sacramento,Phoenix,2024-02-13 9:00 PM CST,TNT
+Minnesota,Portland,2024-02-13 9:00 PM CST		
+Detroit,Lakers,2024-02-13 9:30 PM CST			
+Atlanta,Charlotte,2024-02-14 6:00 PM CST		
+New York,Orlando,2024-02-14 6:00 PM CST			
+Miami,Philadelphia,2024-02-14 6:00 PM CST			
+Brooklyn,Boston,2024-02-14 6:30 PM CST			
+Chicago,Cleveland,2024-02-14 6:30 PM CST,ESPN
+Indiana,Toronto,2024-02-14 6:30 PM CST			
+Houston,Memphis,2024-02-14 7:00 PM CST		
+Washington,New Orleans,2024-02-14 7:00 PM CST		
+San Antonio,Dallas,2024-02-14 7:30 PM CST			
+Sacramento,Denver,2024-02-14 8:00 PM CST			
+Detroit,Phoenix,2024-02-14 8:00 PM CST			
+Lakers,Utah,2024-02-14 8:00 PM CST			
+Clippers,Golden State,2024-02-14 9:00 PM CST,ESPN
+Milwaukee,Memphis,2024-02-15 7:30 PM CST,TNT
+Golden State,Utah,2024-02-15 8:00 PM CST			
+Minnesota,Portland,2024-02-15 9:00 PM CST		
