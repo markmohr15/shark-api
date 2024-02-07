@@ -8,9 +8,9 @@ module Mutations
       argument :bet_online, Boolean, required: true
       argument :pinnacle, Boolean, required: true
       argument :bovada, Boolean, required: true
-      argument :my_bookie, Boolean, required: false
+      argument :draft_kings, Boolean, required: false
 
-      def resolve(bet_online: nil, pinnacle: nil, bovada: nil, my_bookie: nil)
+      def resolve(bet_online: nil, pinnacle: nil, bovada: nil, draft_kings: nil)
         if context[:current_user]
           context[:current_user].sportsbooks = []
           if bet_online
@@ -22,8 +22,8 @@ module Mutations
           if bovada
             context[:current_user].sportsbooks << Sportsbook.find_by_name('Bovada')
           end
-          if my_bookie
-            context[:current_user].sportsbooks << Sportsbook.find_by_name('MyBookie')
+          if draft_kings
+            context[:current_user].sportsbooks << Sportsbook.find_by_name('DraftKings')
           end
           context[:current_user]
         else
