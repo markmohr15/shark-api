@@ -4,7 +4,7 @@ namespace :importer do
 
     file_path = Rails.root.join('config', 'cbb.csv')
     csv = SmarterCSV.process(file_path, force_utf8: true)
-    sport = Sport.find_by_abbreviation 'CBB'
+    sport = Sport.cbb
     nf = []
     csv.each_entry do |line|
       game = Game.where(sport: sport, gametime: line[:gametime], channel: line[:channel],
