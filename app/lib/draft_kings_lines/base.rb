@@ -7,7 +7,7 @@ class DraftKingsLines::Base
   end
 
   def self.sportsbook
-    @sportsbook ||= Sportsbook.find_by_name "Draft Kings"
+    @sportsbook ||= Sportsbook.find_by_name "DraftKings"
   end
 
   def self.fetch
