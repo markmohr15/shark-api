@@ -1,55 +1,28 @@
 visitor,home,gametime,channel
 
-Missouri State,Murray State,2024-03-07 12:00 PM CST,ESPN+
-Coastal Carolina,Louisiana,2024-03-07 2:00 PM CST,ESPN+
-Valparaiso,Belmont,2024-03-07 2:30 PM CST,ESPN+
-Pacific,Pepperdine,2024-03-07 4:30 PM CST,ESPN+
-Texas State,Southern Miss,2024-03-07 5:00 PM CST,ESPN+
-Holy Cross,Colgate,2024-03-07 6:00 PM CST,ESPN+
-Lehigh,Lafayette,2024-03-07 6:00 PM CST,ESPN+
-Navy,Boston University,2024-03-07 6:00 PM CST,ESPN+
-Bucknell,American University,2024-03-07 6:00 PM CST,ESPN+
-Purdue Fort Wayne,Oakland,2024-03-07 6:00 PM CST,ESPN+
-Cleveland State,Youngstown State,2024-03-07 6:00 PM CST,ESPN+
-Evansville,Illinois State,2024-03-07 6:00 PM CST,ESPN+
-Jacksonville,Stetson,2024-03-07 6:00 PM CST,ESPN+
-UAB,Temple,2024-03-07 6:00 PM CST,ESPN2
-Rutgers,Wisconsin,2024-03-07 6:00 PM CST,FS1
-Niagara,Siena,2024-03-07 6:00 PM CST,ESPN+
-Marist,Quinnipiac,2024-03-07 6:00 PM CST,ESPN+
-Iona,Manhattan,2024-03-07 6:00 PM CST,ESPN+
-Canisius,Fairfield,2024-03-07 6:00 PM CST,ESPN+
-Tennessee State,Western Illinois,2024-03-07 6:30 PM CST,ESPN+
-South Carolina State,North Carolina Central,2024-03-07 6:30 PM CST
-Coppin State,Morgan State,2024-03-07 6:30 PM CST,ESPN+
-Utah Tech,UT Rio Grande Valley,2024-03-07 6:30 PM CST,ESPN+
-Southern Utah,Stephen F. Austin,2024-03-07 6:30 PM CST,ESPN+
-Northern Kentucky,Wright State,2024-03-07 7:00 PM CST,ESPN+
-North Alabama,Austin Peay,2024-03-07 7:00 PM CST,ESPN+
-Delaware State,Maryland-Eastern Shore,2024-03-07 7:00 PM CST
-Saint Peter's,Rider,2024-03-07 7:00 PM CST,ESPN+
-Utah Valley,Tarleton State,2024-03-07 7:00 PM CST,ESPN+
-California Baptist,UT Arlington,2024-03-07 7:00 PM CST,ESPN+
-Seattle U,Abilene Christian,2024-03-07 7:00 PM CST,ESPN+
-Marshall,Georgia State,2024-03-07 7:30 PM CST,ESPN+
-Mississippi Valley State,Alcorn State,2024-03-07 7:30 PM CST
-Southern,Alabama State,2024-03-07 7:30 PM CST
-Grambling,Alabama A&M,2024-03-07 7:30 PM CST
-Arkansas-Pine Bluff,Jackson State,2024-03-07 7:30 PM CST
-Nicholls,SE Louisiana,2024-03-07 7:30 PM CST,ESPN+
-Washington,Washington State,2024-03-07 8:00 PM CST,FS1
-Milwaukee,Green Bay,2024-03-07 8:00 PM CST,ESPN+
-Colorado,Oregon,2024-03-07 8:00 PM CST,ESPN2
-Howard,Norfolk State,2024-03-07 8:00 PM CST,ESPNU
-Florida International,UTEP,2024-03-07 8:00 PM CST,ESPN+
-Sam Houston,Louisiana Tech,2024-03-07 8:00 PM CST,CBSSN
-Arizona,UCLA,2024-03-07 8:30 PM CST,ESPN
-UIC,Southern Illinois,2024-03-07 8:30 PM CST,ESPN+
-SIU Edwardsville,Morehead State,2024-03-07 9:00 PM CST,ESPN+
-UC Santa Barbara,Long Beach State,2024-03-07 9:00 PM CST,ESPN+
-UC Davis,UC San Diego,2024-03-07 9:00 PM CST,ESPN+
-Cal State Fullerton,UC Riverside,2024-03-07 9:00 PM CST,ESPN+
-Cal Poly,UC Irvine,2024-03-07 9:00 PM CST,ESPN+
-California,Stanford,2024-03-07 10:00 PM CST,ESPN2
-Arizona State,USC,2024-03-07 10:00 PM CST,FS1
-Utah,Oregon State,2024-03-07 10:00 PM CST,ESPNU
+Radford,High Point,2024-03-08 11:00 AM CST,ESPN+
+Missouri State,Indiana State,2024-03-08 12:00 PM CST,ESPN+
+William & Mary,North Carolina A&T,2024-03-08 1:00 PM CST,
+Longwood,Winthrop,2024-03-08 1:00 PM CST,ESPN+
+Belmont,Northern Iowa,2024-03-08 2:30 PM CST,ESPN+
+Hampton,Elon,2024-03-08 3:30 PM CST,
+The Citadel,Mercer,2024-03-08 4:00 PM CST,ESPN+
+Charleston Southern,UNC Asheville,2024-03-08 5:00 PM CST,ESPN+
+Akron,Western Michigan,2024-03-08 5:00 PM CST,CBSSN
+VCU,Dayton,2024-03-08 6:00 PM CST,ESPN2
+Evansville,Drake,2024-03-08 6:00 PM CST,ESPN+
+Ohio,Miami (OH),2024-03-08 6:00 PM CST,ESPN+
+Ball State,Bowling Green,2024-03-08 6:00 PM CST,ESPN+
+Northern Illinois,Buffalo,2024-03-08 6:00 PM CST,ESPN+
+Eastern Michigan,Central Michigan,2024-03-08 6:00 PM CST,ESPN+
+VMI,East Tennessee State,2024-03-08 6:30 PM CST,ESPN+
+Western Illinois,Little Rock,2024-03-08 7:00 PM CST,ESPNU
+Presbyterian,Gardner-Webb,2024-03-08 7:00 PM CST,ESPN+
+South Dakota,Oral Roberts,2024-03-08 7:00 PM CST,
+Kent State,Toledo,2024-03-08 7:00 PM CST,CBSSN
+Pepperdine,San Diego,2024-03-08 8:00 PM CST,ESPN+
+Wichita State,Tulane,2024-03-08 8:00 PM CST,ESPN2
+UIC,Bradley,2024-03-08 8:30 PM CST,ESPN+
+Boise State,San Diego State,2024-03-08 9:00 PM CST,FS1
+Morehead State,UT Martin,2024-03-08 9:30 PM CST,ESPNU
+Loyola Marymount,Portland,2024-03-08 10:30 PM CST,ESPN+

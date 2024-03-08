@@ -12,8 +12,19 @@ class BetOnlineLines::Base
     @sportsbook ||= Sportsbook.find_by_name "BetOnline"
   end
 
+  def self.agent
+    @agent ||= Mechanize.new
+    @agent.user_agent_alias = 'Mac Mozilla'
+
+    @agent
+  end
+
   def self.fetch
-    @fetch ||= Nokogiri::HTML(URI.open(url))
+    begin
+      @fetch ||= agent.get(url)
+    rescue
+      @fetch ||= agent.get(url)
+    end
   end
 
   def self.base_dates
