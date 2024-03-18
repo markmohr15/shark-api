@@ -31,7 +31,7 @@ class BovadaLines::Base
       game_info = game_info g
       game = sport.games.Scheduled.where.not(id: @found)
                                   .where('gametime > ? and gametime < ? and home_id = ? and visitor_id = ?', 
-                         game_info[:time] - 90.minutes, game_info[:time] + 90.minutes, 
+                         game_info[:time] - 12.hours, game_info[:time] + 12.hours, 
                          team(game_info[:home_name])&.id, team(game_info[:vis_name])&.id).first
       if game.nil?
         @nf << [game_info[:vis_name], game_info[:home_name]]
