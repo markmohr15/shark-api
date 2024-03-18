@@ -30,8 +30,7 @@ class BovadaLines::Base
     games.each do |g|
       game_info = game_info g
       game = sport.games.Scheduled.where.not(id: @found)
-                                  .where('gametime > ? and gametime < ? and home_id = ? and visitor_id = ?', 
-                         game_info[:time] - 12.hours, game_info[:time] + 12.hours, 
+                                  .where('home_id = ? and visitor_id = ?', 
                          team(game_info[:home_name])&.id, team(game_info[:vis_name])&.id).first
       if game.nil?
         @nf << [game_info[:vis_name], game_info[:home_name]]
