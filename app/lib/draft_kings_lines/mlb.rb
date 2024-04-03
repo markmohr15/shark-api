@@ -1,7 +1,7 @@
 class DraftKingsLines::Mlb < DraftKingsLines::Base
 
   def self.league_id
-    92483 #need this
+    84240
   end
 
   def self.sport
