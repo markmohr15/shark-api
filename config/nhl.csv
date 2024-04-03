@@ -1,108 +1,57 @@
 visitor,home,gametime,channel
 
-Toronto,Boston,2024-03-07 6:00 PM CST,ESPN+
-Calgary,Tampa Bay,2024-03-07 6:00 PM CST,ESPN+
-Philadelphia,Florida,2024-03-07 6:00 PM CST,ESPN+
-St. Louis,New Jersey,2024-03-07 6:00 PM CST,ESPN
-Washington,Pittsburgh,2024-03-07 6:00 PM CST,ESPN+
-Montreal,Carolina,2024-03-07 6:00 PM CST,ESPN+
-Edmonton,Columbus,2024-03-07 6:00 PM CST,ESPN+
-Buffalo,Nashville,2024-03-07 7:00 PM CST,ESPN+
-Minnesota,Arizona,2024-03-07 8:00 PM CST,ESPN+
-Vancouver,Vegas,2024-03-07 9:00 PM CST,ESPN+
-Ottawa,Los Angeles,2024-03-07 9:30 PM CST,ESPN+
-Islanders,San Jose,2024-03-07 9:30 PM CST,ESPN+
-Minnesota,Colorado,2024-03-08 8:00 PM CST,NHL
-Detroit,Arizona,2024-03-08 8:00 PM CST,ESPN+
-Dallas,Anaheim,2024-03-08 9:00 PM CST,ESPN+
-Winnipeg,Seattle,2024-03-08 9:00 PM CST,ESPN+
-Edmonton,Buffalo,2024-03-09 11:30 AM CST,ESPN+
-Carolina,New Jersey,2024-03-09 11:30 AM CST,ABC
-Nashville,Columbus,2024-03-09 11:30 AM CST,ESPN+
-Pittsburgh,Boston,2024-03-09 2:00 PM CST,ABC
-Calgary,Florida,2024-03-09 3:00 PM CST,ESPN+
-Toronto,Montreal,2024-03-09 6:00 PM CST,NHL
-Philadelphia,Tampa Bay,2024-03-09 6:00 PM CST,ESPN+
-Chicago,Washington,2024-03-09 6:00 PM CST,ESPN+
-Ottawa,San Jose,2024-03-09 6:00 PM CST,ESPN+
-St. Louis,Rangers,2024-03-09 6:30 PM CST,ESPN+
-Winnipeg,Vancouver,2024-03-09 9:00 PM CST,ESPN+
-Detroit,Vegas,2024-03-09 9:00 PM CST,ESPN+
-Dallas,Los Angeles,2024-03-09 9:30 PM CST,ESPN+
-Edmonton,Pittsburgh,2024-03-10 12:00 PM CST,TNT
-Nashville,Minnesota,2024-03-10 2:30 PM CST,TNT
-Calgary,Carolina,2024-03-10 4:00 PM CST,ESPN+
-Arizona,Chicago,2024-03-10 5:00 PM CST,NHL
-Islanders,Anaheim,2024-03-10 7:00 PM CST,ESPN+
-St. Louis,Boston,2024-03-11 6:00 PM CST,ESPN+
-New Jersey,Rangers,2024-03-11 6:00 PM CST,NHL
-Washington,Winnipeg,2024-03-11 6:30 PM CST,ESPN+
-Rangers,Los Angeles,2024-03-11 9:30 PM CST,ESPN+
-Detroit,Buffalo,2024-03-12 6:00 PM CST,ESPN+
-Columbus,Montreal,2024-03-12 6:00 PM CST,ESPN+
-Pittsburgh,Ottawa,2024-03-12 6:00 PM CST,ESPN+
-San Jose,Philadelphia,2024-03-12 6:00 PM CST,ESPN+
-Rangers,Carolina,2024-03-12 6:00 PM CST,ESPN+
-Florida,Dallas,2024-03-12 7:00 PM CST,ESPN+
-Arizona,Minnesota,2024-03-12 7:00 PM CST,ESPN+
-Anaheim,Chicago,2024-03-12 7:30 PM CST,ESPN+
-Colorado,Calgary,2024-03-12 8:00 PM CST,ESPN+
-Vegas,Seattle,2024-03-12 9:00 PM CST,ESPN+
-Los Angeles,St. Louis,2024-03-13 6:30 PM CST,TNT
-Nashville,Winnipeg,2024-03-13 6:30 PM CST,ESPN+
-Washington,Edmonton,2024-03-13 9:00 PM CST,TNT
-Colorado,Vancouver,2024-03-13 9:30 PM CST,ESPN+
-Boston,Montreal,2024-03-14 6:00 PM CST,ESPN+
-Arizona,Detroit,2024-03-14 6:00 PM CST,ESPN+
-Rangers,Tampa Bay,2024-03-14 6:00 PM CST,ESPN+
-San Jose,Pittsburgh,2024-03-14 6:00 PM CST,ESPN+
-Florida,Carolina,2024-03-14 6:00 PM CST,ESPN+
-Ottawa,Columbus,2024-03-14 6:00 PM CST,ESPN+
-Islanders,Buffalo,2024-03-14 6:30 PM CST,ESPN+
-Toronto,Philadelphia,2024-03-14 6:30 PM CST,ESPN+
-New Jersey,Dallas,2024-03-14 7:00 PM CST,ESPN+
-Anaheim,Minnesota,2024-03-14 7:00 PM CST,ESPN+
-Vegas,Calgary,2024-03-14 8:00 PM CST,ESPN+
-Washington,Seattle,2024-03-14 9:00 PM CST,ESPN+
-Anaheim,Winnipeg,2024-03-15 7:00 PM CST,ESPN+
-Los Angeles,Chicago,2024-03-15 7:30 PM CST,NHL
-Buffalo,Detroit,2024-03-16 11:30 AM CST,NHL
-Ottawa,Islanders,2024-03-16 11:30 AM CST,ESPN+
-Rangers,Pittsburgh,2024-03-16 2:00 PM CST,ABC
-New Jersey,Arizona,2024-03-16 4:00 PM CST,ESPN+
-Tampa Bay,Florida,2024-03-16 5:00 PM CST,ESPN+
-Philadelphia,Boston,2024-03-16 6:00 PM CST,ESPN+
-Carolina,Toronto,2024-03-16 6:00 PM CST,ESPN+
-San Jose,Columbus,2024-03-16 6:00 PM CST,ESPN+
-Montreal,Calgary,2024-03-16 6:00 PM CST,ESPN+
-Minnesota,St. Louis,2024-03-16 7:00 PM CST,ESPN+
-Los Angeles,Dallas,2024-03-16 7:00 PM CST,ESPN+
-Colorado,Edmonton,2024-03-16 9:00 PM CST,ESPN+
-Washington,Vancouver,2024-03-16 9:00 PM CST,ESPN+
-Nashville,Seattle,2024-03-16 9:00 PM CST,ESPN+
-Islanders,Rangers,2024-03-17 12:00 PM CST,TNT
-New Jersey,Vegas,2024-03-17 2:30 PM CST,TNT
-Carolina,Ottawa,2024-03-17 5:00 PM CST,ESPN+
-Detroit,Pittsburgh,2024-03-17 5:00 PM CST,ESPN+
-Winnipeg,Columbus,2024-03-17 5:00 PM CST,ESPN+
-San Jose,Chicago,2024-03-17 5:00 PM CST,ESPN+
-Anaheim,St. Louis,2024-03-17 6:00 PM CST,ESPN+
-Washington,Calgary,2024-03-18 7:30 PM CST,NHL
-Buffalo,Seattle,2024-03-18 9:00 PM CST,ESPN+
-Ottawa,Boston,2024-03-19 6:00 PM CST,ESPN+
-Columbus,Detroit,2024-03-19 6:00 PM CST,ESPN+
-Pittsburgh,New Jersey,2024-03-19 6:00 PM CST,ESPN+
-Winnipeg,Rangers,2024-03-19 6:00 PM CST,ESPN+
-Toronto,Philadelphia,2024-03-19 6:00 PM CST,ESPN+
-Carolina,Islanders,2024-03-19 6:30 PM CST,ESPN+
-Colorado,St. Louis,2024-03-19 7:00 PM CST,ESPN+
-San Jose,Nashville,2024-03-19 7:00 PM CST,ESPN+
-Montreal,Edmonton,2024-03-19 8:00 PM CST,ESPN+
-Buffalo,Vancouver,2024-03-19 9:00 PM CST,ESPN+
-Tampa Bay,Vegas,2024-03-19 9:00 PM CST,ESPN+
-Minnesota,Anaheim,2024-03-19 9:00 PM CST,ESPN+
-Chicago,Los Angeles,2024-03-19 9:30 PM CST,ESPN+
-Toronto,Washington,2024-03-20 6:30 PM CST,TNT
-Arizona,Dallas,2024-03-20 7:00 PM CST,ESPN+
-Minnesota,Los Angeles,2024-03-20 9:00 PM CST,TNT
-	
+Tampa Bay,Toronto,6:00 PM CDT,ESPN+,
+New Jersey,Rangers,6:00 PM CDT,TNT,
+Edmonton,Dallas,8:30 PM CDT,TNT,
+Seattle,Los Angeles,8:30 PM CDT,ESPN+,
+Vancouver,Arizona,9:00 PM CDT,ESPN+,
+Tampa Bay,Montreal,6:00 PM CDT,ESPN+,
+Florida,Ottawa,6:00 PM CDT,ESPN+,
+Pittsburgh,Washington,6:00 PM CDT,ESPN+,
+Boston,Carolina,6:00 PM CDT,ESPN+,
+Islanders,Columbus,6:00 PM CDT,ESPN+,
+St. Louis,Nashville,7:00 PM CDT,ESPN+,
+Colorado,Minnesota,7:00 PM CDT,ESPN+,
+Calgary,Winnipeg,7:00 PM CDT,ESPN+,
+Los Angeles,San Jose,9:30 PM CDT,ESPN+,
+Philadelphia,Buffalo,6:00 PM CDT,ESPN+,
+Rangers,Detroit,6:00 PM CDT,ESPN+,
+Washington,Carolina,6:00 PM CDT,ESPN+,
+Colorado,Edmonton,8:00 PM CDT,ESPN+,
+Vegas,Arizona,9:00 PM CDT,ESPN+,
+Seattle,Anaheim,9:00 PM CDT,ESPN+,
+Tampa Bay,Pittsburgh,12:00 PM CDT,ABC,
+Florida,Boston,2:30 PM CDT,ABC,
+Dallas,Chicago,2:30 PM CDT,ESPN+,
+Winnipeg,Minnesota,3:00 PM CDT,ESPN+,
+St. Louis,San Jose,5:00 PM CDT,ESPN+,
+Toronto,Montreal,6:00 PM CDT,ESPN+,
+New Jersey,Ottawa,6:00 PM CDT,ESPN+,
+Philadelphia,Columbus,6:00 PM CDT,ESPN+,
+Nashville,Islanders,6:30 PM CDT,ESPN+,
+Edmonton,Calgary,9:00 PM CDT,ESPN+,
+Vancouver,Los Angeles,9:00 PM CDT,ESPN+,
+Buffalo,Detroit,12:00 PM CDT,TNT,
+Minnesota,Chicago,2:30 PM CDT,ESPN+,
+Columbus,Carolina,4:00 PM CDT,ESPN+,
+Ottawa,Washington,5:00 PM CDT,ESPN+,
+Arizona,San Jose,5:00 PM CDT,ESPN+,
+Nashville,New Jersey,6:00 PM CDT,ESPN+,
+Montreal,Rangers,6:00 PM CDT,ESPN+,
+St. Louis,Anaheim,7:00 PM CDT,ESPN+,
+Dallas,Colorado,9:00 PM CDT,ESPN,
+Pittsburgh,Toronto,6:00 PM CDT,ESPN+,
+Vegas,Vancouver,9:00 PM CDT,ESPN+,
+Carolina,Boston,6:00 PM CDT,ESPN+,
+Philadelphia,Montreal,6:00 PM CDT,ESPN+,
+Washington,Detroit,6:00 PM CDT,ESPN,
+Columbus,Tampa Bay,6:00 PM CDT,ESPN+,
+Ottawa,Florida,6:00 PM CDT,ESPN+,
+Toronto,New Jersey,6:00 PM CDT,ESPN+,
+Rangers,Islanders,6:00 PM CDT,ESPN+,
+Winnipeg,Nashville,7:00 PM CDT,ESPN+,
+Buffalo,Dallas,7:00 PM CDT,ESPN+,
+Minnesota,Colorado,8:30 PM CDT,ESPN,
+Los Angeles,Anaheim,9:00 PM CDT,ESPN+,
+Arizona,Seattle,9:00 PM CDT,ESPN+,
+Calgary,San Jose,9:30 PM CDT,ESPN+,
