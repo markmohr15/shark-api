@@ -8,8 +8,8 @@ class BetOnlineLines::Cbb < BetOnlineLines::Base
     @sport ||= Sport.cbb
   end
 
-  def self.home home_name
-    sport.tags.find_by_name(home_name.join(" "))&.team
+  def self.team name
+    sport.tags.find_by_name(name.join(" "))&.team
   end
   
   def self.get_lines
@@ -22,9 +22,9 @@ class BetOnlineLines::Cbb < BetOnlineLines::Base
       next if g[0][0].blank?
       game_info = game_info g
       next if game_info[:vis_lines].empty? || game_info[:home_lines].empty?
-      game = Game.Scheduled.where('sport_id = ? and gametime > ? and gametime < ? and home_id = ?', 
+      game = Game.Scheduled.where('sport_id = ? and gametime > ? and gametime < ? and home_id = ? and visitor_id = ?', 
                          sport.id, date.to_datetime, date2.to_datetime.end_of_day + 6.hours, 
-                         home(game_info[:home_name])&.id).first
+                         team(game_info[:home_name])&.id, team(game_info[:vis_name])&.id).first
       if game.nil?
         @nf << g
       else
