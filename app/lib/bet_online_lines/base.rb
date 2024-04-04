@@ -64,7 +64,7 @@ class BetOnlineLines::Base
       end
     end
     bottom[1..-1].each do |x|
-      next if x == "Game" || x[0..1] == "-R" || x[0..1] == "-L"
+      next if x == "Game" || x == "-" || x[0..1] == "-R" || x[0..1] == "-L"
       if x[0] == "-" || x[0] == "+" || x[0..1] == "pk" || x[0..1] == "Ov" || (x[0..1] == "Un" && x.exclude?(","))
         home_lines << x
       else
