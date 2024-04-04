@@ -57,7 +57,7 @@ class DraftKingsLines::Base
     vis_spread = vis_rl = home_rl = total = vis_ml = home_ml = over_juice = under_juice = nil
     game.each do |l|
       next if l["outcomes"].empty?
-      if ["Spread", "Puck Line", "Runline"].include? l["label"]
+      if ["Spread", "Puck Line", "Run Line"].include? l["label"]
         vis_spread = l["outcomes"][0]["line"].to_f
         vis_rl = l["outcomes"][0]["oddsAmerican"]
         home_rl = l["outcomes"][1]["oddsAmerican"]

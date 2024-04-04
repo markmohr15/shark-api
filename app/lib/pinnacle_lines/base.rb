@@ -57,7 +57,9 @@ class PinnacleLines::Base
   end
 
   def self.get_lines
-    @games = @lines = @preseason_games = @preseason_lines = @nf = @found = nil
+    @games = @lines = @preseason_games = @preseason_lines = nil
+    @nf = []
+    @found = []
 
     games.each do |g|
       process_game g
@@ -66,6 +68,7 @@ class PinnacleLines::Base
     preseason_games.each do |g|
       process_game g, true
     end
+
     nf
   rescue StandardError => exception
     raise_api_error exception.message
