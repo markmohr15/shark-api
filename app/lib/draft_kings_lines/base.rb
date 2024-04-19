@@ -1,4 +1,4 @@
-class BovadaLines::Base
+class DraftKingsLines::Base
 
   def self.raise_api_error err
     Sidekiq.logger.info err
@@ -7,15 +7,19 @@ class BovadaLines::Base
   end
 
   def self.sportsbook
-    @sportsbook ||= Sportsbook.find_by_name "Bovada"
+    @sportsbook ||= Sportsbook.find_by_name "DraftKings"
   end
 
   def self.fetch
-    @fetch ||= HTTParty.get(url)
+    @fetch ||= HTTParty.get "https://sportsbook.draftkings.com/sites/US-SB/api/v5/eventgroups/#{league_id}?format=json"
   end
 
   def self.games
-    @games ||= fetch[0]["events"]
+    @games ||= fetch["eventGroup"]["offerCategories"][0]["offerSubcategoryDescriptors"][0]["offerSubcategory"]["offers"]
+  end
+
+  def self.events
+    @events ||= fetch["eventGroup"]["events"]
   end
 
   def self.team name
@@ -23,14 +27,15 @@ class BovadaLines::Base
   end
 
   def self.get_lines
-    @url = @fetch = @games = nil
+    @events = @fetch = @games = nil
     @nf = []
     @found = []
+
     games.each do |g|
       game_info = game_info g
       game = sport.games.Scheduled.where.not(id: @found)
                                   .where('gametime > ? and gametime < ? and home_id = ? and visitor_id = ?', 
-                         game_info[:time] - 24.hours, game_info[:time] + 24.hours, 
+                         game_info[:time] - 90.minutes, game_info[:time] + 90.minutes, 
                          team(game_info[:home_name])&.id, team(game_info[:vis_name])&.id).first
       if game.nil?
         @nf << [game_info[:vis_name], game_info[:home_name]]
@@ -45,30 +50,24 @@ class BovadaLines::Base
   end
 
   def self.game_info game
-    vis_name = game["competitors"].find {|x| x["home"] == false}["name"].split("(")[0].squish
-    home_name = game["competitors"].find {|x| x["home"] == true}["name"].split("(")[0].squish
-    time = Time.at(game["startTime"] / 1000).to_datetime  
-    lines = game["displayGroups"]&.first["markets"]
+    event = events.find {|e| e["eventId"] == game[0]["eventId"]}
+    vis_name =  professional ? event["teamName1"].split(" ")[1..-1].join(" ") : event["teamName1"]
+    home_name = professional ? event["teamName2"].split(" ")[1..-1].join(" ") : event["teamName2"]
+    time = event["startDate"].to_datetime  
     vis_spread = vis_rl = home_rl = total = vis_ml = home_ml = over_juice = under_juice = nil
-    lines.each do |l|
+    game.each do |l|
       next if l["outcomes"].empty?
-      if ["Point Spread", "Puck Line", "Runline"].include? l["description"]
-        vis_spread = l["outcomes"][0]["price"]["handicap"].to_f
-        vis_rl = l["outcomes"][0]["price"]["american"]
-        vis_rl == "EVEN" ? vis_rl = 100 : vis_rl = vis_rl.to_i
-        home_rl = l["outcomes"][1]["price"]["american"]
-        home_rl == "EVEN" ? home_rl = 100 : home_rl = home_rl.to_i
-      elsif l["description"] == "Total"
-        total = l["outcomes"][0]["price"]["handicap"].to_f
-        over_juice = l["outcomes"].find {|x| x["description"] == "Over"}["price"]["american"]
-        over_juice == "EVEN" ? over_juice = 100 : over_juice = over_juice.to_i
-        under_juice = l["outcomes"].find {|x| x["description"] == "Under"}["price"]["american"]
-        under_juice == "EVEN" ? under_juice = 100 : under_juice = under_juice.to_i
-      elsif l["description"] == "Moneyline" 
-        vis_ml = l["outcomes"][0]["price"]["american"]
-        vis_ml == "EVEN" ? vis_ml = 100 : vis_ml = vis_ml.to_i
-        home_ml = l["outcomes"][1]["price"]["american"]
-        home_ml == "EVEN" ? home_ml = 100 : home_ml = home_ml.to_i
+      if ["Spread", "Puck Line", "Run Line"].include? l["label"]
+        vis_spread = l["outcomes"][0]["line"].to_f
+        vis_rl = l["outcomes"][0]["oddsAmerican"]
+        home_rl = l["outcomes"][1]["oddsAmerican"]
+      elsif l["label"] == "Total"
+        total = l["outcomes"][0]["line"].to_f
+        over_juice = l["outcomes"].find {|x| x["label"] == "Over"}["oddsAmerican"]
+        under_juice = l["outcomes"].find {|x| x["label"] == "Under"}["oddsAmerican"]
+      elsif l["label"] == "Moneyline" 
+        vis_ml = l["outcomes"][0]["oddsAmerican"]
+        home_ml = l["outcomes"][1]["oddsAmerican"]
       end
     end
     {vis_name: vis_name, home_name: home_name, time: time, vis_spread: vis_spread,

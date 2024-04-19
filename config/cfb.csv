@@ -1,13 +1,41 @@
-visitor,home,gametime,channel
+visitor,home,gametime,stadium,channel
 
-Akron,Buffalo,2022-12-02 12:00 PM CST,CBSSN
-North Texas,UTSA,2022-12-02	7:00 PM CST,CBSSN
-Utah,USC,2022-12-02	7:00 PM CST,FOX
-Kansas State,TCU,2022-12-03,11:00 AM CST,ABC
-Toledo,Ohio,2022-12-03 11:00 AM CST,ESPN
-Coastal Carolina,Troy,2022-12-03 2:30 PM CST,ESPN
-UCF,Tulane,2022-12-03 3:00 PM CST,ABC
-Fresno State,Boise State,2022-12-03	3:00 PM CST,FOX
-LSU,Georgia,2022-12-03 3:00 PM CST,CBS
-Clemson,North Carolina,2022-12-03 7:00 PM CST,ABC
-Purdue,Michigan,2022-12-03 7:00 PM CST,FOX
+Miami Ohio,UAB,2022-12-16 10:30 AM CST,Thomas A. Robinson National Stadium,ESPN
+Troy,UTSA,2022-12-16 2:00 PM CST,Exploria Stadium,ESPN
+Louisville,Cincinnati,2022-12-17 10:00 AM CST,Fenway Park,ESPN
+Florida,Oregon State,2022-12-17 1:30 PM CST,Allegiant Stadium,ESPN
+Fresno State,Washington State,2022-12-17 2:30 PM CST,SoFi Stadium,ABC
+Rice,Southern Miss,2022-12-17 4:45 PM CST,Hancock Whitney Stadium,ESPN
+BYU,SMU,2022-12-17 6:30 PM CST,University Stadium,ABC
+Boise State,North Texas,2022-12-17 8:15 PM CST,Toyota Stadium,ESPN
+Uconn,Marshall,2022-12-19 1:30 PM CST,Brooks Stadium,ESPN
+Eastern Michigan,San Jose State,2022-12-20 2:30 PM CST,Albertsons Stadium,ESPN
+Toledo,Liberty,2022-12-20 6:30 PM CST,FAU Stadium,ESPN
+South Alabama,Western Kentucky,2022-12-21 8:00 PM CST,Caesars Superdome,ESPN
+Air Force,Baylor,2022-12-22 6:30 PM CST,Amon G. Carter Stadium,ESPN
+Houston,UL Lafayette,2022-12-23 2:00 PM CST,Independence Stadium,ESPN
+Wake Forest,Missouri,2022-12-23 5:30 PM CST,Raymond James Stadium,ESPN
+Middle Tennessee State,San Diego State,2022-12-24 7:00 PM CST,Clarence T.C. Ching Athletics Complex,ESPN
+New Mexico State,Bowling Green,2022-12-26 1:30 PM CST,Ford Field,ESPN
+Georgia Southern,Buffalo,2022-12-27 11:00 AM CST	
+Utah State,Memphis,2022-12-27 2:15 PM CST,Gerald J. Ford Stadium,ESPN
+East Carolina,Coastal Carolina,2022-12-27 5:45 PM CST,Protective Stadium,ESPN
+Wisconsin,Oklahoma State,2022-12-27 9:15 PM CST,Chase Field,ESPN
+Central Florida,Duke,2022-12-28 1:00 PM CST,Navy-Marine Corps Memorial Stadium,ESPN
+Kansas,Arkansas,2022-12-28 4:30 PM CST,Simmons Bank Liberty Stadium,ESPN
+North Carolina,Oregon,2022-12-28 7:00 PM CST,Petco Park,FOX
+Mississippi,Texas Tech,2022-12-28 8:00 PM CST,NRG Stadium,ESPN
+Minnesota,Syracuse,2022-12-29 1:00 PM CST,Yankee Stadium,ESPN
+Oklahoma,Florida State,2022-12-29 4:30 PM CST,Camping World Stadium,ESPN
+Washington,Texas,2022-12-29 8:00 PM CST,Alamodome,ESPN
+Maryland,NC State,2022-12-30 11:00 AM CST,Bank of America Stadium,ESPN
+Pittsburgh,UCLA,2022-12-30 1:00 PM CST,Sun Bowl,CBS
+South Carolina,Notre Dame,2022-12-30 2:30 PM CST,TIAA Bank Field,ESPN
+Wyoming,Ohio,2022-12-30 3:30 PM CST,Arizona Stadium,Barstool
+Clemson,Tennessee,2022-12-30 7:00 PM CST,Hard Rock Stadium,ESPN
+Alabama,Kansas State,2022-12-31 11:00 AM CST,Caesars Superdome,ESPN
+Iowa,Kentucky,2022-12-31 11:00 AM CST,Nissan Stadium,ABC
+Mississippi State,Illinois,2023-01-02 11:00 AM CST,Raymond James Stadium,ESPN2
+Tulane,USC,2023-01-02 12:00 PM CST,AT&T Stadium,ESPN
+Purdue,LSU,2023-01-02 12:00 PM CST,Camping World Stadium,ABC
+Utah,Penn State,2023-01-02 4:00 PM CST,Rose Bowl,ESPN
