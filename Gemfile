@@ -12,7 +12,7 @@ gem 'bcrypt', '~> 3.1.7'          # Use ActiveModel has_secure_password
 gem 'graphql'
 gem 'graphql-errors'
 gem 'rack-cors'
-gem 'puma', '~> 4.3'
+gem 'puma', '~> 5.6'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'redis'
