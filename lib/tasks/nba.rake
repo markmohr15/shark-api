@@ -8,9 +8,9 @@ namespace :importer do
     nf = []
     csv.each_entry do |line|
       game = Game.Scheduled.where(sport: sport,
-                 visitor: sport.teams.find_by_nickname(line[:visitor]),
-                 home: sport.teams.find_by_nickname(line[:home]),
-                 gametime: line[:date] + " " + line[:time] + " " + "CDT").first_or_initialize
+                 visitor: sport.teams.find_by_nickname(line[:visitor]) || sport.teams.find_by_name(line[:visitor]),
+                 home: sport.teams.find_by_nickname(line[:home]) || sport.teams.find_by_name(line[:home]),
+                 gametime: line[:gametime]).first_or_initialize
       game.channel = line[:channel]
       if game.valid?
         game.save!

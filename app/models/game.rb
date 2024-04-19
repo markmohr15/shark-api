@@ -83,15 +83,12 @@ class Game < ApplicationRecord
     end.map(&:delete)
     FetchGameTimeWeatherWorker.perform_at(self.gametime, self.id)
     SetInProgressWorker.perform_at(self.gametime + 1.minutes, self.id)
+    DeleteWeathersWorker.perform_at(self.gametime + 12.hours, self.id)
     DeleteLinesWorker.perform_at(self.gametime + 30.hours, self.id)
   end
 
   def last_lines 
-    if self.Scheduled?
-      self.scheduled_last_lines
-    else
-      self.completed_last_lines
-    end
+    self.Scheduled? ? scheduled_last_lines : completed_last_lines
   end
 
   def display_time

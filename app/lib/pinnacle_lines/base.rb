@@ -22,23 +22,17 @@ class PinnacleLines::Base
   end
 
   def self.fetch_games league_id
-    url = URI("https://guest.api.arcadia.pinnacle.com/0.1/leagues/#{league_id}/matchups")
-    https = Net::HTTP.new(url.host, url.port)
-    https.use_ssl = true
-    request = Net::HTTP::Get.new(url)
-    request["Content-Type"] = "application/json"
-    response = https.request(request)
-    response.read_body
+    url = "https://guest.api.arcadia.pinnacle.com/0.1/leagues/#{league_id}/matchups"
+    headers = {'X-API-Key': 'CmX2KcMrXuFmNg6YFbmTxE0y9CIrOi0R'}
+    response = HTTParty.get(url, headers: headers)
+    response.body
   end
 
   def self.fetch_lines league_id
-    url = URI("https://guest.api.arcadia.pinnacle.com/0.1/leagues/#{league_id}/markets/straight")
-    https = Net::HTTP.new(url.host, url.port)
-    https.use_ssl = true
-    request = Net::HTTP::Get.new(url)
-    request["Content-Type"] = "application/json"
-    response = https.request(request)
-    response.read_body
+    url = "https://guest.api.arcadia.pinnacle.com/0.1/leagues/#{league_id}/markets/straight"
+    headers = {'X-API-Key': 'CmX2KcMrXuFmNg6YFbmTxE0y9CIrOi0R'}
+    response = HTTParty.get(url, headers: headers)
+    response.body
   end
 
   def self.games
@@ -63,7 +57,9 @@ class PinnacleLines::Base
   end
 
   def self.get_lines
-    @games = @lines = @preseason_games = @preseason_lines = @nf = @found = nil
+    @games = @lines = @preseason_games = @preseason_lines = nil
+    @nf = []
+    @found = []
 
     games.each do |g|
       process_game g
@@ -72,6 +68,7 @@ class PinnacleLines::Base
     preseason_games.each do |g|
       process_game g, true
     end
+
     nf
   rescue StandardError => exception
     raise_api_error exception.message

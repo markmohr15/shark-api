@@ -11,6 +11,7 @@ namespace :importer do
                  visitor: sport.teams.where(name: line[:visitor]).first_or_create,
                  home: sport.teams.find_by_name(line[:home])).first_or_initialize
       game.channel = line[:channel]
+      game.stadium = Stadium.find_by_name line[:stadium]
       if game.valid?
         game.save!
       else
