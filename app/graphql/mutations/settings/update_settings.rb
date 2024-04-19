@@ -8,9 +8,11 @@ module Mutations
       argument :bet_online, Boolean, required: true
       argument :pinnacle, Boolean, required: true
       argument :bovada, Boolean, required: true
-      argument :draft_kings, Boolean, required: false
+      argument :draft_kings, Boolean, required: true
+      argument :caesars, Boolean, required: false
 
-      def resolve(bet_online: nil, pinnacle: nil, bovada: nil, draft_kings: nil)
+      def resolve(bet_online: nil, pinnacle: nil, bovada: nil, 
+                  draft_kings: nil, caesars: nil)
         if context[:current_user]
           context[:current_user].sportsbooks = []
           if bet_online
@@ -25,6 +27,10 @@ module Mutations
           if draft_kings
             context[:current_user].sportsbooks << Sportsbook.find_by_name('DraftKings')
           end
+          if caesars
+            context[:current_user].sportsbooks << Sportsbook.find_by_name('Caesars')
+          end
+
           context[:current_user]
         else
           raise GraphQL::ExecutionError, "Invalid Token"
