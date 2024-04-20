@@ -8,7 +8,19 @@ class CaesarsLines::Base
 
   def self.headers
     { "x-platform" => "cordova-desktop",
-      "user-agent" => "Mac Mozilla" }
+      "user-agent" => "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+      "accept-language" => "en-US,en;q=0.9",
+      "content-type" => "application/json",
+      "dnt" => "1",
+      "origin" => "https://sportsbook.caesars.com",
+      "referer" => "https://sportsbook.caesars.com/",
+      "sec-ch-ua-mobile" => "?0",
+      "sec-ch-ua-platform" => "macOS",
+      "sec-fetch-dest" => "empty",
+      "sec-fetch-mode" => "cors",
+      "sec-fetch-site" => "cross-site",
+      "x-app-version" => "7.10.3",
+      "x-unique-device-id" => "bbf259bc-6ae2-4aa0-a51c-0905417a063b"}
   end
 
   def self.sportsbook
