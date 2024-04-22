@@ -1,8 +1,24 @@
 visitor,home,gametime,channel
 
-Chicago,Miami,2024-04-19 6:00 PM CST,ESPN
-Sacramento,New Orleans,2024-04-19 8:30 PM CST,TNT
-Orlando,Cleveland,2024-04-20 12:00 PM CST,ESPN
-Phoenix,Minnesota,2024-04-20 2:30 PM CST,ESPN
-Philadelphia,New York,2024-04-20 5:00 PM CST,ESPN
-Los Angeles,Denver,2024-04-20 7:30 PM CST,ABC
+Orlando,Cleveland,2024-04-22 6:00 PM CDT,NBATV
+Philadelphia,New York,2024-04-22 6:30 PM CDT,TNT
+Los Angeles,Denver,2024-04-22 9:00 PM CDT,TNT
+Phoenix,Minnesota,2024-04-23 6:30 PM CDT,TNT
+Indiana,Milwaukee,2024-04-23 7:30 PM CDT,NBATV
+Dallas,LA,2024-04-23 9:00 PM CDT,TNT
+Miami,Boston,2024-04-24 6:00 PM CDT,TNT
+New Orleans,Oklahoma City,2024-04-24 8:30 PM CDT,TNT
+Cleveland,Orlando,2024-04-25 6:00 PM CDT,NBATV
+New York,Philadelphia,2024-04-25 6:30 PM CDT,TNT
+Denver,Los Angeles,2024-04-25 9:00 PM CDT,TNT
+Milwaukee,Indiana,2024-04-26 4:30 PM CDT,ESPN
+LA,Dallas,2024-04-26 7:00 PM CDT,ESPN
+Minnesota,Phoenix,2024-04-26 9:30 PM CDT,ESPN
+Cleveland,Orlando,2024-04-27 12:00 PM CDT,TNT
+Oklahoma City,New Orleans,2024-04-27 2:30 PM CDT,TNT
+Boston,Miami,2024-04-27 5:00 PM CDT,TNT
+Denver,Los Angeles,2024-04-27 7:30 PM CDT,ABC
+New York,Philadelphia,2024-04-28 12:00 PM CDT,ABC
+LA,Dallas,2024-04-28 2:30 PM CDT,ABC
+Milwaukee,Indiana,2024-04-28 6:00 PM CDT,TNT
+Minnesota,Phoenix,2024-04-28 8:30 PM CDT,TNT
