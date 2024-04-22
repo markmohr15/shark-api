@@ -77,7 +77,7 @@ class Line < ApplicationRecord
   end
 
   def update_triggers
-    UpdateTriggersWorker.perform_async self.id
+    UpdateTriggersWorker.perform_at(5.seconds, self.id)
   end
 
   def self.user_last_lines user, game

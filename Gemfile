@@ -26,6 +26,7 @@ gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dab
 gem 'net-smtp', require: false
 gem 'net-imap', require: false
 gem 'net-pop', require: false
+gem "barnes"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
