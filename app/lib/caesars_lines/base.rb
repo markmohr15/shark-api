@@ -9,7 +9,7 @@ class CaesarsLines::Base
   def self.headers
     { "x-platform" => "cordova-desktop",
       "user-agent" => "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-      "Host" => "api.americanwagering.com"}
+    }
   end
 
   def self.sportsbook
@@ -17,7 +17,15 @@ class CaesarsLines::Base
   end
 
   def self.fetch
-    @fetch ||= HTTParty.get(url, headers: headers)
+    if Rails.env.development?
+      @fetch ||= HTTParty.get(url, headers: headers)
+    else
+      @fetch ||= HTTParty.get(proxy_url)
+    end
+  end
+
+  def self.proxy_url
+    "https://6350-72-198-216-227.ngrok-free.app/caesars/#{sport.abbreviation.downcase}"
   end
 
   def self.games
