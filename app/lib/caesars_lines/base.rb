@@ -60,12 +60,12 @@ class CaesarsLines::Base
   end
 
   def self.game_info game
-    vis_name =  game['markets']&.first&.dig['selections']&.first&.dig('teamData')&.dig('teamName')
-    home_name = game['markets']&.first&.dig['selections']&.second&.dig('teamData')&.dig('teamName')
+    vis_name =  game["markets"]&.first&.dig("selections")&.first&.dig("teamData")&.dig("teamName")
+    home_name = game["markets"]&.first&.dig("selections")&.second&.dig("teamData")&.dig("teamName")
     time = game["startTime"].to_datetime  
     vis_spread = vis_rl = home_rl = total = vis_ml = home_ml = over_juice = under_juice = nil
-    game['markets'].each do |l|
-      next if l['selections'].empty?
+    game["markets"].each do |l|
+      next if l["selections"].empty?
       if ["Spread", "Puck Line", "Run Line"].include? l["displayName"]
         vis_spread = l["line"].to_f * -1
         vis_rl = l["selections"][0]["price"]["a"]
