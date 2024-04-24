@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_01_045408) do
+ActiveRecord::Schema.define(version: 2024_04_24_152838) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,12 +47,6 @@ ActiveRecord::Schema.define(version: 2022_09_01_045408) do
     t.integer "sportsdata_game_id"
     t.integer "week"
     t.boolean "conference_game", default: false
-    t.float "spread"
-    t.float "total"
-    t.integer "visitor_ml"
-    t.integer "home_ml"
-    t.integer "visitor_rl"
-    t.integer "home_rl"
     t.integer "period"
     t.integer "time_left_min"
     t.integer "time_left_sec"
@@ -189,8 +183,6 @@ ActiveRecord::Schema.define(version: 2022_09_01_045408) do
     t.integer "sportsdata_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "bookmaker_name"
-    t.string "bovada_name"
     t.bigint "stadium_id"
     t.index ["division_id"], name: "index_teams_on_division_id"
     t.index ["league_id"], name: "index_teams_on_league_id"

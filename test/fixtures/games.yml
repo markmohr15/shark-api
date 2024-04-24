@@ -6,19 +6,13 @@
 #  channel            :string
 #  conference_game    :boolean          default(FALSE)
 #  gametime           :datetime
-#  home_ml            :integer
-#  home_rl            :integer
 #  home_rot           :integer
 #  home_score         :integer
 #  neutral            :boolean          default(FALSE)
 #  period             :integer
-#  spread             :float
 #  status             :integer
 #  time_left_min      :integer
 #  time_left_sec      :integer
-#  total              :float
-#  visitor_ml         :integer
-#  visitor_rl         :integer
 #  visitor_rot        :integer
 #  visitor_score      :integer
 #  week               :integer

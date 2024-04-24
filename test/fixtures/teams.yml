@@ -4,8 +4,6 @@
 #
 #  id                 :bigint           not null, primary key
 #  active             :boolean          default(TRUE)
-#  bookmaker_name     :string
-#  bovada_name        :string
 #  name               :string
 #  nickname           :string
 #  short_display_name :string

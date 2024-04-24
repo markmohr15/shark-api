@@ -33,7 +33,7 @@ class CaesarsLines::Base
   end
 
   def self.team name
-    sport.tags.where("lower(tags.name) = ?", name.downcase)&.first&.team
+    sport.tags.where("lower(tags.name) = ?", name&.downcase)&.first&.team
   end
 
   def self.get_lines
@@ -60,8 +60,8 @@ class CaesarsLines::Base
   end
 
   def self.game_info game
-    vis_name =  game['markets'][0]['selections'][0]['teamData']['teamName']
-    home_name = game['markets'][0]['selections'][1]['teamData']['teamName']
+    vis_name =  game['markets']&.first&.dig['selections']&.first&.dig('teamData')&.dig('teamName')
+    home_name = game['markets']&.first&.dig['selections']&.second&.dig('teamData')&.dig('teamName')
     time = game["startTime"].to_datetime  
     vis_spread = vis_rl = home_rl = total = vis_ml = home_ml = over_juice = under_juice = nil
     game['markets'].each do |l|
