@@ -1,8 +1,6 @@
 class BetOnlineLines::Kbo < BetOnlineLines::Base
 
-  def self.url
-    @url ||= "https://www.betonline.ag/sportsbook/baseball/south-korea"
-  end
+  URL = "https://www.betonline.ag/sportsbook/baseball/south-korea"
 
   def self.sport
     @sport ||= Sport.kbo

@@ -1,10 +1,7 @@
 class BetOnlineLines::Nba < BetOnlineLines::Base
   
-  def self.url
-    @url ||= "https://classic.betonline.ag/sportsbook/basketball/nba"
-   # @url ||= "https://www.betonline.ag/sportsbook/basketball/preseason"
-    
-  end
+  URL = "https://classic.betonline.ag/sportsbook/basketball/nba"
+  # pre-season "https://www.betonline.ag/sportsbook/basketball/preseason"
 
   def self.sport
     @sport ||= Sport.nba

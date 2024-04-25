@@ -1,8 +1,6 @@
 class BetOnlineLines::Nhl < BetOnlineLines::Base
   
-  def self.url
-    @url ||= "https://classic.betonline.ag/sportsbook/hockey/nhl"
-  end
+  URL = "https://classic.betonline.ag/sportsbook/hockey/nhl"
 
   def self.sport
     @sport ||= Sport.nhl

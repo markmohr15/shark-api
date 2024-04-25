@@ -1,15 +1,10 @@
 class DraftKingsLines::Nfl < DraftKingsLines::Base
 
-  def self.league_id
-    88808
-  end
+  LEAGUE_ID = 88808
+  PROFESSIONAL = true
 
   def self.sport
     @sport ||= Sport.nfl
-  end
-
-  def self.professional
-    true
   end
   
 end

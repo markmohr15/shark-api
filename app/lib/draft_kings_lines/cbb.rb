@@ -1,15 +1,10 @@
 class DraftKingsLines::Cbb < DraftKingsLines::Base
 
-  def self.league_id
-    92483
-  end
-
+  LEAGUE_ID = 92483
+  PROFESSIONAL = false
+  
   def self.sport
     @sport ||= Sport.cbb
-  end
-
-  def self.professional
-    false
   end
 
 end

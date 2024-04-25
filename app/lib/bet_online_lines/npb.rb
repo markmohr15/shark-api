@@ -1,8 +1,6 @@
 class BetOnlineLines::Npb < BetOnlineLines::Base
   
-  def self.url
-    @url ||= "https://www.betonline.ag/sportsbook/baseball/japan"
-  end
+  URL = "https://www.betonline.ag/sportsbook/baseball/japan"
 
   def self.sport
     @sport ||= Sport.npb

@@ -18,7 +18,7 @@ class CaesarsLines::Base
 
   def self.fetch
     if Rails.env.development?
-      @fetch ||= HTTParty.get(url, headers: headers)
+      @fetch ||= HTTParty.get(self::URL, headers: headers)
     else
       @fetch ||= HTTParty.get(proxy_url)
     end
@@ -29,7 +29,7 @@ class CaesarsLines::Base
   end
 
   def self.games
-    @games ||= fetch["competitions"][0]["events"].select {|x| !x["started"]}
+    @games ||= fetch["competitions"]&.first&.dig("events")&.select {|x| !x["started"]}
   end
 
   def self.team name

@@ -1,15 +1,10 @@
 class DraftKingsLines::Cfb < DraftKingsLines::Base
 
-  def self.league_id
-    92483 #need this
-  end
+  LEAGUE_ID = 92483 #need to update this
+  PROFESSIONAL = false
 
   def self.sport
     @sport ||= Sport.cfb
-  end
-
-  def self.professional
-    false
   end
 
 end

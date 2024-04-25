@@ -11,7 +11,7 @@ class DraftKingsLines::Base
   end
 
   def self.fetch
-    @fetch ||= HTTParty.get "https://sportsbook.draftkings.com/sites/US-SB/api/v5/eventgroups/#{league_id}?format=json"
+    @fetch ||= HTTParty.get "https://sportsbook.draftkings.com/sites/US-SB/api/v5/eventgroups/#{self::LEAGUE_ID}?format=json"
   end
 
   def self.games
@@ -51,8 +51,8 @@ class DraftKingsLines::Base
 
   def self.game_info game
     event = events.find {|e| e["eventId"] == game[0]["eventId"]}
-    vis_name =  professional ? event["teamName1"].split(" ")[1..-1].join(" ") : event["teamName1"]
-    home_name = professional ? event["teamName2"].split(" ")[1..-1].join(" ") : event["teamName2"]
+    vis_name =  self::PROFESSIONAL ? event["teamName1"].split(" ")[1..-1].join(" ") : event["teamName1"]
+    home_name = self::PROFESSIONAL ? event["teamName2"].split(" ")[1..-1].join(" ") : event["teamName2"]
     time = event["startDate"].to_datetime  
     vis_spread = vis_rl = home_rl = total = vis_ml = home_ml = over_juice = under_juice = nil
     game.each do |l|

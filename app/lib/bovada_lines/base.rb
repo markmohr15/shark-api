@@ -11,11 +11,11 @@ class BovadaLines::Base
   end
 
   def self.fetch
-    @fetch ||= HTTParty.get(url)
+    @fetch ||= HTTParty.get(self::URL)
   end
 
   def self.games
-    @games ||= fetch[0]["events"]
+    @games ||= fetch[0]&.dig("events")
   end
 
   def self.team name

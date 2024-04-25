@@ -21,9 +21,9 @@ class BetOnlineLines::Base
 
   def self.fetch
     begin
-      @fetch ||= agent.get(url)
+      @fetch ||= agent.get(self::URL)
     rescue
-      @fetch ||= agent.get(url)
+      @fetch ||= agent.get(self::URL)
     end
   end
 

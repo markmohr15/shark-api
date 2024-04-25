@@ -1,9 +1,7 @@
 class BovadaLines::Mlb < BovadaLines::Base
 
-  def self.url
-    @url ||= "https://www.bovada.lv/services/sports/event/coupon/events/A/description/baseball/mlb?marketFilterId=def&preMatchOnly=true&lang=en"
-    # @url ||= "https://www.bovada.lv/services/sports/event/coupon/events/A/description/baseball/mlb-exhibition?marketFilterId=def&preMatchOnly=true&lang=en"
-  end
+  URL = "https://www.bovada.lv/services/sports/event/coupon/events/A/description/baseball/mlb?marketFilterId=def&preMatchOnly=true&lang=en"
+  #spring training "https://www.bovada.lv/services/sports/event/coupon/events/A/description/baseball/mlb-exhibition?marketFilterId=def&preMatchOnly=true&lang=en"
 
   def self.sport
     @sport ||= Sport.mlb

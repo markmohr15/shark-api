@@ -1,8 +1,6 @@
 class BetOnlineLines::Cbb < BetOnlineLines::Base
 
-  def self.url
-    @url ||= "https://classic.betonline.ag/sportsbook/basketball/ncaa"
-  end
+  URL = "https://classic.betonline.ag/sportsbook/basketball/ncaa"
 
   def self.sport
     @sport ||= Sport.cbb
